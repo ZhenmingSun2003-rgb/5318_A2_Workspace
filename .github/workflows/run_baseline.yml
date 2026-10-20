@@ -43,5 +43,7 @@ jobs:
           git add baseline.ipynb notebooks_zh/baseline_中文版.ipynb
           if ! git diff --cached --quiet; then
             git commit -m "Save executed PathMNIST baseline outputs [skip ci]"
+            git fetch origin main
+            git rebase origin/main
             git push origin HEAD:main
           fi
