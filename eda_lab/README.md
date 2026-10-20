@@ -4,17 +4,17 @@
 
 从仓库根目录运行：
 
-\`\`\`bash
+```bash
 conda env create -f requirements.yaml
 conda activate comp5318-a2
 streamlit run eda_lab/app.py
-\`\`\`
+```
 
-应用会自动查找 \`Canvas Sources/Assignment2Data-1/Assignment2Data/\` 四个 NPY 文件；不复制、不修改原始数据。
+应用会自动查找 `Canvas Sources/Assignment2Data-1/Assignment2Data/` 四个 NPY 文件；不复制、不修改原始数据。
 
 界面包括：
 
-1. **整体结构与类别**：检查 NHWC 四维结构 \`(样本数, 高, 宽, 通道)\`、dtype、训练类别数及类别不平衡；
+1. **整体结构与类别**：检查 NHWC 四维结构 `(样本数, 高, 宽, 通道)`、dtype、训练类别数及类别不平衡；
 2. **样本图库**：分层随机抽样各类图像，观察 H&E 染色下的颜色、细胞密度、空间纹理等表象（视觉解释并不代表病理诊断）；
 3. **色彩分布**：RGB 像素直方图、每类平均颜色和标准差，可辅助判断是否有染色或亮度差异；
 4. **PCA 二维探索**：只对随机抽取的原始训练图像执行 PCA，不使用测试数据；二维投影丢失信息，类别点云重叠不等同于模型上限；
