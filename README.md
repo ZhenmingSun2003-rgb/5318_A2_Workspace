@@ -27,9 +27,11 @@
 │   ├── app.py                                 # 中文可视化工具，仅供内部探索
 │   └── README.md                              # 工具详细说明
 ├── scripts/
-│   └── execute_baseline.py                    # Notebook 运行及中英文输出同步
+│   ├── execute_baseline.py                    # Notebook 运行及中英文输出同步
+│   └── smoke_eda.py                           # EDA 页面基础启动与渲染检查
 ├── .github/workflows/
-│   └── run_baseline.yml                       # 仓库自动运行验证（如 Actions 可用）
+│   ├── run_baseline.yml                       # 自动执行并保存 Baseline 的真实输出
+│   └── eda_smoke.yml                          # EDA 应用自动冒烟测试
 ├── requirements.yaml                         # Conda 运行环境配置
 ├── .gitignore
 └── README.md                                  # 当前说明
@@ -120,7 +122,7 @@ streamlit run eda_lab/app.py
 
 ## 6. 可复现性、AI 说明与自动检查
 
-课程强调：**Notebook 最终输出应保留、运行过程能够重现、搜索单元可以跳过而不破坏最终模型部分**。仓库包含 `.github/workflows/run_baseline.yml`，用于在 GitHub Actions 环境可用且有写入权限时，对英文 Baseline 执行真实 Canvas 数据，并将产生的结果同步到中文版 Notebook。该自动检查是额外辅助，**成功前不能当作已完成的实测验证**。若动作运行失败，请查看 Actions 日志并在本地复跑；不要填入估算成绩。脚本是 `scripts/execute_baseline.py`。
+课程强调：**Notebook 最终输出应保留、运行过程能够重现、搜索单元可以跳过而不破坏最终模型部分**。仓库包含 `.github/workflows/run_baseline.yml`，用于在 GitHub Actions 环境可用且有写入权限时，对英文 Baseline 执行真实 Canvas 数据，并将产生的结果同步到中文版 Notebook。该自动检查是额外辅助，**成功前不能当作已完成的实测验证**。若动作运行失败，请查看 Actions 日志并在本地复跑；不要填入估算成绩。脚本是 `scripts/execute_baseline.py`。此外 `eda_smoke.yml` 在 EDA 工具更新时执行真实 Canvas 数据上的页面冒烟测试，辅助发现语法、页面渲染或依赖错误。
 
 本仓库 Notebook 的初始结构、Baseline 实现、EDA 工具及这些协作说明由 **ChatGPT（OpenAI）** 辅助起草。最终提交时须根据实际使用情况，在**Notebook 和报告中**完整、准确填写 AI 使用声明，并对代码、结果和学术论证进行小组审查。
 
