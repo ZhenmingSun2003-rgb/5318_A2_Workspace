@@ -1,0 +1,21 @@
+name: comp5318-a2
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy=1.26.4
+  - pandas=2.2.3
+  - scipy=1.14.*
+  - scikit-learn=1.5.2
+  - matplotlib=3.9.2
+  - seaborn=0.13.2
+  - pillow=10.4.0
+  - streamlit=1.39.0
+  - plotly=5.24.1
+  - jupyterlab=4.2.*
+  - ipykernel=6.29.*
+  - nbconvert=7.16.*
+  - nbclient=0.10.*
+  - pip
+  - pip:
+      - tensorflow==2.17.1

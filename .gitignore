@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.venv/
+venv/
+.env
+.env.*
+!*.example
+.DS_Store
+Thumbs.db
+*.log
+.conda/
+streamlit.log
+.eda-cache/
