@@ -154,7 +154,7 @@ with tab2:
     cols = st.columns(4)
     for j, ix in enumerate(sample_indices):
         with cols[j % 4]:
-            st.image(rgb_image(X[ix], divisor), caption=f"训练索引 {ix}", use_container_width=True)
+            st.image(rgb_image(X[ix], divisor), caption=f"训练索引 {ix}", use_column_width=True)
     st.caption(
         "每张图像是 28×28 的 RGB 切片块。仅凭这种低分辨率图片，"
         "不宜推断病患信息或做临床诊断；此处用于理解视觉特征和潜在混淆。"
