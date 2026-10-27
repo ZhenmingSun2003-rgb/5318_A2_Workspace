@@ -1,0 +1,237 @@
+[2026-10-27T08:55:33.855833+00:00] START mlp; source=/workspace/repo/MLP.ipynb; sha256=5297efd9faca2593d87d6304a93de411914fdece974c1f8609d6cd271057027f; original_cells=32
+[2026-10-27T08:55:35.608105+00:00] BEGIN source_cell=4
+[2026-10-27T08:55:40.928792+00:00] END source_cell=4 seconds=5.320 outputs=2
+--- source cell 4 outputs ---
+2026-10-27 08:55:37.700616: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-10-27 08:55:37.803321: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-10-27 08:55:37.818905: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+
+{
+  "python": "3.11.11",
+  "numpy": "1.26.4",
+  "pandas": "2.2.3",
+  "scikit_learn": "1.5.2",
+  "tensorflow": "2.17.1",
+  "keras": "3.6.0",
+  "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+  "processor": "",
+  "logical_cpu_count": 16,
+  "seed": 5318,
+  "devices": [
+    "/physical_device:CPU:0"
+  ],
+  "intra_op_threads": 4,
+  "inter_op_threads": 2,
+  "deterministic_ops": true
+}
+
+--- end cell 4 ---
+[2026-10-27T08:55:40.939348+00:00] BEGIN source_cell=6
+[2026-10-27T08:55:41.637386+00:00] END source_cell=6 seconds=0.698 outputs=2
+--- source cell 6 outputs ---
+{
+  "fit_indices_sha256": "191d1629061294ebe7e01fe7a79ac57739fced43795161a0c6b821241311c571",
+  "validation_indices_sha256": "c07d9573b52ee95cb6bd73390fde64f9c2dccd1c2ab14c244a479b1aa0dd3718"
+}
+Train (25600, 28, 28, 3) Val (6400, 28, 28, 3) Test (8000, 28, 28, 3) Labels [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Training dtype: uint8 | pixel divisor: 255.0
+Flattened fit/validation shapes: (25600, 2352) (6400, 2352)
+
+   class_id                            class_name  original_train   fit  \
+0         0                               Adipose            3490  2792   
+1         1                            Background            3431  2745   
+2         2                                Debris            3505  2804   
+3         3                           Lymphocytes            3656  2925   
+4         4                                 Mucus            2950  2360   
+5         5                         Smooth muscle            4290  3432   
+6         6                   Normal colon mucosa            2728  2182   
+7         7              Cancer-associated stroma            3253  2602   
+8         8  Colorectal adenocarcinoma epithelium            4697  3758   
+
+   validation  
+0         698  
+1         686  
+2         701  
+3         731  
+4         590  
+5         858  
+6         546  
+7         651  
+8         939  
+--- end cell 6 ---
+[2026-10-27T08:55:41.646845+00:00] BEGIN source_cell=8
+[2026-10-27T08:55:42.645110+00:00] END source_cell=8 seconds=0.998 outputs=0
+[2026-10-27T08:55:42.653492+00:00] BEGIN source_cell=12
+[2026-10-27T08:55:42.923589+00:00] END source_cell=12 seconds=0.270 outputs=6
+--- source cell 12 outputs ---
+[1mModel: "pathmnist_mlp"[0m
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃[1m [0m[1mLayer (type)                   [0m[1m [0m┃[1m [0m[1mOutput Shape          [0m[1m [0m┃[1m [0m[1m      Param #[0m[1m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ dense ([38;5;33mDense[0m)                   │ ([38;5;45mNone[0m, [38;5;34m128[0m)            │       [38;5;34m301,184[0m │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dropout ([38;5;33mDropout[0m)               │ ([38;5;45mNone[0m, [38;5;34m128[0m)            │             [38;5;34m0[0m │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_1 ([38;5;33mDense[0m)                 │ ([38;5;45mNone[0m, [38;5;34m9[0m)              │         [38;5;34m1,161[0m │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+
+[1m Total params: [0m[38;5;34m302,345[0m (1.15 MB)
+
+[1m Trainable params: [0m[38;5;34m302,345[0m (1.15 MB)
+
+[1m Non-trainable params: [0m[38;5;34m0[0m (0.00 B)
+
+Macro-F1 streaming/reset and parameter-count checks passed.
+
+--- end cell 12 ---
+[2026-10-27T08:55:42.932563+00:00] BEGIN source_cell=13
+[2026-10-27T08:55:46.606956+00:00] END source_cell=13 seconds=3.674 outputs=6
+--- source cell 13 outputs ---
+Epoch 1/2
+
+200/200 - 2s - 9ms/step - accuracy: 0.2304 - loss: 2.0578 - macro_f1: 0.1711 - val_accuracy: 0.2748 - val_loss: 1.8658 - val_macro_f1: 0.1692
+
+Epoch 2/2
+
+200/200 - 1s - 4ms/step - accuracy: 0.3052 - loss: 1.8138 - macro_f1: 0.2677 - val_accuracy: 0.3381 - val_loss: 1.7605 - val_macro_f1: 0.2758
+
+   hidden_units  learning_rate  dropout_rate  batch_size  max_epochs  \
+0           128          0.001           0.0         128           2   
+
+   patience  validation_accuracy  validation_macro_f1  \
+0         3              0.33812              0.27585   
+
+   validation_balanced_accuracy  fit_seconds  validation_seconds  \
+0                       0.33327      2.60727             0.13394   
+
+   training_epoch_seconds  in_fit_validation_seconds  epochs_run  best_epoch  \
+0                 2.26517                    0.31302           2           2   
+
+   parameters  seed  fit_samples  validation_samples  
+0      302345  5318        25600                6400  
+4356
+--- end cell 13 ---
+[2026-10-27T08:55:46.616204+00:00] SKIP source_cell=18 final_only mode
+[2026-10-27T08:55:46.616565+00:00] BEGIN source_cell=19
+[2026-10-27T08:55:47.142936+00:00] END source_cell=19 seconds=0.526 outputs=6
+--- source cell 19 outputs ---
+
+Descriptive grid averages: hidden_units
+
+              validation_macro_f1  fit_seconds
+hidden_units                                  
+128                       0.28783      7.34585
+256                       0.38256      9.24420
+
+Descriptive grid averages: learning_rate
+
+               validation_macro_f1  fit_seconds
+learning_rate                                  
+0.0003                     0.37443      9.68387
+0.0010                     0.29596      6.90618
+
+Descriptive grid averages: dropout_rate
+
+              validation_macro_f1  fit_seconds
+dropout_rate                                  
+0.0                       0.40407      8.84082
+0.3                       0.26632      7.74923
+--- end cell 19 ---
+[2026-10-27T08:55:47.152509+00:00] BEGIN source_cell=25
+[2026-10-27T08:55:47.160014+00:00] END source_cell=25 seconds=0.007 outputs=1
+--- source cell 25 outputs ---
+Frozen MLP parameters: {'hidden_units': 256, 'learning_rate': 0.001, 'dropout_rate': 0.0}
+Fixed full-data epochs: 10
+Recorded validation selection: {'trial_id': 5, 'macro_f1': 0.4245453119342078, 'accuracy': 0.46828125, 'balanced_accuracy': 0.4624929838057703}
+
+--- end cell 25 ---
+[2026-10-27T08:55:47.169906+00:00] BEGIN source_cell=26
+[2026-10-27T08:56:02.484879+00:00] END source_cell=26 seconds=15.314 outputs=21
+--- source cell 26 outputs ---
+Epoch 1/10
+
+250/250 - 2s - 9ms/step - accuracy: 0.2429 - loss: 2.0129 - macro_f1: 0.2031
+
+Epoch 2/10
+
+250/250 - 1s - 6ms/step - accuracy: 0.3238 - loss: 1.7905 - macro_f1: 0.3009
+
+Epoch 3/10
+
+250/250 - 1s - 5ms/step - accuracy: 0.3884 - loss: 1.6772 - macro_f1: 0.3636
+
+Epoch 4/10
+
+250/250 - 1s - 5ms/step - accuracy: 0.4035 - loss: 1.6267 - macro_f1: 0.3766
+
+Epoch 5/10
+
+250/250 - 1s - 5ms/step - accuracy: 0.4235 - loss: 1.5773 - macro_f1: 0.3873
+
+Epoch 6/10
+
+250/250 - 1s - 5ms/step - accuracy: 0.4288 - loss: 1.5522 - macro_f1: 0.3931
+
+Epoch 7/10
+
+250/250 - 1s - 5ms/step - accuracy: 0.4421 - loss: 1.5206 - macro_f1: 0.4067
+
+Epoch 8/10
+
+250/250 - 1s - 5ms/step - accuracy: 0.4492 - loss: 1.4992 - macro_f1: 0.4079
+
+Epoch 9/10
+
+250/250 - 1s - 6ms/step - accuracy: 0.4537 - loss: 1.4807 - macro_f1: 0.4143
+
+Epoch 10/10
+
+250/250 - 1s - 5ms/step - accuracy: 0.4663 - loss: 1.4703 - macro_f1: 0.4285
+
+Final fit: 32000 images, 10 epochs, 14.411 s, 604,681 parameters
+
+--- end cell 26 ---
+[2026-10-27T08:56:02.494935+00:00] BEGIN source_cell=27
+[2026-10-27T08:56:03.037289+00:00] END source_cell=27 seconds=0.542 outputs=2
+--- source cell 27 outputs ---
+                                                                    value
+model                                                                 MLP
+best_hyperparameters    {"dropout_rate": 0.0, "hidden_units": 256, "le...
+validation_macro_f1                                              0.424545
+test_accuracy                                                     0.48925
+test_macro_f1                                                    0.438672
+test_balanced_accuracy                                           0.469945
+fit_seconds                                                     14.411153
+prediction_seconds                                               0.190455
+parameters                                                         604681
+epochs                                                                 10
+search_fit_samples                                                  25600
+validation_samples                                                   6400
+train_samples                                                       32000
+test_samples                                                         8000
+seed                                                                 5318
+                                      precision  recall  f1-score    support
+Adipose                                  0.7327  0.9576    0.8302   873.0000
+Background                               0.7287  0.6387    0.6807   858.0000
+Debris                                   0.3948  0.1391    0.2057   877.0000
+Lymphocytes                              0.4650  0.6827    0.5532   914.0000
+Mucus                                    0.5349  0.5305    0.5327   737.0000
+Smooth muscle                            0.3843  0.4552    0.4167  1072.0000
+Normal colon mucosa                      0.2857  0.0323    0.0580   682.0000
+Cancer-associated stroma                 0.2781  0.1341    0.1809   813.0000
+Colorectal adenocarcinoma epithelium     0.3897  0.6593    0.4899  1174.0000
+accuracy                                 0.4892  0.4892    0.4892     0.4892
+macro avg                                0.4660  0.4699    0.4387  8000.0000
+weighted avg                             0.4651  0.4892    0.4495  8000.0000
+--- end cell 27 ---
+[2026-10-27T08:56:03.048020+00:00] BEGIN source_cell=28
+[2026-10-27T08:56:03.427550+00:00] END source_cell=28 seconds=0.379 outputs=2
+--- source cell 28 outputs ---
+Largest directed confusions (count, true class, predicted class): [(321, 2, 5), (285, 6, 8), (250, 7, 8), (242, 2, 8), (240, 7, 5)]
+
+<IPython.core.display.Markdown object>
+--- end cell 28 ---
+[2026-10-27T08:56:03.439214+00:00] BEGIN audit_export_cell=32
+[2026-10-27T08:56:03.454612+00:00] END audit_export_cell outputs=1
+[2026-10-27T08:56:04.723220+00:00] COMPLETE mlp: PASS; wall_seconds=30.827

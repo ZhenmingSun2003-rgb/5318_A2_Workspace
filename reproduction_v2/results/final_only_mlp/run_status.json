@@ -1,0 +1,15 @@
+{
+  "model": "mlp",
+  "mode": "final_only",
+  "started_at": "2026-10-27T08:55:33.851543+00:00",
+  "source_sha256": "5297efd9faca2593d87d6304a93de411914fdece974c1f8609d6cd271057027f",
+  "original_cells": 32,
+  "completed_original_code_cells": 10,
+  "skipped_source_cells": [
+    18
+  ],
+  "audit_cell_executed": true,
+  "status": "PASS",
+  "ended_at": "2026-10-27T08:56:04.678983+00:00",
+  "wall_seconds": 30.826849057000118
+}

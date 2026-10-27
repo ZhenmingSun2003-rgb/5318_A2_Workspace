@@ -1,0 +1,55 @@
+{
+  "commit": "0f2ffeaa118a82a39f4d2585ceca6e1d691e5036",
+  "notebooks": {
+    "baseline.ipynb": {
+      "source": "A: baseline.ipynb Cell 4 保存输出",
+      "saved_text": "Seed: 5318 | Python: 3.11.17 | NumPy: 1.26.4 | scikit-learn: 1.5.2\nMachine: Linux-6.17.0-1022-azure-x86_64-with-glibc2.39\nOriginal Canvas data: /home/runner/work/5318_A2_Workspace/5318_A2_Workspace/Canvas Sources/Assignment2Data-1/Assignment2Data\n"
+    },
+    "Naive_Bayes.ipynb": {
+      "source": "D",
+      "saved_text": null
+    },
+    "MLP.ipynb": {
+      "source": "A: MLP.ipynb Cell 4 保存输出",
+      "values": {
+        "python": "3.11.15",
+        "numpy": "1.26.4",
+        "pandas": "2.2.3",
+        "scikit_learn": "1.5.2",
+        "tensorflow": "2.17.1",
+        "keras": "3.6.0",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 189 Stepping 1, GenuineIntel",
+        "logical_cpu_count": 8,
+        "seed": 5318,
+        "devices": [
+          "/physical_device:CPU:0"
+        ],
+        "intra_op_threads": 4,
+        "inter_op_threads": 2,
+        "deterministic_ops": true
+      }
+    },
+    "CNN.ipynb": {
+      "source": "A: CNN.ipynb Cell 3 保存输出",
+      "values": {
+        "seed": 5318,
+        "python": "3.12.14",
+        "numpy": "1.26.4",
+        "pandas": "2.2.3",
+        "scikit_learn": "1.5.2",
+        "tensorflow": "2.17.1",
+        "keras": "3.5.0",
+        "platform": "macOS-26.3-arm64-arm-64bit",
+        "machine": "arm64",
+        "logical_cpu_count": 10,
+        "tensorflow_devices": [
+          "/physical_device:CPU:0"
+        ],
+        "intra_op_threads": 4,
+        "inter_op_threads": 2,
+        "deterministic_ops": true
+      }
+    }
+  }
+}

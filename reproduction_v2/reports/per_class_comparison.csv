@@ -1,0 +1,73 @@
+model,class_id,class_name,metric,v1_value,v2_value,absolute_difference,status,evidence
+nearest_centroid,0,Adipose,recall,0.96,0.9599083619702177,9.163802978229274e-05,SMALL DIFFERENCE,V1 baseline.ipynb classification report; V2 verified_metrics.json
+nearest_centroid,0,Adipose,f1,0.788,0.7879642689233662,3.573107663379371e-05,MATCHES PRINTED PRECISION,V1 baseline.ipynb classification report; V2 verified_metrics.json
+nearest_centroid,1,Background,recall,0.67,0.6701631701631702,0.00016317016317013433,SMALL DIFFERENCE,V1 baseline.ipynb classification report; V2 verified_metrics.json
+nearest_centroid,1,Background,f1,0.543,0.5427088249174139,0.000291175082586137,SMALL DIFFERENCE,V1 baseline.ipynb classification report; V2 verified_metrics.json
+nearest_centroid,2,Debris,recall,0.268,0.26795895096921324,4.104903078677724e-05,MATCHES PRINTED PRECISION,V1 baseline.ipynb classification report; V2 verified_metrics.json
+nearest_centroid,2,Debris,f1,0.29,0.2904820766378245,0.0004820766378245134,SMALL DIFFERENCE,V1 baseline.ipynb classification report; V2 verified_metrics.json
+nearest_centroid,3,Lymphocytes,recall,0.435,0.43544857768052514,0.0004485776805251418,SMALL DIFFERENCE,V1 baseline.ipynb classification report; V2 verified_metrics.json
+nearest_centroid,3,Lymphocytes,f1,0.556,0.5562543675751223,0.0002543675751222052,SMALL DIFFERENCE,V1 baseline.ipynb classification report; V2 verified_metrics.json
+nearest_centroid,4,Mucus,recall,0.577,0.576662143826323,0.00033785617367698695,SMALL DIFFERENCE,V1 baseline.ipynb classification report; V2 verified_metrics.json
+nearest_centroid,4,Mucus,f1,0.394,0.3942486085343228,0.00024860853432279173,SMALL DIFFERENCE,V1 baseline.ipynb classification report; V2 verified_metrics.json
+nearest_centroid,5,Smooth muscle,recall,0.283,0.2826492537313433,0.00035074626865666536,SMALL DIFFERENCE,V1 baseline.ipynb classification report; V2 verified_metrics.json
+nearest_centroid,5,Smooth muscle,f1,0.363,0.36330935251798563,0.00030935251798563934,SMALL DIFFERENCE,V1 baseline.ipynb classification report; V2 verified_metrics.json
+nearest_centroid,6,Normal colon mucosa,recall,0.199,0.19941348973607037,0.00041348973607036044,SMALL DIFFERENCE,V1 baseline.ipynb classification report; V2 verified_metrics.json
+nearest_centroid,6,Normal colon mucosa,f1,0.199,0.19883040935672514,0.00016959064327487505,SMALL DIFFERENCE,V1 baseline.ipynb classification report; V2 verified_metrics.json
+nearest_centroid,7,Cancer-associated stroma,recall,0.154,0.15375153751537515,0.0002484624846248451,SMALL DIFFERENCE,V1 baseline.ipynb classification report; V2 verified_metrics.json
+nearest_centroid,7,Cancer-associated stroma,f1,0.19,0.1902587519025875,0.00025875190258750624,SMALL DIFFERENCE,V1 baseline.ipynb classification report; V2 verified_metrics.json
+nearest_centroid,8,Colorectal adenocarcinoma epithelium,recall,0.347,0.34667802385008517,0.0003219761499148044,SMALL DIFFERENCE,V1 baseline.ipynb classification report; V2 verified_metrics.json
+nearest_centroid,8,Colorectal adenocarcinoma epithelium,f1,0.37,0.37016825829922695,0.00016825829922695323,SMALL DIFFERENCE,V1 baseline.ipynb classification report; V2 verified_metrics.json
+gaussian_nb,0,0,recall,0.9381,0.9381443298969072,4.4329896907169264e-05,MATCHES PRINTED PRECISION,V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json
+gaussian_nb,0,0,f1,0.7822,0.7822349570200573,3.495702005729129e-05,MATCHES PRINTED PRECISION,V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json
+gaussian_nb,1,1,recall,0.6445,0.6445221445221445,2.2144522144551537e-05,MATCHES PRINTED PRECISION,V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json
+gaussian_nb,1,1,f1,0.6663,0.6662650602409639,3.493975903612334e-05,MATCHES PRINTED PRECISION,V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json
+gaussian_nb,2,2,recall,0.1026,0.10262257696693272,2.2576966932724707e-05,MATCHES PRINTED PRECISION,V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json
+gaussian_nb,2,2,f1,0.132,0.13196480938416422,3.519061583578953e-05,MATCHES PRINTED PRECISION,V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json
+gaussian_nb,3,3,recall,0.6214,0.6214442013129103,4.420131291038576e-05,MATCHES PRINTED PRECISION,V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json
+gaussian_nb,3,3,f1,0.4993,0.49934065934065935,4.065934065933252e-05,MATCHES PRINTED PRECISION,V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json
+gaussian_nb,4,4,recall,0.4749,0.47489823609226595,1.763907734042558e-06,MATCHES PRINTED PRECISION,V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json
+gaussian_nb,4,4,f1,0.4016,0.40160642570281124,6.425702811230227e-06,MATCHES PRINTED PRECISION,V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json
+gaussian_nb,5,5,recall,0.0756,0.07555970149253731,4.0298507462691036e-05,MATCHES PRINTED PRECISION,V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json
+gaussian_nb,5,5,f1,0.1297,0.1297037630104083,3.763010408303069e-06,MATCHES PRINTED PRECISION,V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json
+gaussian_nb,6,6,recall,0.2155,0.2155425219941349,4.2521994134903096e-05,MATCHES PRINTED PRECISION,V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json
+gaussian_nb,6,6,f1,0.2398,0.2398042414355628,4.241435562796214e-06,MATCHES PRINTED PRECISION,V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json
+gaussian_nb,7,7,recall,0.6298,0.6297662976629766,3.370233702337799e-05,MATCHES PRINTED PRECISION,V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json
+gaussian_nb,7,7,f1,0.381,0.38095238095238093,4.7619047619074095e-05,MATCHES PRINTED PRECISION,V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json
+gaussian_nb,8,8,recall,0.1738,0.1737649063032368,3.50936967632165e-05,MATCHES PRINTED PRECISION,V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json
+gaussian_nb,8,8,f1,0.2399,0.23985890652557318,4.109347442682321e-05,MATCHES PRINTED PRECISION,V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json
+mlp,0,Adipose,recall,0.9645,0.9576174112256587,0.006882588774341336,SMALL DIFFERENCE,V1 MLP.ipynb classification report; V2 verified_metrics.json
+mlp,0,Adipose,f1,0.8259,0.8301886792452831,0.004288679245283089,SMALL DIFFERENCE,V1 MLP.ipynb classification report; V2 verified_metrics.json
+mlp,1,Background,recall,0.6399,0.6386946386946387,0.0012053613053613077,SMALL DIFFERENCE,V1 MLP.ipynb classification report; V2 verified_metrics.json
+mlp,1,Background,f1,0.6906,0.6807453416149069,0.00985465838509314,SMALL DIFFERENCE,V1 MLP.ipynb classification report; V2 verified_metrics.json
+mlp,2,Debris,recall,0.138,0.13911060433295325,0.0011106043329532356,SMALL DIFFERENCE,V1 MLP.ipynb classification report; V2 verified_metrics.json
+mlp,2,Debris,f1,0.2214,0.2057335581787521,0.015666441821247906,NOTICE (>0.01),V1 MLP.ipynb classification report; V2 verified_metrics.json
+mlp,3,Lymphocytes,recall,0.6685,0.6827133479212254,0.014213347921225417,NOTICE (>0.01),V1 MLP.ipynb classification report; V2 verified_metrics.json
+mlp,3,Lymphocytes,f1,0.5509,0.5531914893617021,0.0022914893617022036,SMALL DIFFERENCE,V1 MLP.ipynb classification report; V2 verified_metrics.json
+mlp,4,Mucus,recall,0.5292,0.5305291723202171,0.0013291723202171202,SMALL DIFFERENCE,V1 MLP.ipynb classification report; V2 verified_metrics.json
+mlp,4,Mucus,f1,0.5186,0.5326975476839237,0.014097547683923795,NOTICE (>0.01),V1 MLP.ipynb classification report; V2 verified_metrics.json
+mlp,5,Smooth muscle,recall,0.4422,0.4552238805970149,0.013023880597014925,NOTICE (>0.01),V1 MLP.ipynb classification report; V2 verified_metrics.json
+mlp,5,Smooth muscle,f1,0.4311,0.41673783091374894,0.014362169086251042,NOTICE (>0.01),V1 MLP.ipynb classification report; V2 verified_metrics.json
+mlp,6,Normal colon mucosa,recall,0.0821,0.03225806451612903,0.049841935483870975,INVESTIGATE (>0.02),V1 MLP.ipynb classification report; V2 verified_metrics.json
+mlp,6,Normal colon mucosa,f1,0.1322,0.057971014492753624,0.07422898550724638,SIGNIFICANT RISK (>0.05),V1 MLP.ipynb classification report; V2 verified_metrics.json
+mlp,7,Cancer-associated stroma,recall,0.1279,0.13407134071340712,0.0061713407134071085,SMALL DIFFERENCE,V1 MLP.ipynb classification report; V2 verified_metrics.json
+mlp,7,Cancer-associated stroma,f1,0.1813,0.18091286307053941,0.0003871369294605742,SMALL DIFFERENCE,V1 MLP.ipynb classification report; V2 verified_metrics.json
+mlp,8,Colorectal adenocarcinoma epithelium,recall,0.7019,0.6592844974446337,0.04261550255536628,INVESTIGATE (>0.02),V1 MLP.ipynb classification report; V2 verified_metrics.json
+mlp,8,Colorectal adenocarcinoma epithelium,f1,0.49,0.489873417721519,0.00012658227848100223,SMALL DIFFERENCE,V1 MLP.ipynb classification report; V2 verified_metrics.json
+cnn,0,Adipose,recall,0.9759,0.9736540664375716,0.002245933562428415,SMALL DIFFERENCE,V1 CNN.ipynb classification report; V2 verified_metrics.json
+cnn,0,Adipose,f1,0.9059,0.9032943676939427,0.0026056323060573705,SMALL DIFFERENCE,V1 CNN.ipynb classification report; V2 verified_metrics.json
+cnn,1,Background,recall,0.9231,0.9300699300699301,0.006969930069930075,SMALL DIFFERENCE,V1 CNN.ipynb classification report; V2 verified_metrics.json
+cnn,1,Background,f1,0.9468,0.9516994633273703,0.004899463327370346,SMALL DIFFERENCE,V1 CNN.ipynb classification report; V2 verified_metrics.json
+cnn,2,Debris,recall,0.2645,0.39110604332953247,0.12660604332953246,SIGNIFICANT RISK (>0.05),V1 CNN.ipynb classification report; V2 verified_metrics.json
+cnn,2,Debris,f1,0.4024,0.5066469719350074,0.10424697193500743,SIGNIFICANT RISK (>0.05),V1 CNN.ipynb classification report; V2 verified_metrics.json
+cnn,3,Lymphocytes,recall,0.953,0.9529540481400438,4.5951859956150365e-05,SMALL DIFFERENCE,V1 CNN.ipynb classification report; V2 verified_metrics.json
+cnn,3,Lymphocytes,f1,0.9217,0.9168421052631579,0.004857894736842061,SMALL DIFFERENCE,V1 CNN.ipynb classification report; V2 verified_metrics.json
+cnn,4,Mucus,recall,0.6866,0.6879240162822252,0.0013240162822252266,SMALL DIFFERENCE,V1 CNN.ipynb classification report; V2 verified_metrics.json
+cnn,4,Mucus,f1,0.6898,0.7051460361613352,0.01534603616133523,NOTICE (>0.01),V1 CNN.ipynb classification report; V2 verified_metrics.json
+cnn,5,Smooth muscle,recall,0.764,0.7220149253731343,0.04198507462686574,INVESTIGATE (>0.02),V1 CNN.ipynb classification report; V2 verified_metrics.json
+cnn,5,Smooth muscle,f1,0.7,0.7133640552995392,0.013364055299539213,NOTICE (>0.01),V1 CNN.ipynb classification report; V2 verified_metrics.json
+cnn,6,Normal colon mucosa,recall,0.4897,0.5146627565982405,0.024962756598240432,INVESTIGATE (>0.02),V1 CNN.ipynb classification report; V2 verified_metrics.json
+cnn,6,Normal colon mucosa,f1,0.5521,0.5549407114624506,0.0028407114624505736,SMALL DIFFERENCE,V1 CNN.ipynb classification report; V2 verified_metrics.json
+cnn,7,Cancer-associated stroma,recall,0.433,0.5092250922509225,0.0762250922509225,SIGNIFICANT RISK (>0.05),V1 CNN.ipynb classification report; V2 verified_metrics.json
+cnn,7,Cancer-associated stroma,f1,0.4467,0.5054945054945055,0.05879450549450549,SIGNIFICANT RISK (>0.05),V1 CNN.ipynb classification report; V2 verified_metrics.json
+cnn,8,Colorectal adenocarcinoma epithelium,recall,0.856,0.8568994889267462,0.0008994889267461836,SMALL DIFFERENCE,V1 CNN.ipynb classification report; V2 verified_metrics.json
+cnn,8,Colorectal adenocarcinoma epithelium,f1,0.7153,0.7518684603886397,0.0365684603886397,INVESTIGATE (>0.02),V1 CNN.ipynb classification report; V2 verified_metrics.json

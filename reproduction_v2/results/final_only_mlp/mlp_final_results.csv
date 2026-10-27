@@ -1,0 +1,2 @@
+model,best_hyperparameters,validation_macro_f1,test_accuracy,test_macro_f1,test_balanced_accuracy,fit_seconds,prediction_seconds,parameters,epochs,search_fit_samples,validation_samples,train_samples,test_samples,seed
+MLP,"{""dropout_rate"": 0.0, ""hidden_units"": 256, ""learning_rate"": 0.001}",0.4245453119342078,0.48925,0.43867241580923655,0.4699447730850976,14.411153498999965,0.19045527399998718,604681,10,25600,6400,32000,8000,5318

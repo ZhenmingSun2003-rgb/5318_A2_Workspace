@@ -1,0 +1,117 @@
+[2026-10-27T08:36:17.708973+00:00] START mlp; source=/workspace/repo/MLP.ipynb; sha256=5297efd9faca2593d87d6304a93de411914fdece974c1f8609d6cd271057027f; original_cells=32
+[2026-10-27T08:36:18.792302+00:00] BEGIN source_cell=4
+[2026-10-27T08:36:21.673736+00:00] END source_cell=4 seconds=2.880 outputs=2
+--- source cell 4 outputs ---
+2026-10-27 08:36:20.109392: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-10-27 08:36:20.122333: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-10-27 08:36:20.126032: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+
+{
+  "python": "3.11.11",
+  "numpy": "1.26.4",
+  "pandas": "2.2.3",
+  "scikit_learn": "1.5.2",
+  "tensorflow": "2.17.1",
+  "keras": "3.6.0",
+  "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+  "processor": "",
+  "logical_cpu_count": 16,
+  "seed": 5318,
+  "devices": [
+    "/physical_device:CPU:0"
+  ],
+  "intra_op_threads": 4,
+  "inter_op_threads": 2,
+  "deterministic_ops": true
+}
+
+--- end cell 4 ---
+[2026-10-27T08:36:21.681948+00:00] BEGIN source_cell=6
+[2026-10-27T08:36:22.360530+00:00] END source_cell=6 seconds=0.678 outputs=2
+--- source cell 6 outputs ---
+{
+  "fit_indices_sha256": "191d1629061294ebe7e01fe7a79ac57739fced43795161a0c6b821241311c571",
+  "validation_indices_sha256": "c07d9573b52ee95cb6bd73390fde64f9c2dccd1c2ab14c244a479b1aa0dd3718"
+}
+Train (25600, 28, 28, 3) Val (6400, 28, 28, 3) Test (8000, 28, 28, 3) Labels [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Training dtype: uint8 | pixel divisor: 255.0
+Flattened fit/validation shapes: (25600, 2352) (6400, 2352)
+
+   class_id                            class_name  original_train   fit  \
+0         0                               Adipose            3490  2792   
+1         1                            Background            3431  2745   
+2         2                                Debris            3505  2804   
+3         3                           Lymphocytes            3656  2925   
+4         4                                 Mucus            2950  2360   
+5         5                         Smooth muscle            4290  3432   
+6         6                   Normal colon mucosa            2728  2182   
+7         7              Cancer-associated stroma            3253  2602   
+8         8  Colorectal adenocarcinoma epithelium            4697  3758   
+
+   validation  
+0         698  
+1         686  
+2         701  
+3         731  
+4         590  
+5         858  
+6         546  
+7         651  
+8         939  
+--- end cell 6 ---
+[2026-10-27T08:36:22.368463+00:00] BEGIN source_cell=8
+[2026-10-27T08:36:23.403006+00:00] END source_cell=8 seconds=1.034 outputs=0
+[2026-10-27T08:36:23.411670+00:00] BEGIN source_cell=12
+[2026-10-27T08:36:23.666903+00:00] END source_cell=12 seconds=0.255 outputs=6
+--- source cell 12 outputs ---
+[1mModel: "pathmnist_mlp"[0m
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃[1m [0m[1mLayer (type)                   [0m[1m [0m┃[1m [0m[1mOutput Shape          [0m[1m [0m┃[1m [0m[1m      Param #[0m[1m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ dense ([38;5;33mDense[0m)                   │ ([38;5;45mNone[0m, [38;5;34m128[0m)            │       [38;5;34m301,184[0m │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dropout ([38;5;33mDropout[0m)               │ ([38;5;45mNone[0m, [38;5;34m128[0m)            │             [38;5;34m0[0m │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_1 ([38;5;33mDense[0m)                 │ ([38;5;45mNone[0m, [38;5;34m9[0m)              │         [38;5;34m1,161[0m │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+
+[1m Total params: [0m[38;5;34m302,345[0m (1.15 MB)
+
+[1m Trainable params: [0m[38;5;34m302,345[0m (1.15 MB)
+
+[1m Non-trainable params: [0m[38;5;34m0[0m (0.00 B)
+
+Macro-F1 streaming/reset and parameter-count checks passed.
+
+--- end cell 12 ---
+[2026-10-27T08:36:23.676141+00:00] BEGIN source_cell=13
+[2026-10-27T08:36:27.524224+00:00] END source_cell=13 seconds=3.848 outputs=6
+--- source cell 13 outputs ---
+Epoch 1/2
+
+200/200 - 2s - 9ms/step - accuracy: 0.2304 - loss: 2.0578 - macro_f1: 0.1711 - val_accuracy: 0.2748 - val_loss: 1.8658 - val_macro_f1: 0.1692
+
+Epoch 2/2
+
+200/200 - 1s - 4ms/step - accuracy: 0.3052 - loss: 1.8138 - macro_f1: 0.2677 - val_accuracy: 0.3381 - val_loss: 1.7605 - val_macro_f1: 0.2758
+
+   hidden_units  learning_rate  dropout_rate  batch_size  max_epochs  \
+0           128          0.001           0.0         128           2   
+
+   patience  validation_accuracy  validation_macro_f1  \
+0         3              0.33812              0.27585   
+
+   validation_balanced_accuracy  fit_seconds  validation_seconds  \
+0                       0.33327      2.64964             0.18515   
+
+   training_epoch_seconds  in_fit_validation_seconds  epochs_run  best_epoch  \
+0                 2.27146                    0.34624           2           2   
+
+   parameters  seed  fit_samples  validation_samples  
+0      302345  5318        25600                6400  
+4347
+--- end cell 13 ---
+[2026-10-27T08:36:27.534523+00:00] BEGIN source_cell=18
+[HOST] Docker Desktop backend restarted during source Cell 18; docker compose exited 125 unexpected EOF. Previous trial CSVs preserved.
+[HOST FOLLOW-UP] User reported manually closing and reopening Docker Desktop during this run; interruption is excluded from model failure assessment.

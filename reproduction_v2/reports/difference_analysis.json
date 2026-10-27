@@ -1,0 +1,589 @@
+{
+  "commit": "0f2ffeaa118a82a39f4d2585ceca6e1d691e5036",
+  "models": {
+    "mlp": {
+      "strict_run": "C:\\Users\\Saberken\\Downloads\\5318_A2_Workspace\\reproduction_v2\\runs\\20261027T083829Z_mlp_13872e7e",
+      "final_only_run": "C:\\Users\\Saberken\\Downloads\\5318_A2_Workspace\\reproduction_v2\\runs\\20261027T085530Z_mlp_final_only_1735dda5",
+      "strict_prediction_sha256": "745dffc303a113b74b5f01e04a302965936b20f88d131619d67531a0f94149dd",
+      "final_only_prediction_sha256": "745dffc303a113b74b5f01e04a302965936b20f88d131619d67531a0f94149dd",
+      "strict_final_only_predictions_identical": true,
+      "v1_final": {
+        "test_accuracy": 0.496375,
+        "test_macro_f1": 0.449128,
+        "test_balanced_accuracy": 0.477117,
+        "selected_epochs": 10
+      },
+      "v2_final": {
+        "test_accuracy": 0.48925,
+        "test_macro_f1": 0.43867241580923655,
+        "test_balanced_accuracy": 0.4699447730850976,
+        "selected_epochs": 10.0
+      },
+      "v1_frozen_hyperparameters": {
+        "hidden_units": 256,
+        "learning_rate": 0.001,
+        "dropout_rate": 0.0
+      },
+      "v2_search_best": {
+        "hidden_units": "256",
+        "learning_rate": "0.001",
+        "dropout_rate": "0.0",
+        "batch_size": "128",
+        "max_epochs": "12",
+        "patience": "3",
+        "validation_accuracy": "0.44546875",
+        "validation_macro_f1": "0.4288596287516593",
+        "validation_balanced_accuracy": "0.4438372652524023",
+        "fit_seconds": "15.202407861999973",
+        "validation_seconds": "0.17628685399995447",
+        "training_epoch_seconds": "13.775747518999651",
+        "in_fit_validation_seconds": "1.313987780000275",
+        "epochs_run": "12",
+        "best_epoch": "9",
+        "parameters": "604681",
+        "seed": "5318",
+        "fit_samples": "25600",
+        "validation_samples": "6400",
+        "trial_id": "5"
+      },
+      "v1_environment": {
+        "python": "3.11.15",
+        "numpy": "1.26.4",
+        "pandas": "2.2.3",
+        "scikit_learn": "1.5.2",
+        "tensorflow": "2.17.1",
+        "keras": "3.6.0",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 189 Stepping 1, GenuineIntel",
+        "logical_cpu_count": 8,
+        "seed": 5318,
+        "devices": [
+          "/physical_device:CPU:0"
+        ],
+        "intra_op_threads": 4,
+        "inter_op_threads": 2,
+        "deterministic_ops": true
+      },
+      "v2_environment": {
+        "python": "3.11.11",
+        "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+        "packages": {
+          "numpy": "1.26.4",
+          "pandas": "2.2.3",
+          "scikit-learn": "1.5.2",
+          "scipy": "1.14.1",
+          "matplotlib": "3.9.2",
+          "tensorflow": "2.17.1",
+          "keras": "3.6.0",
+          "ipykernel": "6.29.5",
+          "nbclient": "0.10.2",
+          "nbformat": "5.10.4",
+          "ipython": "8.30.0",
+          "pillow": "10.4.0"
+        },
+        "devices": [
+          "/physical_device:CPU:0"
+        ]
+      },
+      "training_trajectory": [
+        {
+          "epoch": 1,
+          "v1_loss_rounded": 2.0129,
+          "v2_loss": 2.0128893852233887,
+          "loss_delta_v2_minus_v1": -1.0614776611461707e-05,
+          "v1_accuracy_rounded": 0.2429,
+          "v2_accuracy": 0.24293750524520874,
+          "accuracy_delta_v2_minus_v1": 3.750524520873544e-05
+        },
+        {
+          "epoch": 2,
+          "v1_loss_rounded": 1.7905,
+          "v2_loss": 1.7905259132385254,
+          "loss_delta_v2_minus_v1": 2.5913238525410165e-05,
+          "v1_accuracy_rounded": 0.3238,
+          "v2_accuracy": 0.3238125145435333,
+          "accuracy_delta_v2_minus_v1": 1.2514543533348466e-05
+        },
+        {
+          "epoch": 3,
+          "v1_loss_rounded": 1.6776,
+          "v2_loss": 1.6771881580352783,
+          "loss_delta_v2_minus_v1": -0.0004118419647216598,
+          "v1_accuracy_rounded": 0.3878,
+          "v2_accuracy": 0.38837501406669617,
+          "accuracy_delta_v2_minus_v1": 0.0005750140666961889
+        },
+        {
+          "epoch": 4,
+          "v1_loss_rounded": 1.6242,
+          "v2_loss": 1.6267473697662354,
+          "loss_delta_v2_minus_v1": 0.0025473697662352635,
+          "v1_accuracy_rounded": 0.4039,
+          "v2_accuracy": 0.4035312533378601,
+          "accuracy_delta_v2_minus_v1": -0.00036874666213987384
+        },
+        {
+          "epoch": 5,
+          "v1_loss_rounded": 1.5735,
+          "v2_loss": 1.5772957801818848,
+          "loss_delta_v2_minus_v1": 0.003795780181884867,
+          "v1_accuracy_rounded": 0.4234,
+          "v2_accuracy": 0.42353126406669617,
+          "accuracy_delta_v2_minus_v1": 0.0001312640666961684
+        },
+        {
+          "epoch": 6,
+          "v1_loss_rounded": 1.5495,
+          "v2_loss": 1.5521742105484009,
+          "loss_delta_v2_minus_v1": 0.0026742105484007794,
+          "v1_accuracy_rounded": 0.432,
+          "v2_accuracy": 0.42884373664855957,
+          "accuracy_delta_v2_minus_v1": -0.003156263351440425
+        },
+        {
+          "epoch": 7,
+          "v1_loss_rounded": 1.5172,
+          "v2_loss": 1.5205687284469604,
+          "loss_delta_v2_minus_v1": 0.003368728446960345,
+          "v1_accuracy_rounded": 0.4448,
+          "v2_accuracy": 0.44209375977516174,
+          "accuracy_delta_v2_minus_v1": -0.00270624022483823
+        },
+        {
+          "epoch": 8,
+          "v1_loss_rounded": 1.4943,
+          "v2_loss": 1.4991896152496338,
+          "loss_delta_v2_minus_v1": 0.004889615249633827,
+          "v1_accuracy_rounded": 0.4557,
+          "v2_accuracy": 0.449156254529953,
+          "accuracy_delta_v2_minus_v1": -0.006543745470046991
+        },
+        {
+          "epoch": 9,
+          "v1_loss_rounded": 1.4765,
+          "v2_loss": 1.4807188510894775,
+          "loss_delta_v2_minus_v1": 0.0042188510894776154,
+          "v1_accuracy_rounded": 0.4579,
+          "v2_accuracy": 0.45365625619888306,
+          "accuracy_delta_v2_minus_v1": -0.004243743801116917
+        },
+        {
+          "epoch": 10,
+          "v1_loss_rounded": 1.4719,
+          "v2_loss": 1.4702789783477783,
+          "loss_delta_v2_minus_v1": -0.0016210216522216658,
+          "v1_accuracy_rounded": 0.4663,
+          "v2_accuracy": 0.4662500023841858,
+          "accuracy_delta_v2_minus_v1": -4.999761581420126e-05
+        }
+      ],
+      "largest_class_metric_differences": [
+        {
+          "model": "mlp",
+          "class_id": 6,
+          "class_name": "Normal colon mucosa",
+          "metric": "f1",
+          "v1_value": 0.1322,
+          "v2_value": 0.057971014492753624,
+          "absolute_difference": 0.07422898550724638,
+          "status": "SIGNIFICANT RISK (>0.05)",
+          "evidence": "V1 MLP.ipynb classification report; V2 verified_metrics.json"
+        },
+        {
+          "model": "mlp",
+          "class_id": 6,
+          "class_name": "Normal colon mucosa",
+          "metric": "recall",
+          "v1_value": 0.0821,
+          "v2_value": 0.03225806451612903,
+          "absolute_difference": 0.049841935483870975,
+          "status": "INVESTIGATE (>0.02)",
+          "evidence": "V1 MLP.ipynb classification report; V2 verified_metrics.json"
+        },
+        {
+          "model": "mlp",
+          "class_id": 8,
+          "class_name": "Colorectal adenocarcinoma epithelium",
+          "metric": "recall",
+          "v1_value": 0.7019,
+          "v2_value": 0.6592844974446337,
+          "absolute_difference": 0.04261550255536628,
+          "status": "INVESTIGATE (>0.02)",
+          "evidence": "V1 MLP.ipynb classification report; V2 verified_metrics.json"
+        },
+        {
+          "model": "mlp",
+          "class_id": 2,
+          "class_name": "Debris",
+          "metric": "f1",
+          "v1_value": 0.2214,
+          "v2_value": 0.2057335581787521,
+          "absolute_difference": 0.015666441821247906,
+          "status": "NOTICE (>0.01)",
+          "evidence": "V1 MLP.ipynb classification report; V2 verified_metrics.json"
+        },
+        {
+          "model": "mlp",
+          "class_id": 5,
+          "class_name": "Smooth muscle",
+          "metric": "f1",
+          "v1_value": 0.4311,
+          "v2_value": 0.41673783091374894,
+          "absolute_difference": 0.014362169086251042,
+          "status": "NOTICE (>0.01)",
+          "evidence": "V1 MLP.ipynb classification report; V2 verified_metrics.json"
+        }
+      ],
+      "macro_f1_class_contributions_from_rounded_v1": [
+        {
+          "class_id": 6,
+          "class_name": "Normal colon mucosa",
+          "f1_delta": -0.07422898550724638,
+          "macro_f1_contribution": -0.008247665056360709
+        },
+        {
+          "class_id": 2,
+          "class_name": "Debris",
+          "f1_delta": -0.015666441821247906,
+          "macro_f1_contribution": -0.001740715757916434
+        },
+        {
+          "class_id": 5,
+          "class_name": "Smooth muscle",
+          "f1_delta": -0.014362169086251042,
+          "macro_f1_contribution": -0.0015957965651390046
+        },
+        {
+          "class_id": 4,
+          "class_name": "Mucus",
+          "f1_delta": 0.014097547683923795,
+          "macro_f1_contribution": 0.0015663941871026437
+        },
+        {
+          "class_id": 1,
+          "class_name": "Background",
+          "f1_delta": -0.00985465838509314,
+          "macro_f1_contribution": -0.0010949620427881267
+        },
+        {
+          "class_id": 0,
+          "class_name": "Adipose",
+          "f1_delta": 0.004288679245283089,
+          "macro_f1_contribution": 0.00047651991614256547
+        },
+        {
+          "class_id": 3,
+          "class_name": "Lymphocytes",
+          "f1_delta": 0.0022914893617022036,
+          "macro_f1_contribution": 0.0002546099290780226
+        },
+        {
+          "class_id": 7,
+          "class_name": "Cancer-associated stroma",
+          "f1_delta": -0.0003871369294605742,
+          "macro_f1_contribution": -4.301521438450825e-05
+        },
+        {
+          "class_id": 8,
+          "class_name": "Colorectal adenocarcinoma epithelium",
+          "f1_delta": -0.00012658227848100223,
+          "macro_f1_contribution": -1.4064697609000248e-05
+        }
+      ]
+    },
+    "cnn": {
+      "strict_run": "C:\\Users\\Saberken\\Downloads\\5318_A2_Workspace\\reproduction_v2\\runs\\20261027T084038Z_cnn_85313f9d",
+      "final_only_run": "C:\\Users\\Saberken\\Downloads\\5318_A2_Workspace\\reproduction_v2\\runs\\20261027T085634Z_cnn_final_only_6e433c16",
+      "strict_prediction_sha256": "baa8aed260a4a00a4198049ac85e8218ef625f8fc695a87d8a953538d968b6ef",
+      "final_only_prediction_sha256": "baa8aed260a4a00a4198049ac85e8218ef625f8fc695a87d8a953538d968b6ef",
+      "strict_final_only_predictions_identical": true,
+      "v1_final": {
+        "test_accuracy": 0.720375,
+        "test_macro_f1": 0.69786,
+        "test_balanced_accuracy": 0.705091,
+        "selected_epochs": 11
+      },
+      "v2_final": {
+        "test_accuracy": 0.73925,
+        "test_macro_f1": 0.7232551863362164,
+        "test_balanced_accuracy": 0.7265011519342607,
+        "selected_epochs": 11.0
+      },
+      "v1_frozen_hyperparameters": {
+        "base_filters": 16,
+        "learning_rate": 0.001,
+        "dropout_rate": 0.3
+      },
+      "v2_search_best": {
+        "base_filters": "16",
+        "learning_rate": "0.001",
+        "dropout_rate": "0.3",
+        "validation_accuracy": "0.748125",
+        "validation_macro_f1": "0.7369693606145916",
+        "validation_balanced_accuracy": "0.7362167225250756",
+        "fit_seconds": "53.487122888000044",
+        "training_epoch_seconds": "49.52096655299988",
+        "in_fit_validation_seconds": "3.850076246000185",
+        "validation_seconds": "0.449099724000007",
+        "epochs_run": "12",
+        "best_epoch": "12",
+        "parameters": "106089",
+        "trial_id": "6"
+      },
+      "v1_environment": {
+        "seed": 5318,
+        "python": "3.12.14",
+        "numpy": "1.26.4",
+        "pandas": "2.2.3",
+        "scikit_learn": "1.5.2",
+        "tensorflow": "2.17.1",
+        "keras": "3.5.0",
+        "platform": "macOS-26.3-arm64-arm-64bit",
+        "machine": "arm64",
+        "logical_cpu_count": 10,
+        "tensorflow_devices": [
+          "/physical_device:CPU:0"
+        ],
+        "intra_op_threads": 4,
+        "inter_op_threads": 2,
+        "deterministic_ops": true
+      },
+      "v2_environment": {
+        "python": "3.11.11",
+        "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+        "packages": {
+          "numpy": "1.26.4",
+          "pandas": "2.2.3",
+          "scikit-learn": "1.5.2",
+          "scipy": "1.14.1",
+          "matplotlib": "3.9.2",
+          "tensorflow": "2.17.1",
+          "keras": "3.6.0",
+          "ipykernel": "6.29.5",
+          "nbclient": "0.10.2",
+          "nbformat": "5.10.4",
+          "ipython": "8.30.0",
+          "pillow": "10.4.0"
+        },
+        "devices": [
+          "/physical_device:CPU:0"
+        ]
+      },
+      "training_trajectory": [
+        {
+          "epoch": 1,
+          "v1_loss_rounded": 1.8287,
+          "v2_loss": 1.8232523202896118,
+          "loss_delta_v2_minus_v1": -0.005447679710388176,
+          "v1_accuracy_rounded": 0.3008,
+          "v2_accuracy": 0.30178123712539673,
+          "accuracy_delta_v2_minus_v1": 0.0009812371253967167
+        },
+        {
+          "epoch": 2,
+          "v1_loss_rounded": 1.4035,
+          "v2_loss": 1.403080701828003,
+          "loss_delta_v2_minus_v1": -0.0004192981719970401,
+          "v1_accuracy_rounded": 0.4617,
+          "v2_accuracy": 0.4645312428474426,
+          "accuracy_delta_v2_minus_v1": 0.0028312428474426277
+        },
+        {
+          "epoch": 3,
+          "v1_loss_rounded": 1.2296,
+          "v2_loss": 1.1857532262802124,
+          "loss_delta_v2_minus_v1": -0.043846773719787624,
+          "v1_accuracy_rounded": 0.5235,
+          "v2_accuracy": 0.5454062223434448,
+          "accuracy_delta_v2_minus_v1": 0.02190622234344486
+        },
+        {
+          "epoch": 4,
+          "v1_loss_rounded": 1.1698,
+          "v2_loss": 1.114524245262146,
+          "loss_delta_v2_minus_v1": -0.055275754737853955,
+          "v1_accuracy_rounded": 0.549,
+          "v2_accuracy": 0.5776875019073486,
+          "accuracy_delta_v2_minus_v1": 0.02868750190734859
+        },
+        {
+          "epoch": 5,
+          "v1_loss_rounded": 1.1139,
+          "v2_loss": 1.0567392110824585,
+          "loss_delta_v2_minus_v1": -0.057160788917541394,
+          "v1_accuracy_rounded": 0.5742,
+          "v2_accuracy": 0.6004062294960022,
+          "accuracy_delta_v2_minus_v1": 0.026206229496002154
+        },
+        {
+          "epoch": 6,
+          "v1_loss_rounded": 1.0737,
+          "v2_loss": 1.0213886499404907,
+          "loss_delta_v2_minus_v1": -0.052311350059509376,
+          "v1_accuracy_rounded": 0.5922,
+          "v2_accuracy": 0.6181874871253967,
+          "accuracy_delta_v2_minus_v1": 0.02598748712539678
+        },
+        {
+          "epoch": 7,
+          "v1_loss_rounded": 1.0287,
+          "v2_loss": 0.9951347708702087,
+          "loss_delta_v2_minus_v1": -0.03356522912979121,
+          "v1_accuracy_rounded": 0.6141,
+          "v2_accuracy": 0.6288124918937683,
+          "accuracy_delta_v2_minus_v1": 0.014712491893768331
+        },
+        {
+          "epoch": 8,
+          "v1_loss_rounded": 1.0212,
+          "v2_loss": 0.9808639287948608,
+          "loss_delta_v2_minus_v1": -0.04033607120513927,
+          "v1_accuracy_rounded": 0.6179,
+          "v2_accuracy": 0.6360312700271606,
+          "accuracy_delta_v2_minus_v1": 0.01813127002716064
+        },
+        {
+          "epoch": 9,
+          "v1_loss_rounded": 0.971,
+          "v2_loss": 0.9487489461898804,
+          "loss_delta_v2_minus_v1": -0.022251053810119603,
+          "v1_accuracy_rounded": 0.6377,
+          "v2_accuracy": 0.6491562724113464,
+          "accuracy_delta_v2_minus_v1": 0.011456272411346391
+        },
+        {
+          "epoch": 10,
+          "v1_loss_rounded": 0.9621,
+          "v2_loss": 0.934492826461792,
+          "loss_delta_v2_minus_v1": -0.027607173538207963,
+          "v1_accuracy_rounded": 0.6407,
+          "v2_accuracy": 0.6552500128746033,
+          "accuracy_delta_v2_minus_v1": 0.014550012874603224
+        },
+        {
+          "epoch": 11,
+          "v1_loss_rounded": 0.9431,
+          "v2_loss": 0.8916985988616943,
+          "loss_delta_v2_minus_v1": -0.05140140113830571,
+          "v1_accuracy_rounded": 0.6518,
+          "v2_accuracy": 0.6696875095367432,
+          "accuracy_delta_v2_minus_v1": 0.017887509536743118
+        }
+      ],
+      "largest_class_metric_differences": [
+        {
+          "model": "cnn",
+          "class_id": 2,
+          "class_name": "Debris",
+          "metric": "recall",
+          "v1_value": 0.2645,
+          "v2_value": 0.39110604332953247,
+          "absolute_difference": 0.12660604332953246,
+          "status": "SIGNIFICANT RISK (>0.05)",
+          "evidence": "V1 CNN.ipynb classification report; V2 verified_metrics.json"
+        },
+        {
+          "model": "cnn",
+          "class_id": 2,
+          "class_name": "Debris",
+          "metric": "f1",
+          "v1_value": 0.4024,
+          "v2_value": 0.5066469719350074,
+          "absolute_difference": 0.10424697193500743,
+          "status": "SIGNIFICANT RISK (>0.05)",
+          "evidence": "V1 CNN.ipynb classification report; V2 verified_metrics.json"
+        },
+        {
+          "model": "cnn",
+          "class_id": 7,
+          "class_name": "Cancer-associated stroma",
+          "metric": "recall",
+          "v1_value": 0.433,
+          "v2_value": 0.5092250922509225,
+          "absolute_difference": 0.0762250922509225,
+          "status": "SIGNIFICANT RISK (>0.05)",
+          "evidence": "V1 CNN.ipynb classification report; V2 verified_metrics.json"
+        },
+        {
+          "model": "cnn",
+          "class_id": 7,
+          "class_name": "Cancer-associated stroma",
+          "metric": "f1",
+          "v1_value": 0.4467,
+          "v2_value": 0.5054945054945055,
+          "absolute_difference": 0.05879450549450549,
+          "status": "SIGNIFICANT RISK (>0.05)",
+          "evidence": "V1 CNN.ipynb classification report; V2 verified_metrics.json"
+        },
+        {
+          "model": "cnn",
+          "class_id": 5,
+          "class_name": "Smooth muscle",
+          "metric": "recall",
+          "v1_value": 0.764,
+          "v2_value": 0.7220149253731343,
+          "absolute_difference": 0.04198507462686574,
+          "status": "INVESTIGATE (>0.02)",
+          "evidence": "V1 CNN.ipynb classification report; V2 verified_metrics.json"
+        }
+      ],
+      "macro_f1_class_contributions_from_rounded_v1": [
+        {
+          "class_id": 2,
+          "class_name": "Debris",
+          "f1_delta": 0.10424697193500743,
+          "macro_f1_contribution": 0.011582996881667492
+        },
+        {
+          "class_id": 7,
+          "class_name": "Cancer-associated stroma",
+          "f1_delta": 0.05879450549450549,
+          "macro_f1_contribution": 0.006532722832722832
+        },
+        {
+          "class_id": 8,
+          "class_name": "Colorectal adenocarcinoma epithelium",
+          "f1_delta": 0.0365684603886397,
+          "macro_f1_contribution": 0.0040631622654044115
+        },
+        {
+          "class_id": 4,
+          "class_name": "Mucus",
+          "f1_delta": 0.01534603616133523,
+          "macro_f1_contribution": 0.0017051151290372478
+        },
+        {
+          "class_id": 5,
+          "class_name": "Smooth muscle",
+          "f1_delta": 0.013364055299539213,
+          "macro_f1_contribution": 0.0014848950332821348
+        },
+        {
+          "class_id": 1,
+          "class_name": "Background",
+          "f1_delta": 0.004899463327370346,
+          "macro_f1_contribution": 0.0005443848141522607
+        },
+        {
+          "class_id": 3,
+          "class_name": "Lymphocytes",
+          "f1_delta": -0.004857894736842061,
+          "macro_f1_contribution": -0.0005397660818713401
+        },
+        {
+          "class_id": 6,
+          "class_name": "Normal colon mucosa",
+          "f1_delta": 0.0028407114624505736,
+          "macro_f1_contribution": 0.0003156346069389526
+        },
+        {
+          "class_id": 0,
+          "class_name": "Adipose",
+          "f1_delta": -0.0026056323060573705,
+          "macro_f1_contribution": -0.0002895147006730412
+        }
+      ]
+    }
+  },
+  "limits": []
+}

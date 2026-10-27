@@ -1,0 +1,11 @@
+{
+  "model": "naive_bayes",
+  "started_at": "2026-10-27T08:48:20.493388+00:00",
+  "source_sha256": "b1a6bbcea36013dbd262759f64cd334ad9b331fbcf7badcf00e5ff828b98c064",
+  "original_cells": 26,
+  "completed_original_code_cells": 8,
+  "audit_cell_executed": true,
+  "status": "PASS",
+  "ended_at": "2026-10-27T08:48:34.131860+00:00",
+  "wall_seconds": 13.638492392999979
+}

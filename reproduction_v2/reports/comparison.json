@@ -1,0 +1,2828 @@
+{
+  "models": {
+    "dummy": {
+      "status": "PASS",
+      "execution_status": "PASS",
+      "run_dir": "C:\\Users\\Saberken\\Downloads\\5318_A2_Workspace\\reproduction_v2\\runs\\20261027T083549Z_baseline_5893c130",
+      "source_notebook": "baseline.ipynb",
+      "search_trial_count": 0,
+      "v1_frozen_parameters": {},
+      "v2_search_best": null,
+      "v1": {
+        "validation_accuracy": 0.1467,
+        "validation_macro_f1": 0.0284,
+        "validation_balanced_accuracy": 0.1111,
+        "test_accuracy": 0.1468,
+        "test_macro_f1": 0.0284,
+        "test_balanced_accuracy": 0.1111,
+        "fit_seconds": 0.0009,
+        "prediction_seconds": 0.0001,
+        "per_class": null
+      },
+      "v2": {
+        "validation_accuracy": 0.14671875,
+        "validation_macro_f1": 0.02843257482854158,
+        "validation_balanced_accuracy": 0.1111111111111111,
+        "test_accuracy": 0.14675,
+        "test_macro_f1": 0.02843785577598527,
+        "test_balanced_accuracy": 0.1111111111111111,
+        "fit_seconds": 0.0011655540000106157,
+        "prediction_seconds": 4.780199998322132e-05,
+        "parameters": null,
+        "selected_epochs": null
+      },
+      "independent": {
+        "status": "PASS",
+        "n_test": 8000,
+        "predictions_sha256": "27646bd6eed6b753a49b2668ef65f406eb20617b5a21740b54f891d34fdebab9",
+        "accuracy": 0.14675,
+        "macro_f1": 0.02843785577598527,
+        "balanced_accuracy": 0.1111111111111111,
+        "classification_report": {
+          "0": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 873.0
+          },
+          "1": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 858.0
+          },
+          "2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 877.0
+          },
+          "3": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 914.0
+          },
+          "4": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 737.0
+          },
+          "5": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1072.0
+          },
+          "6": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 682.0
+          },
+          "7": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 813.0
+          },
+          "8": {
+            "precision": 0.14675,
+            "recall": 1.0,
+            "f1-score": 0.2559407019838674,
+            "support": 1174.0
+          },
+          "accuracy": 0.14675,
+          "macro avg": {
+            "precision": 0.016305555555555556,
+            "recall": 0.1111111111111111,
+            "f1-score": 0.02843785577598527,
+            "support": 8000.0
+          },
+          "weighted avg": {
+            "precision": 0.021535562499999997,
+            "recall": 0.14675,
+            "f1-score": 0.037559298016132545,
+            "support": 8000.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            873
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            858
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            877
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            914
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            737
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1072
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            682
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            813
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1174
+          ]
+        ]
+      },
+      "notebook_reported": {
+        "test_accuracy": 0.14675,
+        "test_macro_f1": 0.02843785577598527,
+        "test_balanced_accuracy": 0.1111111111111111,
+        "fit_seconds": 0.0011655540000106157,
+        "prediction_seconds": 4.780199998322132e-05
+      }
+    },
+    "nearest_centroid": {
+      "status": "PASS",
+      "execution_status": "PASS",
+      "run_dir": "C:\\Users\\Saberken\\Downloads\\5318_A2_Workspace\\reproduction_v2\\runs\\20261027T083549Z_baseline_5893c130",
+      "source_notebook": "baseline.ipynb",
+      "search_trial_count": 0,
+      "v1_frozen_parameters": {},
+      "v2_search_best": null,
+      "v1": {
+        "validation_accuracy": 0.4222,
+        "validation_macro_f1": 0.4051,
+        "validation_balanced_accuracy": 0.4237,
+        "test_accuracy": 0.4302,
+        "test_macro_f1": 0.4105,
+        "test_balanced_accuracy": 0.4325,
+        "fit_seconds": 0.106,
+        "prediction_seconds": 0.0648,
+        "per_class": {
+          "Adipose": {
+            "precision": 0.668,
+            "recall": 0.96,
+            "f1": 0.788,
+            "support": 873
+          },
+          "Background": {
+            "precision": 0.456,
+            "recall": 0.67,
+            "f1": 0.543,
+            "support": 858
+          },
+          "Debris": {
+            "precision": 0.317,
+            "recall": 0.268,
+            "f1": 0.29,
+            "support": 877
+          },
+          "Lymphocytes": {
+            "precision": 0.77,
+            "recall": 0.435,
+            "f1": 0.556,
+            "support": 914
+          },
+          "Mucus": {
+            "precision": 0.3,
+            "recall": 0.577,
+            "f1": 0.394,
+            "support": 737
+          },
+          "Smooth muscle": {
+            "precision": 0.508,
+            "recall": 0.283,
+            "f1": 0.363,
+            "support": 1072
+          },
+          "Normal colon mucosa": {
+            "precision": 0.198,
+            "recall": 0.199,
+            "f1": 0.199,
+            "support": 682
+          },
+          "Cancer-associated stroma": {
+            "precision": 0.25,
+            "recall": 0.154,
+            "f1": 0.19,
+            "support": 813
+          },
+          "Colorectal adenocarcinoma epithelium": {
+            "precision": 0.397,
+            "recall": 0.347,
+            "f1": 0.37,
+            "support": 1174
+          }
+        }
+      },
+      "v2": {
+        "validation_accuracy": 0.4221875,
+        "validation_macro_f1": 0.40512791304459844,
+        "validation_balanced_accuracy": 0.4236870716323191,
+        "test_accuracy": 0.43025,
+        "test_macro_f1": 0.41046943540717495,
+        "test_balanced_accuracy": 0.43251483438248034,
+        "fit_seconds": 0.09510057799997185,
+        "prediction_seconds": 0.04658484500004079,
+        "parameters": null,
+        "selected_epochs": null
+      },
+      "independent": {
+        "status": "PASS",
+        "n_test": 8000,
+        "predictions_sha256": "f3144ddff90eb35624bf5eaa3fedab7e9500c2d200e96855f4305b73f1dac0bb",
+        "accuracy": 0.43025,
+        "macro_f1": 0.41046943540717495,
+        "balanced_accuracy": 0.43251483438248034,
+        "classification_report": {
+          "0": {
+            "precision": 0.6682615629984051,
+            "recall": 0.9599083619702177,
+            "f1-score": 0.7879642689233662,
+            "support": 873.0
+          },
+          "1": {
+            "precision": 0.45598731165741474,
+            "recall": 0.6701631701631702,
+            "f1-score": 0.5427088249174139,
+            "support": 858.0
+          },
+          "2": {
+            "precision": 0.31713900134952766,
+            "recall": 0.26795895096921324,
+            "f1-score": 0.2904820766378245,
+            "support": 877.0
+          },
+          "3": {
+            "precision": 0.769825918762089,
+            "recall": 0.43544857768052514,
+            "f1-score": 0.5562543675751223,
+            "support": 914.0
+          },
+          "4": {
+            "precision": 0.29950669485553205,
+            "recall": 0.576662143826323,
+            "f1-score": 0.3942486085343228,
+            "support": 737.0
+          },
+          "5": {
+            "precision": 0.5083892617449665,
+            "recall": 0.2826492537313433,
+            "f1-score": 0.36330935251798563,
+            "support": 1072.0
+          },
+          "6": {
+            "precision": 0.19825072886297376,
+            "recall": 0.19941348973607037,
+            "f1-score": 0.19883040935672514,
+            "support": 682.0
+          },
+          "7": {
+            "precision": 0.249500998003992,
+            "recall": 0.15375153751537515,
+            "f1-score": 0.1902587519025875,
+            "support": 813.0
+          },
+          "8": {
+            "precision": 0.39707317073170734,
+            "recall": 0.34667802385008517,
+            "f1-score": 0.37016825829922695,
+            "support": 1174.0
+          },
+          "accuracy": 0.43025,
+          "macro avg": {
+            "precision": 0.42932607210740087,
+            "recall": 0.43251483438248034,
+            "f1-score": 0.41046943540717495,
+            "support": 8000.0
+          },
+          "weighted avg": {
+            "precision": 0.4407907731789629,
+            "recall": 0.43025,
+            "f1-score": 0.41519941772934166,
+            "support": 8000.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            838,
+            0,
+            0,
+            1,
+            32,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            172,
+            575,
+            0,
+            34,
+            34,
+            0,
+            41,
+            1,
+            1
+          ],
+          [
+            27,
+            97,
+            235,
+            4,
+            110,
+            161,
+            18,
+            52,
+            173
+          ],
+          [
+            9,
+            173,
+            0,
+            398,
+            69,
+            0,
+            191,
+            22,
+            52
+          ],
+          [
+            110,
+            10,
+            8,
+            16,
+            425,
+            1,
+            99,
+            49,
+            19
+          ],
+          [
+            67,
+            27,
+            257,
+            0,
+            232,
+            303,
+            12,
+            53,
+            121
+          ],
+          [
+            14,
+            77,
+            5,
+            28,
+            215,
+            1,
+            136,
+            67,
+            139
+          ],
+          [
+            9,
+            17,
+            177,
+            2,
+            215,
+            125,
+            32,
+            125,
+            111
+          ],
+          [
+            8,
+            285,
+            59,
+            34,
+            87,
+            5,
+            157,
+            132,
+            407
+          ]
+        ]
+      },
+      "notebook_reported": {
+        "test_accuracy": 0.43025,
+        "test_macro_f1": 0.41046943540717495,
+        "test_balanced_accuracy": 0.43251483438248034,
+        "fit_seconds": 0.09510057799997185,
+        "prediction_seconds": 0.04658484500004079
+      }
+    },
+    "gaussian_nb": {
+      "status": "PASS",
+      "execution_status": "PASS",
+      "run_dir": "C:\\Users\\Saberken\\Downloads\\5318_A2_Workspace\\reproduction_v2\\runs\\20261027T084817Z_naive_bayes_c0d7f694",
+      "source_notebook": "Naive_Bayes.ipynb",
+      "search_trial_count": 8,
+      "v1_frozen_parameters": {
+        "var_smoothing": 1e-06
+      },
+      "v2_search_best": {
+        "var_smoothing": "1e-12",
+        "validation_accuracy": "0.4040625",
+        "validation_macro_f1": "0.3749196062459024",
+        "validation_balanced_accuracy": "0.4188215002921101",
+        "fit_seconds": "0.27050457600012123",
+        "validation_seconds": "0.6418488799999977"
+      },
+      "v1": {
+        "validation_accuracy": 0.4041,
+        "validation_macro_f1": 0.3749,
+        "validation_balanced_accuracy": 0.4188,
+        "test_accuracy": 0.4155,
+        "test_macro_f1": 0.3857,
+        "test_balanced_accuracy": 0.4307,
+        "fit_seconds": 0.3792,
+        "prediction_seconds": 0.9081,
+        "selected_hyperparameters": {
+          "var_smoothing": 1e-06
+        },
+        "selected_epochs": null,
+        "per_class": {
+          "0": {
+            "precision": 0.6708,
+            "recall": 0.9381,
+            "f1": 0.7822,
+            "support": 873
+          },
+          "1": {
+            "precision": 0.6895,
+            "recall": 0.6445,
+            "f1": 0.6663,
+            "support": 858
+          },
+          "2": {
+            "precision": 0.1848,
+            "recall": 0.1026,
+            "f1": 0.132,
+            "support": 877
+          },
+          "3": {
+            "precision": 0.4173,
+            "recall": 0.6214,
+            "f1": 0.4993,
+            "support": 914
+          },
+          "4": {
+            "precision": 0.3479,
+            "recall": 0.4749,
+            "f1": 0.4016,
+            "support": 737
+          },
+          "5": {
+            "precision": 0.4576,
+            "recall": 0.0756,
+            "f1": 0.1297,
+            "support": 1072
+          },
+          "6": {
+            "precision": 0.2702,
+            "recall": 0.2155,
+            "f1": 0.2398,
+            "support": 682
+          },
+          "7": {
+            "precision": 0.2731,
+            "recall": 0.6298,
+            "f1": 0.381,
+            "support": 813
+          },
+          "8": {
+            "precision": 0.3871,
+            "recall": 0.1738,
+            "f1": 0.2399,
+            "support": 1174
+          }
+        }
+      },
+      "v2": {
+        "validation_accuracy": 0.4040625,
+        "validation_macro_f1": 0.3749196062459024,
+        "validation_balanced_accuracy": 0.4188215002921101,
+        "test_accuracy": 0.4155,
+        "test_macro_f1": 0.38574791151250903,
+        "test_balanced_accuracy": 0.43069610180489404,
+        "fit_seconds": 0.3691,
+        "prediction_seconds": 0.7947,
+        "parameters": 42345,
+        "selected_epochs": null
+      },
+      "independent": {
+        "status": "PASS",
+        "n_test": 8000,
+        "predictions_sha256": "69e6556fbe070d734af194908ea7d35165bd40a6ec0d43f4c34889550e9ba7fb",
+        "accuracy": 0.4155,
+        "macro_f1": 0.38574791151250903,
+        "balanced_accuracy": 0.43069610180489404,
+        "classification_report": {
+          "0": {
+            "precision": 0.6707616707616708,
+            "recall": 0.9381443298969072,
+            "f1-score": 0.7822349570200573,
+            "support": 873.0
+          },
+          "1": {
+            "precision": 0.6895261845386533,
+            "recall": 0.6445221445221445,
+            "f1-score": 0.6662650602409639,
+            "support": 858.0
+          },
+          "2": {
+            "precision": 0.18480492813141683,
+            "recall": 0.10262257696693272,
+            "f1-score": 0.13196480938416422,
+            "support": 877.0
+          },
+          "3": {
+            "precision": 0.41734019103600295,
+            "recall": 0.6214442013129103,
+            "f1-score": 0.49934065934065935,
+            "support": 914.0
+          },
+          "4": {
+            "precision": 0.34791252485089463,
+            "recall": 0.47489823609226595,
+            "f1-score": 0.40160642570281124,
+            "support": 737.0
+          },
+          "5": {
+            "precision": 0.4576271186440678,
+            "recall": 0.07555970149253731,
+            "f1-score": 0.1297037630104083,
+            "support": 1072.0
+          },
+          "6": {
+            "precision": 0.2702205882352941,
+            "recall": 0.2155425219941349,
+            "f1-score": 0.2398042414355628,
+            "support": 682.0
+          },
+          "7": {
+            "precision": 0.2730666666666667,
+            "recall": 0.6297662976629766,
+            "f1-score": 0.38095238095238093,
+            "support": 813.0
+          },
+          "8": {
+            "precision": 0.3870967741935484,
+            "recall": 0.1737649063032368,
+            "f1-score": 0.23985890652557318,
+            "support": 1174.0
+          },
+          "accuracy": 0.4155,
+          "macro avg": {
+            "precision": 0.41092851633980176,
+            "recall": 0.43069610180489404,
+            "f1-score": 0.38574791151250903,
+            "support": 8000.0
+          },
+          "weighted avg": {
+            "precision": 0.41605553969606357,
+            "recall": 0.4155,
+            "f1-score": 0.37706981799462796,
+            "support": 8000.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            819,
+            3,
+            0,
+            0,
+            47,
+            0,
+            4,
+            0,
+            0
+          ],
+          [
+            172,
+            553,
+            0,
+            54,
+            17,
+            0,
+            5,
+            55,
+            2
+          ],
+          [
+            29,
+            51,
+            90,
+            143,
+            44,
+            12,
+            60,
+            409,
+            39
+          ],
+          [
+            8,
+            14,
+            18,
+            568,
+            42,
+            3,
+            107,
+            54,
+            100
+          ],
+          [
+            100,
+            13,
+            24,
+            28,
+            350,
+            19,
+            47,
+            150,
+            6
+          ],
+          [
+            57,
+            0,
+            140,
+            83,
+            166,
+            81,
+            37,
+            497,
+            11
+          ],
+          [
+            12,
+            35,
+            41,
+            48,
+            193,
+            21,
+            147,
+            24,
+            161
+          ],
+          [
+            19,
+            0,
+            78,
+            82,
+            99,
+            16,
+            3,
+            512,
+            4
+          ],
+          [
+            5,
+            133,
+            96,
+            355,
+            48,
+            25,
+            134,
+            174,
+            204
+          ]
+        ]
+      },
+      "notebook_reported": {
+        "test_accuracy": 0.4155,
+        "test_macro_f1": 0.3857,
+        "test_balanced_accuracy": 0.4307,
+        "fit_seconds": 0.3691,
+        "prediction_seconds": 0.7947,
+        "parameters": 42345,
+        "best_hyperparameters": {
+          "var_smoothing": 1e-06
+        }
+      }
+    },
+    "mlp": {
+      "status": "WARNING",
+      "execution_status": "PASS",
+      "run_dir": "C:\\Users\\Saberken\\Downloads\\5318_A2_Workspace\\reproduction_v2\\runs\\20261027T083829Z_mlp_13872e7e",
+      "source_notebook": "MLP.ipynb",
+      "search_trial_count": 8,
+      "v1_frozen_parameters": {
+        "hidden_units": 256,
+        "learning_rate": 0.001,
+        "dropout_rate": 0.0
+      },
+      "v2_search_best": {
+        "hidden_units": "256",
+        "learning_rate": "0.001",
+        "dropout_rate": "0.0",
+        "batch_size": "128",
+        "max_epochs": "12",
+        "patience": "3",
+        "validation_accuracy": "0.44546875",
+        "validation_macro_f1": "0.4288596287516593",
+        "validation_balanced_accuracy": "0.4438372652524023",
+        "fit_seconds": "15.202407861999973",
+        "validation_seconds": "0.17628685399995447",
+        "training_epoch_seconds": "13.775747518999651",
+        "in_fit_validation_seconds": "1.313987780000275",
+        "epochs_run": "12",
+        "best_epoch": "9",
+        "parameters": "604681",
+        "seed": "5318",
+        "fit_samples": "25600",
+        "validation_samples": "6400",
+        "trial_id": "5"
+      },
+      "v1": {
+        "validation_accuracy": 0.46828125,
+        "validation_macro_f1": 0.424545,
+        "validation_balanced_accuracy": 0.4624929838057703,
+        "test_accuracy": 0.496375,
+        "test_macro_f1": 0.449128,
+        "test_balanced_accuracy": 0.477117,
+        "fit_seconds": 10.76656,
+        "prediction_seconds": 0.205754,
+        "parameters": 604681.0,
+        "selected_hyperparameters": {
+          "hidden_units": 256,
+          "learning_rate": 0.001,
+          "dropout_rate": 0.0
+        },
+        "selected_epochs": 10,
+        "per_class": {
+          "Adipose": {
+            "precision": 0.7221,
+            "recall": 0.9645,
+            "f1": 0.8259,
+            "support": 873
+          },
+          "Background": {
+            "precision": 0.75,
+            "recall": 0.6399,
+            "f1": 0.6906,
+            "support": 858
+          },
+          "Debris": {
+            "precision": 0.5602,
+            "recall": 0.138,
+            "f1": 0.2214,
+            "support": 877
+          },
+          "Lymphocytes": {
+            "precision": 0.4686,
+            "recall": 0.6685,
+            "f1": 0.5509,
+            "support": 914
+          },
+          "Mucus": {
+            "precision": 0.5085,
+            "recall": 0.5292,
+            "f1": 0.5186,
+            "support": 737
+          },
+          "Smooth muscle": {
+            "precision": 0.4206,
+            "recall": 0.4422,
+            "f1": 0.4311,
+            "support": 1072
+          },
+          "Normal colon mucosa": {
+            "precision": 0.3394,
+            "recall": 0.0821,
+            "f1": 0.1322,
+            "support": 682
+          },
+          "Cancer-associated stroma": {
+            "precision": 0.3114,
+            "recall": 0.1279,
+            "f1": 0.1813,
+            "support": 813
+          },
+          "Colorectal adenocarcinoma epithelium": {
+            "precision": 0.3764,
+            "recall": 0.7019,
+            "f1": 0.49,
+            "support": 1174
+          }
+        }
+      },
+      "v2": {
+        "validation_accuracy": 0.44546875,
+        "validation_macro_f1": 0.4288596287516593,
+        "validation_balanced_accuracy": 0.4438372652524023,
+        "test_accuracy": 0.48925,
+        "test_macro_f1": 0.43867241580923655,
+        "test_balanced_accuracy": 0.4699447730850976,
+        "fit_seconds": 13.189111662999949,
+        "prediction_seconds": 0.18059203400002843,
+        "parameters": 604681.0,
+        "selected_epochs": 10.0
+      },
+      "independent": {
+        "status": "PASS",
+        "n_test": 8000,
+        "predictions_sha256": "745dffc303a113b74b5f01e04a302965936b20f88d131619d67531a0f94149dd",
+        "accuracy": 0.48925,
+        "macro_f1": 0.43867241580923655,
+        "balanced_accuracy": 0.4699447730850976,
+        "classification_report": {
+          "0": {
+            "precision": 0.7326906222611744,
+            "recall": 0.9576174112256587,
+            "f1-score": 0.8301886792452831,
+            "support": 873.0
+          },
+          "1": {
+            "precision": 0.7287234042553191,
+            "recall": 0.6386946386946387,
+            "f1-score": 0.6807453416149069,
+            "support": 858.0
+          },
+          "2": {
+            "precision": 0.3948220064724919,
+            "recall": 0.13911060433295325,
+            "f1-score": 0.2057335581787521,
+            "support": 877.0
+          },
+          "3": {
+            "precision": 0.46497764530551416,
+            "recall": 0.6827133479212254,
+            "f1-score": 0.5531914893617021,
+            "support": 914.0
+          },
+          "4": {
+            "precision": 0.5348837209302325,
+            "recall": 0.5305291723202171,
+            "f1-score": 0.5326975476839237,
+            "support": 737.0
+          },
+          "5": {
+            "precision": 0.384251968503937,
+            "recall": 0.4552238805970149,
+            "f1-score": 0.41673783091374894,
+            "support": 1072.0
+          },
+          "6": {
+            "precision": 0.2857142857142857,
+            "recall": 0.03225806451612903,
+            "f1-score": 0.057971014492753624,
+            "support": 682.0
+          },
+          "7": {
+            "precision": 0.2780612244897959,
+            "recall": 0.13407134071340712,
+            "f1-score": 0.18091286307053941,
+            "support": 813.0
+          },
+          "8": {
+            "precision": 0.38972809667673713,
+            "recall": 0.6592844974446337,
+            "f1-score": 0.489873417721519,
+            "support": 1174.0
+          },
+          "accuracy": 0.48925,
+          "macro avg": {
+            "precision": 0.46598366384549866,
+            "recall": 0.4699447730850976,
+            "f1-score": 0.43867241580923655,
+            "support": 8000.0
+          },
+          "weighted avg": {
+            "precision": 0.4650901472497903,
+            "recall": 0.48925,
+            "f1-score": 0.449493800154268,
+            "support": 8000.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            836,
+            0,
+            0,
+            0,
+            27,
+            10,
+            0,
+            0,
+            0
+          ],
+          [
+            159,
+            548,
+            0,
+            89,
+            38,
+            17,
+            2,
+            0,
+            5
+          ],
+          [
+            10,
+            51,
+            122,
+            28,
+            40,
+            321,
+            3,
+            60,
+            242
+          ],
+          [
+            2,
+            0,
+            0,
+            624,
+            47,
+            31,
+            5,
+            11,
+            194
+          ],
+          [
+            92,
+            0,
+            0,
+            137,
+            391,
+            24,
+            10,
+            17,
+            66
+          ],
+          [
+            30,
+            140,
+            68,
+            26,
+            42,
+            488,
+            10,
+            98,
+            170
+          ],
+          [
+            7,
+            0,
+            11,
+            156,
+            102,
+            68,
+            22,
+            31,
+            285
+          ],
+          [
+            1,
+            11,
+            57,
+            120,
+            15,
+            240,
+            10,
+            109,
+            250
+          ],
+          [
+            4,
+            2,
+            51,
+            162,
+            29,
+            71,
+            15,
+            66,
+            774
+          ]
+        ]
+      },
+      "notebook_reported": {
+        "test_accuracy": 0.48925,
+        "test_macro_f1": 0.43867241580923655,
+        "test_balanced_accuracy": 0.4699447730850976,
+        "fit_seconds": 13.189111662999949,
+        "prediction_seconds": 0.18059203400002843,
+        "parameters": 604681.0,
+        "epochs": 10.0,
+        "search_fit_samples": 25600.0,
+        "validation_samples": 6400.0,
+        "train_samples": 32000.0,
+        "test_samples": 8000.0,
+        "best_hyperparameters": {
+          "dropout_rate": 0.0,
+          "hidden_units": 256,
+          "learning_rate": 0.001
+        }
+      }
+    },
+    "cnn": {
+      "status": "WARNING",
+      "execution_status": "PASS",
+      "run_dir": "C:\\Users\\Saberken\\Downloads\\5318_A2_Workspace\\reproduction_v2\\runs\\20261027T084038Z_cnn_85313f9d",
+      "source_notebook": "CNN.ipynb",
+      "search_trial_count": 8,
+      "v1_frozen_parameters": {
+        "base_filters": 16,
+        "learning_rate": 0.001,
+        "dropout_rate": 0.3
+      },
+      "v2_search_best": {
+        "base_filters": "16",
+        "learning_rate": "0.001",
+        "dropout_rate": "0.3",
+        "validation_accuracy": "0.748125",
+        "validation_macro_f1": "0.7369693606145916",
+        "validation_balanced_accuracy": "0.7362167225250756",
+        "fit_seconds": "53.487122888000044",
+        "training_epoch_seconds": "49.52096655299988",
+        "in_fit_validation_seconds": "3.850076246000185",
+        "validation_seconds": "0.449099724000007",
+        "epochs_run": "12",
+        "best_epoch": "12",
+        "parameters": "106089",
+        "trial_id": "6"
+      },
+      "v1": {
+        "validation_accuracy": 0.75125,
+        "validation_macro_f1": 0.738608,
+        "validation_balanced_accuracy": 0.743244847776286,
+        "test_accuracy": 0.720375,
+        "test_macro_f1": 0.69786,
+        "test_balanced_accuracy": 0.705091,
+        "fit_seconds": 30.181307,
+        "prediction_seconds": 0.248718,
+        "parameters": 106089.0,
+        "selected_hyperparameters": {
+          "base_filters": 16,
+          "learning_rate": 0.001,
+          "dropout_rate": 0.3
+        },
+        "selected_epochs": 11,
+        "per_class": {
+          "Adipose": {
+            "precision": 0.8452,
+            "recall": 0.9759,
+            "f1": 0.9059,
+            "support": 873
+          },
+          "Background": {
+            "precision": 0.9718,
+            "recall": 0.9231,
+            "f1": 0.9468,
+            "support": 858
+          },
+          "Debris": {
+            "precision": 0.8406,
+            "recall": 0.2645,
+            "f1": 0.4024,
+            "support": 877
+          },
+          "Lymphocytes": {
+            "precision": 0.8924,
+            "recall": 0.953,
+            "f1": 0.9217,
+            "support": 914
+          },
+          "Mucus": {
+            "precision": 0.6932,
+            "recall": 0.6866,
+            "f1": 0.6898,
+            "support": 737
+          },
+          "Smooth muscle": {
+            "precision": 0.6459,
+            "recall": 0.764,
+            "f1": 0.7,
+            "support": 1072
+          },
+          "Normal colon mucosa": {
+            "precision": 0.6326,
+            "recall": 0.4897,
+            "f1": 0.5521,
+            "support": 682
+          },
+          "Cancer-associated stroma": {
+            "precision": 0.4613,
+            "recall": 0.433,
+            "f1": 0.4467,
+            "support": 813
+          },
+          "Colorectal adenocarcinoma epithelium": {
+            "precision": 0.6143,
+            "recall": 0.856,
+            "f1": 0.7153,
+            "support": 1174
+          }
+        }
+      },
+      "v2": {
+        "validation_accuracy": 0.748125,
+        "validation_macro_f1": 0.7369693606145916,
+        "validation_balanced_accuracy": 0.7362167225250756,
+        "test_accuracy": 0.73925,
+        "test_macro_f1": 0.7232551863362164,
+        "test_balanced_accuracy": 0.7265011519342607,
+        "fit_seconds": 57.70163873700005,
+        "prediction_seconds": 0.506010827000182,
+        "parameters": 106089.0,
+        "selected_epochs": 11.0
+      },
+      "independent": {
+        "status": "PASS",
+        "n_test": 8000,
+        "predictions_sha256": "baa8aed260a4a00a4198049ac85e8218ef625f8fc695a87d8a953538d968b6ef",
+        "accuracy": 0.73925,
+        "macro_f1": 0.7232551863362164,
+        "balanced_accuracy": 0.7265011519342607,
+        "classification_report": {
+          "0": {
+            "precision": 0.8424182358771061,
+            "recall": 0.9736540664375716,
+            "f1-score": 0.9032943676939427,
+            "support": 873.0
+          },
+          "1": {
+            "precision": 0.9743589743589743,
+            "recall": 0.9300699300699301,
+            "f1-score": 0.9516994633273703,
+            "support": 858.0
+          },
+          "2": {
+            "precision": 0.7190775681341719,
+            "recall": 0.39110604332953247,
+            "f1-score": 0.5066469719350074,
+            "support": 877.0
+          },
+          "3": {
+            "precision": 0.8833671399594321,
+            "recall": 0.9529540481400438,
+            "f1-score": 0.9168421052631579,
+            "support": 914.0
+          },
+          "4": {
+            "precision": 0.7232524964336662,
+            "recall": 0.6879240162822252,
+            "f1-score": 0.7051460361613352,
+            "support": 737.0
+          },
+          "5": {
+            "precision": 0.7049180327868853,
+            "recall": 0.7220149253731343,
+            "f1-score": 0.7133640552995392,
+            "support": 1072.0
+          },
+          "6": {
+            "precision": 0.6020583190394511,
+            "recall": 0.5146627565982405,
+            "f1-score": 0.5549407114624506,
+            "support": 682.0
+          },
+          "7": {
+            "precision": 0.5018181818181818,
+            "recall": 0.5092250922509225,
+            "f1-score": 0.5054945054945055,
+            "support": 813.0
+          },
+          "8": {
+            "precision": 0.6697736351531292,
+            "recall": 0.8568994889267462,
+            "f1-score": 0.7518684603886397,
+            "support": 1174.0
+          },
+          "accuracy": 0.73925,
+          "macro avg": {
+            "precision": 0.7356713981734442,
+            "recall": 0.7265011519342607,
+            "f1-score": 0.7232551863362164,
+            "support": 8000.0
+          },
+          "weighted avg": {
+            "precision": 0.7378831421486648,
+            "recall": 0.73925,
+            "f1-score": 0.7305007834677402,
+            "support": 8000.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            850,
+            6,
+            0,
+            0,
+            12,
+            3,
+            2,
+            0,
+            0
+          ],
+          [
+            40,
+            798,
+            2,
+            0,
+            16,
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            5,
+            7,
+            343,
+            10,
+            9,
+            132,
+            37,
+            161,
+            173
+          ],
+          [
+            0,
+            0,
+            0,
+            871,
+            6,
+            0,
+            28,
+            0,
+            9
+          ],
+          [
+            81,
+            3,
+            1,
+            5,
+            507,
+            16,
+            60,
+            26,
+            38
+          ],
+          [
+            19,
+            1,
+            38,
+            2,
+            25,
+            774,
+            13,
+            166,
+            34
+          ],
+          [
+            9,
+            0,
+            1,
+            53,
+            92,
+            6,
+            351,
+            5,
+            165
+          ],
+          [
+            1,
+            4,
+            80,
+            7,
+            16,
+            162,
+            52,
+            414,
+            77
+          ],
+          [
+            4,
+            0,
+            12,
+            38,
+            18,
+            5,
+            39,
+            52,
+            1006
+          ]
+        ]
+      },
+      "notebook_reported": {
+        "test_accuracy": 0.73925,
+        "test_macro_f1": 0.7232551863362164,
+        "test_balanced_accuracy": 0.7265011519342607,
+        "fit_seconds": 57.70163873700005,
+        "prediction_seconds": 0.506010827000182,
+        "parameters": 106089.0,
+        "epochs": 11.0,
+        "search_fit_samples": 25600.0,
+        "validation_samples": 6400.0,
+        "train_samples": 32000.0,
+        "test_samples": 8000.0,
+        "best_hyperparameters": {
+          "base_filters": 16,
+          "dropout_rate": 0.3,
+          "learning_rate": 0.001
+        }
+      }
+    }
+  },
+  "issues": [
+    {
+      "severity": "MEDIUM",
+      "model": "mlp/cnn",
+      "issue": "Original plotting cells embed V1 search rows, and final-result CSV validation fields repeat V1 frozen-selection constants. V2 search comparison uses newly written search_results.csv only."
+    },
+    {
+      "severity": "LOW",
+      "model": "v1 records",
+      "issue": "V1 exact prediction arrays and numeric confusion matrices are not present in Git; V1 class reports are rounded saved output. V2 exports full predictions and numeric matrices."
+    },
+    {
+      "severity": "INFO",
+      "model": "mlp",
+      "issue": "Run interrupted by user-acknowledged manual Docker Desktop restart; excluded from model failure assessment. Partial logs preserved.",
+      "evidence": "C:\\Users\\Saberken\\Downloads\\5318_A2_Workspace\\reproduction_v2\\runs\\20261027T083614Z_mlp_974f1f91\\execution.log"
+    },
+    {
+      "severity": "MEDIUM",
+      "model": "mlp",
+      "issue": "Class 6 Normal colon mucosa f1 differs by 0.0742 (V1 0.1322, V2 0.0580); investigate class-level shift."
+    },
+    {
+      "severity": "MEDIUM",
+      "model": "cnn",
+      "issue": "Class 2 Debris recall differs by 0.1266 (V1 0.2645, V2 0.3911); investigate class-level shift."
+    },
+    {
+      "severity": "MEDIUM",
+      "model": "cnn",
+      "issue": "Class 2 Debris f1 differs by 0.1042 (V1 0.4024, V2 0.5066); investigate class-level shift."
+    },
+    {
+      "severity": "MEDIUM",
+      "model": "cnn",
+      "issue": "Class 7 Cancer-associated stroma recall differs by 0.0762 (V1 0.4330, V2 0.5092); investigate class-level shift."
+    },
+    {
+      "severity": "MEDIUM",
+      "model": "cnn",
+      "issue": "Class 7 Cancer-associated stroma f1 differs by 0.0588 (V1 0.4467, V2 0.5055); investigate class-level shift."
+    }
+  ],
+  "comparison": [
+    {
+      "model": "dummy",
+      "metric": "validation_accuracy",
+      "v1_value": 0.1467,
+      "v2_value": 0.14671875,
+      "absolute_difference": 1.8750000000011813e-05,
+      "relative_difference": 0.0001278118609407758,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence_source": "V1 A: baseline.ipynb Cell 22 保存输出; V2 runs/20261027T083549Z_baseline_5893c130/validation_results.csv",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "dummy",
+      "metric": "validation_macro_f1",
+      "v1_value": 0.0284,
+      "v2_value": 0.02843257482854158,
+      "absolute_difference": 3.257482854157959e-05,
+      "relative_difference": 0.0011470010049851966,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence_source": "V1 A: baseline.ipynb Cell 22 保存输出; V2 runs/20261027T083549Z_baseline_5893c130/validation_results.csv",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "dummy",
+      "metric": "validation_balanced_accuracy",
+      "v1_value": 0.1111,
+      "v2_value": 0.1111111111111111,
+      "absolute_difference": 1.1111111111100636e-05,
+      "relative_difference": 0.00010001000100000571,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence_source": "V1 A: baseline.ipynb Cell 22 保存输出; V2 runs/20261027T083549Z_baseline_5893c130/validation_results.csv",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "dummy",
+      "metric": "test_accuracy",
+      "v1_value": 0.1468,
+      "v2_value": 0.14675,
+      "absolute_difference": 5.000000000002225e-05,
+      "relative_difference": 0.00034059945504102344,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence_source": "V1 A: baseline.ipynb Cell 29 保存输出; V2 runs/20261027T083549Z_baseline_5893c130/verified_metrics.json",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "dummy",
+      "metric": "test_macro_f1",
+      "v1_value": 0.0284,
+      "v2_value": 0.02843785577598527,
+      "absolute_difference": 3.785577598526893e-05,
+      "relative_difference": 0.0013329498586362298,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence_source": "V1 A: baseline.ipynb Cell 29 保存输出; V2 runs/20261027T083549Z_baseline_5893c130/verified_metrics.json",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "dummy",
+      "metric": "test_balanced_accuracy",
+      "v1_value": 0.1111,
+      "v2_value": 0.1111111111111111,
+      "absolute_difference": 1.1111111111100636e-05,
+      "relative_difference": 0.00010001000100000571,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence_source": "V1 A: baseline.ipynb Cell 29 保存输出; V2 runs/20261027T083549Z_baseline_5893c130/verified_metrics.json",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "dummy",
+      "metric": "fit_seconds",
+      "v1_value": 0.0009,
+      "v2_value": 0.0011655540000106157,
+      "absolute_difference": 0.00026555400001061573,
+      "relative_difference": null,
+      "status": "HARDWARE NOT CONTROLLED",
+      "evidence_source": "V1 A: baseline.ipynb Cell 29 保存输出; V2 runs/20261027T083549Z_baseline_5893c130/notebook_final_results.csv",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "dummy",
+      "metric": "prediction_seconds",
+      "v1_value": 0.0001,
+      "v2_value": 4.780199998322132e-05,
+      "absolute_difference": 5.219800001677868e-05,
+      "relative_difference": null,
+      "status": "HARDWARE NOT CONTROLLED",
+      "evidence_source": "V1 A: baseline.ipynb Cell 29 保存输出; V2 runs/20261027T083549Z_baseline_5893c130/notebook_final_results.csv",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "dummy",
+      "metric": "parameters",
+      "v1_value": null,
+      "v2_value": null,
+      "absolute_difference": null,
+      "relative_difference": null,
+      "status": "NOT AVAILABLE",
+      "evidence_source": "V1 A: baseline.ipynb Cell 29 保存输出; V2 runs/20261027T083549Z_baseline_5893c130/notebook_final_results.csv",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "dummy",
+      "metric": "selected_epochs",
+      "v1_value": null,
+      "v2_value": null,
+      "absolute_difference": null,
+      "relative_difference": null,
+      "status": "NOT AVAILABLE",
+      "evidence_source": "V1 A: baseline.ipynb Cell 29 保存输出; V2 runs/20261027T083549Z_baseline_5893c130/notebook_final_results.csv",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "nearest_centroid",
+      "metric": "validation_accuracy",
+      "v1_value": 0.4222,
+      "v2_value": 0.4221875,
+      "absolute_difference": 1.2500000000026379e-05,
+      "relative_difference": 2.9606821411715722e-05,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence_source": "V1 A: baseline.ipynb Cell 22 保存输出; V2 runs/20261027T083549Z_baseline_5893c130/validation_results.csv",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "nearest_centroid",
+      "metric": "validation_macro_f1",
+      "v1_value": 0.4051,
+      "v2_value": 0.40512791304459844,
+      "absolute_difference": 2.7913044598426584e-05,
+      "relative_difference": 6.890408441971509e-05,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence_source": "V1 A: baseline.ipynb Cell 22 保存输出; V2 runs/20261027T083549Z_baseline_5893c130/validation_results.csv",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "nearest_centroid",
+      "metric": "validation_balanced_accuracy",
+      "v1_value": 0.4237,
+      "v2_value": 0.4236870716323191,
+      "absolute_difference": 1.2928367680908881e-05,
+      "relative_difference": 3.0513022612482607e-05,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence_source": "V1 A: baseline.ipynb Cell 22 保存输出; V2 runs/20261027T083549Z_baseline_5893c130/validation_results.csv",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "nearest_centroid",
+      "metric": "test_accuracy",
+      "v1_value": 0.4302,
+      "v2_value": 0.43025,
+      "absolute_difference": 4.999999999999449e-05,
+      "relative_difference": 0.00011622501162248835,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence_source": "V1 A: baseline.ipynb Cell 29 保存输出; V2 runs/20261027T083549Z_baseline_5893c130/verified_metrics.json",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "nearest_centroid",
+      "metric": "test_macro_f1",
+      "v1_value": 0.4105,
+      "v2_value": 0.41046943540717495,
+      "absolute_difference": 3.0564592825022e-05,
+      "relative_difference": 7.445698617544944e-05,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence_source": "V1 A: baseline.ipynb Cell 29 保存输出; V2 runs/20261027T083549Z_baseline_5893c130/verified_metrics.json",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "nearest_centroid",
+      "metric": "test_balanced_accuracy",
+      "v1_value": 0.4325,
+      "v2_value": 0.43251483438248034,
+      "absolute_difference": 1.48343824803443e-05,
+      "relative_difference": 3.4299150243570634e-05,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence_source": "V1 A: baseline.ipynb Cell 29 保存输出; V2 runs/20261027T083549Z_baseline_5893c130/verified_metrics.json",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "nearest_centroid",
+      "metric": "fit_seconds",
+      "v1_value": 0.106,
+      "v2_value": 0.09510057799997185,
+      "absolute_difference": 0.01089942200002815,
+      "relative_difference": null,
+      "status": "HARDWARE NOT CONTROLLED",
+      "evidence_source": "V1 A: baseline.ipynb Cell 29 保存输出; V2 runs/20261027T083549Z_baseline_5893c130/notebook_final_results.csv",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "nearest_centroid",
+      "metric": "prediction_seconds",
+      "v1_value": 0.0648,
+      "v2_value": 0.04658484500004079,
+      "absolute_difference": 0.01821515499995921,
+      "relative_difference": null,
+      "status": "HARDWARE NOT CONTROLLED",
+      "evidence_source": "V1 A: baseline.ipynb Cell 29 保存输出; V2 runs/20261027T083549Z_baseline_5893c130/notebook_final_results.csv",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "nearest_centroid",
+      "metric": "parameters",
+      "v1_value": null,
+      "v2_value": null,
+      "absolute_difference": null,
+      "relative_difference": null,
+      "status": "NOT AVAILABLE",
+      "evidence_source": "V1 A: baseline.ipynb Cell 29 保存输出; V2 runs/20261027T083549Z_baseline_5893c130/notebook_final_results.csv",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "nearest_centroid",
+      "metric": "selected_epochs",
+      "v1_value": null,
+      "v2_value": null,
+      "absolute_difference": null,
+      "relative_difference": null,
+      "status": "NOT AVAILABLE",
+      "evidence_source": "V1 A: baseline.ipynb Cell 29 保存输出; V2 runs/20261027T083549Z_baseline_5893c130/notebook_final_results.csv",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "gaussian_nb",
+      "metric": "validation_accuracy",
+      "v1_value": 0.4041,
+      "v2_value": 0.4040625,
+      "absolute_difference": 3.7500000000023626e-05,
+      "relative_difference": 9.279881217526262e-05,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence_source": "V1 A: Naive_Bayes.ipynb Cell 15 保存输出; V2 runs/20261027T084817Z_naive_bayes_c0d7f694/search_results.csv",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "gaussian_nb",
+      "metric": "validation_macro_f1",
+      "v1_value": 0.3749,
+      "v2_value": 0.3749196062459024,
+      "absolute_difference": 1.9606245902414887e-05,
+      "relative_difference": 5.229726834466494e-05,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence_source": "V1 A: Naive_Bayes.ipynb Cell 15 保存输出; V2 runs/20261027T084817Z_naive_bayes_c0d7f694/search_results.csv",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "gaussian_nb",
+      "metric": "validation_balanced_accuracy",
+      "v1_value": 0.4188,
+      "v2_value": 0.4188215002921101,
+      "absolute_difference": 2.15002921101215e-05,
+      "relative_difference": 5.133785126581065e-05,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence_source": "V1 A: Naive_Bayes.ipynb Cell 15 保存输出; V2 runs/20261027T084817Z_naive_bayes_c0d7f694/search_results.csv",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "gaussian_nb",
+      "metric": "test_accuracy",
+      "v1_value": 0.4155,
+      "v2_value": 0.4155,
+      "absolute_difference": 0.0,
+      "relative_difference": 0.0,
+      "status": "EXACT",
+      "evidence_source": "V1 A: Naive_Bayes.ipynb Cell 22 保存输出; V2 runs/20261027T084817Z_naive_bayes_c0d7f694/verified_metrics.json",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "gaussian_nb",
+      "metric": "test_macro_f1",
+      "v1_value": 0.3857,
+      "v2_value": 0.38574791151250903,
+      "absolute_difference": 4.7911512509046794e-05,
+      "relative_difference": 0.00012421963315801607,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence_source": "V1 A: Naive_Bayes.ipynb Cell 22 保存输出; V2 runs/20261027T084817Z_naive_bayes_c0d7f694/verified_metrics.json",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "gaussian_nb",
+      "metric": "test_balanced_accuracy",
+      "v1_value": 0.4307,
+      "v2_value": 0.43069610180489404,
+      "absolute_difference": 3.8981951059890996e-06,
+      "relative_difference": 9.0508360947042e-06,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence_source": "V1 A: Naive_Bayes.ipynb Cell 22 保存输出; V2 runs/20261027T084817Z_naive_bayes_c0d7f694/verified_metrics.json",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "gaussian_nb",
+      "metric": "fit_seconds",
+      "v1_value": 0.3792,
+      "v2_value": 0.3691,
+      "absolute_difference": 0.010099999999999998,
+      "relative_difference": null,
+      "status": "HARDWARE NOT CONTROLLED",
+      "evidence_source": "V1 A: Naive_Bayes.ipynb Cell 22 保存输出; V2 runs/20261027T084817Z_naive_bayes_c0d7f694/execution.log",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "gaussian_nb",
+      "metric": "prediction_seconds",
+      "v1_value": 0.9081,
+      "v2_value": 0.7947,
+      "absolute_difference": 0.11340000000000006,
+      "relative_difference": null,
+      "status": "HARDWARE NOT CONTROLLED",
+      "evidence_source": "V1 A: Naive_Bayes.ipynb Cell 22 保存输出; V2 runs/20261027T084817Z_naive_bayes_c0d7f694/execution.log",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "gaussian_nb",
+      "metric": "parameters",
+      "v1_value": null,
+      "v2_value": 42345.0,
+      "absolute_difference": null,
+      "relative_difference": null,
+      "status": "NOT AVAILABLE",
+      "evidence_source": "V1 A: Naive_Bayes.ipynb Cell 22 保存输出; V2 runs/20261027T084817Z_naive_bayes_c0d7f694/parameter_inventory.json",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "gaussian_nb",
+      "metric": "selected_epochs",
+      "v1_value": null,
+      "v2_value": null,
+      "absolute_difference": null,
+      "relative_difference": null,
+      "status": "NOT AVAILABLE",
+      "evidence_source": "V1 A: Naive_Bayes.ipynb Cell 22 保存输出; V2 runs/20261027T084817Z_naive_bayes_c0d7f694/execution.log",
+      "notes": "V1 rounded display precision"
+    },
+    {
+      "model": "gaussian_nb",
+      "metric": "selected_hyperparameters",
+      "v1_value": "{\"var_smoothing\": 1e-06}",
+      "v2_value": "{\"var_smoothing\": 1e-06}",
+      "absolute_difference": null,
+      "relative_difference": null,
+      "status": "EXACT",
+      "evidence_source": "V1 C: Cell 22 BEST_VAR_SMOOTHING；B: Cell 18 tie-break 描述; V2 runs/20261027T084817Z_naive_bayes_c0d7f694/execution.log",
+      "notes": "Final model uses V1 frozen choice, independent of V2 search winner"
+    },
+    {
+      "model": "mlp",
+      "metric": "validation_accuracy",
+      "v1_value": 0.46828125,
+      "v2_value": 0.44546875,
+      "absolute_difference": 0.022812499999999958,
+      "relative_difference": 0.0487153820487153,
+      "status": "INVESTIGATE (>0.02)",
+      "evidence_source": "V1 A: MLP.ipynb Cell 18 保存输出; V2 runs/20261027T083829Z_mlp_13872e7e/search_results.csv",
+      "notes": ""
+    },
+    {
+      "model": "mlp",
+      "metric": "validation_macro_f1",
+      "v1_value": 0.424545,
+      "v2_value": 0.4288596287516593,
+      "absolute_difference": 0.004314628751659277,
+      "relative_difference": 0.010162947983510057,
+      "status": "SMALL DIFFERENCE",
+      "evidence_source": "V1 A: MLP.ipynb Cell 18 保存输出; V2 runs/20261027T083829Z_mlp_13872e7e/search_results.csv",
+      "notes": ""
+    },
+    {
+      "model": "mlp",
+      "metric": "validation_balanced_accuracy",
+      "v1_value": 0.4624929838057703,
+      "v2_value": 0.4438372652524023,
+      "absolute_difference": 0.018655718553368006,
+      "relative_difference": 0.04033730068692828,
+      "status": "NOTICE (>0.01)",
+      "evidence_source": "V1 A: MLP.ipynb Cell 18 保存输出; V2 runs/20261027T083829Z_mlp_13872e7e/search_results.csv",
+      "notes": ""
+    },
+    {
+      "model": "mlp",
+      "metric": "test_accuracy",
+      "v1_value": 0.496375,
+      "v2_value": 0.48925,
+      "absolute_difference": 0.0071249999999999925,
+      "relative_difference": 0.014354066985645918,
+      "status": "SMALL DIFFERENCE",
+      "evidence_source": "V1 A: MLP.ipynb Cell 27 保存输出; V2 runs/20261027T083829Z_mlp_13872e7e/verified_metrics.json",
+      "notes": ""
+    },
+    {
+      "model": "mlp",
+      "metric": "test_macro_f1",
+      "v1_value": 0.449128,
+      "v2_value": 0.43867241580923655,
+      "absolute_difference": 0.010455584190763478,
+      "relative_difference": 0.02327974250272412,
+      "status": "NOTICE (>0.01)",
+      "evidence_source": "V1 A: MLP.ipynb Cell 27 保存输出; V2 runs/20261027T083829Z_mlp_13872e7e/verified_metrics.json",
+      "notes": ""
+    },
+    {
+      "model": "mlp",
+      "metric": "test_balanced_accuracy",
+      "v1_value": 0.477117,
+      "v2_value": 0.4699447730850976,
+      "absolute_difference": 0.007172226914902435,
+      "relative_difference": 0.015032427926278952,
+      "status": "SMALL DIFFERENCE",
+      "evidence_source": "V1 A: MLP.ipynb Cell 27 保存输出; V2 runs/20261027T083829Z_mlp_13872e7e/verified_metrics.json",
+      "notes": ""
+    },
+    {
+      "model": "mlp",
+      "metric": "fit_seconds",
+      "v1_value": 10.76656,
+      "v2_value": 13.189111662999949,
+      "absolute_difference": 2.4225516629999486,
+      "relative_difference": null,
+      "status": "HARDWARE NOT CONTROLLED",
+      "evidence_source": "V1 A: MLP.ipynb Cell 27 保存输出; V2 runs/20261027T083829Z_mlp_13872e7e/mlp_final_results.csv",
+      "notes": ""
+    },
+    {
+      "model": "mlp",
+      "metric": "prediction_seconds",
+      "v1_value": 0.205754,
+      "v2_value": 0.18059203400002843,
+      "absolute_difference": 0.02516196599997156,
+      "relative_difference": null,
+      "status": "HARDWARE NOT CONTROLLED",
+      "evidence_source": "V1 A: MLP.ipynb Cell 27 保存输出; V2 runs/20261027T083829Z_mlp_13872e7e/mlp_final_results.csv",
+      "notes": ""
+    },
+    {
+      "model": "mlp",
+      "metric": "parameters",
+      "v1_value": 604681.0,
+      "v2_value": 604681.0,
+      "absolute_difference": 0.0,
+      "relative_difference": 0.0,
+      "status": "EXACT",
+      "evidence_source": "V1 A: MLP.ipynb Cell 27 保存输出; V2 runs/20261027T083829Z_mlp_13872e7e/mlp_final_results.csv",
+      "notes": ""
+    },
+    {
+      "model": "mlp",
+      "metric": "selected_epochs",
+      "v1_value": 10.0,
+      "v2_value": 10.0,
+      "absolute_difference": 0.0,
+      "relative_difference": 0.0,
+      "status": "EXACT",
+      "evidence_source": "V1 A: MLP.ipynb Cell 27 保存输出; V2 runs/20261027T083829Z_mlp_13872e7e/mlp_final_results.csv",
+      "notes": ""
+    },
+    {
+      "model": "mlp",
+      "metric": "selected_hyperparameters",
+      "v1_value": "{\"dropout_rate\": 0.0, \"hidden_units\": 256, \"learning_rate\": 0.001}",
+      "v2_value": "{\"dropout_rate\": 0.0, \"hidden_units\": 256, \"learning_rate\": 0.001}",
+      "absolute_difference": null,
+      "relative_difference": null,
+      "status": "EXACT",
+      "evidence_source": "V1 frozen source cell; V2 runs/20261027T083829Z_mlp_13872e7e/mlp_final_results.csv",
+      "notes": "Final model uses V1 frozen choice, independent of V2 search winner"
+    },
+    {
+      "model": "cnn",
+      "metric": "validation_accuracy",
+      "v1_value": 0.75125,
+      "v2_value": 0.748125,
+      "absolute_difference": 0.0031249999999999334,
+      "relative_difference": 0.004159733777038181,
+      "status": "SMALL DIFFERENCE",
+      "evidence_source": "V1 A: CNN.ipynb Cell 19 保存输出; V2 runs/20261027T084038Z_cnn_85313f9d/search_results.csv",
+      "notes": ""
+    },
+    {
+      "model": "cnn",
+      "metric": "validation_macro_f1",
+      "v1_value": 0.738608,
+      "v2_value": 0.7369693606145916,
+      "absolute_difference": 0.0016386393854084247,
+      "relative_difference": 0.002218550821827579,
+      "status": "SMALL DIFFERENCE",
+      "evidence_source": "V1 A: CNN.ipynb Cell 19 保存输出; V2 runs/20261027T084038Z_cnn_85313f9d/search_results.csv",
+      "notes": ""
+    },
+    {
+      "model": "cnn",
+      "metric": "validation_balanced_accuracy",
+      "v1_value": 0.743244847776286,
+      "v2_value": 0.7362167225250756,
+      "absolute_difference": 0.0070281252512103265,
+      "relative_difference": 0.009456002651397816,
+      "status": "SMALL DIFFERENCE",
+      "evidence_source": "V1 A: CNN.ipynb Cell 19 保存输出; V2 runs/20261027T084038Z_cnn_85313f9d/search_results.csv",
+      "notes": ""
+    },
+    {
+      "model": "cnn",
+      "metric": "test_accuracy",
+      "v1_value": 0.720375,
+      "v2_value": 0.73925,
+      "absolute_difference": 0.018874999999999975,
+      "relative_difference": 0.026201631094915807,
+      "status": "NOTICE (>0.01)",
+      "evidence_source": "V1 A: CNN.ipynb Cell 29 保存输出; V2 runs/20261027T084038Z_cnn_85313f9d/verified_metrics.json",
+      "notes": ""
+    },
+    {
+      "model": "cnn",
+      "metric": "test_macro_f1",
+      "v1_value": 0.69786,
+      "v2_value": 0.7232551863362164,
+      "absolute_difference": 0.025395186336216402,
+      "relative_difference": 0.03639008731868341,
+      "status": "INVESTIGATE (>0.02)",
+      "evidence_source": "V1 A: CNN.ipynb Cell 29 保存输出; V2 runs/20261027T084038Z_cnn_85313f9d/verified_metrics.json",
+      "notes": ""
+    },
+    {
+      "model": "cnn",
+      "metric": "test_balanced_accuracy",
+      "v1_value": 0.705091,
+      "v2_value": 0.7265011519342607,
+      "absolute_difference": 0.021410151934260657,
+      "relative_difference": 0.030365090370265194,
+      "status": "INVESTIGATE (>0.02)",
+      "evidence_source": "V1 A: CNN.ipynb Cell 29 保存输出; V2 runs/20261027T084038Z_cnn_85313f9d/verified_metrics.json",
+      "notes": ""
+    },
+    {
+      "model": "cnn",
+      "metric": "fit_seconds",
+      "v1_value": 30.181307,
+      "v2_value": 57.70163873700005,
+      "absolute_difference": 27.520331737000053,
+      "relative_difference": null,
+      "status": "HARDWARE NOT CONTROLLED",
+      "evidence_source": "V1 A: CNN.ipynb Cell 29 保存输出; V2 runs/20261027T084038Z_cnn_85313f9d/cnn_final_results.csv",
+      "notes": ""
+    },
+    {
+      "model": "cnn",
+      "metric": "prediction_seconds",
+      "v1_value": 0.248718,
+      "v2_value": 0.506010827000182,
+      "absolute_difference": 0.25729282700018197,
+      "relative_difference": null,
+      "status": "HARDWARE NOT CONTROLLED",
+      "evidence_source": "V1 A: CNN.ipynb Cell 29 保存输出; V2 runs/20261027T084038Z_cnn_85313f9d/cnn_final_results.csv",
+      "notes": ""
+    },
+    {
+      "model": "cnn",
+      "metric": "parameters",
+      "v1_value": 106089.0,
+      "v2_value": 106089.0,
+      "absolute_difference": 0.0,
+      "relative_difference": 0.0,
+      "status": "EXACT",
+      "evidence_source": "V1 A: CNN.ipynb Cell 29 保存输出; V2 runs/20261027T084038Z_cnn_85313f9d/cnn_final_results.csv",
+      "notes": ""
+    },
+    {
+      "model": "cnn",
+      "metric": "selected_epochs",
+      "v1_value": 11.0,
+      "v2_value": 11.0,
+      "absolute_difference": 0.0,
+      "relative_difference": 0.0,
+      "status": "EXACT",
+      "evidence_source": "V1 A: CNN.ipynb Cell 29 保存输出; V2 runs/20261027T084038Z_cnn_85313f9d/cnn_final_results.csv",
+      "notes": ""
+    },
+    {
+      "model": "cnn",
+      "metric": "selected_hyperparameters",
+      "v1_value": "{\"base_filters\": 16, \"dropout_rate\": 0.3, \"learning_rate\": 0.001}",
+      "v2_value": "{\"base_filters\": 16, \"dropout_rate\": 0.3, \"learning_rate\": 0.001}",
+      "absolute_difference": null,
+      "relative_difference": null,
+      "status": "EXACT",
+      "evidence_source": "V1 frozen source cell; V2 runs/20261027T084038Z_cnn_85313f9d/cnn_final_results.csv",
+      "notes": "Final model uses V1 frozen choice, independent of V2 search winner"
+    }
+  ],
+  "per_class_comparison": [
+    {
+      "model": "nearest_centroid",
+      "class_id": 0,
+      "class_name": "Adipose",
+      "metric": "recall",
+      "v1_value": 0.96,
+      "v2_value": 0.9599083619702177,
+      "absolute_difference": 9.163802978229274e-05,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 baseline.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "nearest_centroid",
+      "class_id": 0,
+      "class_name": "Adipose",
+      "metric": "f1",
+      "v1_value": 0.788,
+      "v2_value": 0.7879642689233662,
+      "absolute_difference": 3.573107663379371e-05,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence": "V1 baseline.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "nearest_centroid",
+      "class_id": 1,
+      "class_name": "Background",
+      "metric": "recall",
+      "v1_value": 0.67,
+      "v2_value": 0.6701631701631702,
+      "absolute_difference": 0.00016317016317013433,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 baseline.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "nearest_centroid",
+      "class_id": 1,
+      "class_name": "Background",
+      "metric": "f1",
+      "v1_value": 0.543,
+      "v2_value": 0.5427088249174139,
+      "absolute_difference": 0.000291175082586137,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 baseline.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "nearest_centroid",
+      "class_id": 2,
+      "class_name": "Debris",
+      "metric": "recall",
+      "v1_value": 0.268,
+      "v2_value": 0.26795895096921324,
+      "absolute_difference": 4.104903078677724e-05,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence": "V1 baseline.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "nearest_centroid",
+      "class_id": 2,
+      "class_name": "Debris",
+      "metric": "f1",
+      "v1_value": 0.29,
+      "v2_value": 0.2904820766378245,
+      "absolute_difference": 0.0004820766378245134,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 baseline.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "nearest_centroid",
+      "class_id": 3,
+      "class_name": "Lymphocytes",
+      "metric": "recall",
+      "v1_value": 0.435,
+      "v2_value": 0.43544857768052514,
+      "absolute_difference": 0.0004485776805251418,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 baseline.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "nearest_centroid",
+      "class_id": 3,
+      "class_name": "Lymphocytes",
+      "metric": "f1",
+      "v1_value": 0.556,
+      "v2_value": 0.5562543675751223,
+      "absolute_difference": 0.0002543675751222052,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 baseline.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "nearest_centroid",
+      "class_id": 4,
+      "class_name": "Mucus",
+      "metric": "recall",
+      "v1_value": 0.577,
+      "v2_value": 0.576662143826323,
+      "absolute_difference": 0.00033785617367698695,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 baseline.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "nearest_centroid",
+      "class_id": 4,
+      "class_name": "Mucus",
+      "metric": "f1",
+      "v1_value": 0.394,
+      "v2_value": 0.3942486085343228,
+      "absolute_difference": 0.00024860853432279173,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 baseline.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "nearest_centroid",
+      "class_id": 5,
+      "class_name": "Smooth muscle",
+      "metric": "recall",
+      "v1_value": 0.283,
+      "v2_value": 0.2826492537313433,
+      "absolute_difference": 0.00035074626865666536,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 baseline.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "nearest_centroid",
+      "class_id": 5,
+      "class_name": "Smooth muscle",
+      "metric": "f1",
+      "v1_value": 0.363,
+      "v2_value": 0.36330935251798563,
+      "absolute_difference": 0.00030935251798563934,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 baseline.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "nearest_centroid",
+      "class_id": 6,
+      "class_name": "Normal colon mucosa",
+      "metric": "recall",
+      "v1_value": 0.199,
+      "v2_value": 0.19941348973607037,
+      "absolute_difference": 0.00041348973607036044,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 baseline.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "nearest_centroid",
+      "class_id": 6,
+      "class_name": "Normal colon mucosa",
+      "metric": "f1",
+      "v1_value": 0.199,
+      "v2_value": 0.19883040935672514,
+      "absolute_difference": 0.00016959064327487505,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 baseline.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "nearest_centroid",
+      "class_id": 7,
+      "class_name": "Cancer-associated stroma",
+      "metric": "recall",
+      "v1_value": 0.154,
+      "v2_value": 0.15375153751537515,
+      "absolute_difference": 0.0002484624846248451,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 baseline.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "nearest_centroid",
+      "class_id": 7,
+      "class_name": "Cancer-associated stroma",
+      "metric": "f1",
+      "v1_value": 0.19,
+      "v2_value": 0.1902587519025875,
+      "absolute_difference": 0.00025875190258750624,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 baseline.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "nearest_centroid",
+      "class_id": 8,
+      "class_name": "Colorectal adenocarcinoma epithelium",
+      "metric": "recall",
+      "v1_value": 0.347,
+      "v2_value": 0.34667802385008517,
+      "absolute_difference": 0.0003219761499148044,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 baseline.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "nearest_centroid",
+      "class_id": 8,
+      "class_name": "Colorectal adenocarcinoma epithelium",
+      "metric": "f1",
+      "v1_value": 0.37,
+      "v2_value": 0.37016825829922695,
+      "absolute_difference": 0.00016825829922695323,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 baseline.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "gaussian_nb",
+      "class_id": 0,
+      "class_name": "0",
+      "metric": "recall",
+      "v1_value": 0.9381,
+      "v2_value": 0.9381443298969072,
+      "absolute_difference": 4.4329896907169264e-05,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence": "V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "gaussian_nb",
+      "class_id": 0,
+      "class_name": "0",
+      "metric": "f1",
+      "v1_value": 0.7822,
+      "v2_value": 0.7822349570200573,
+      "absolute_difference": 3.495702005729129e-05,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence": "V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "gaussian_nb",
+      "class_id": 1,
+      "class_name": "1",
+      "metric": "recall",
+      "v1_value": 0.6445,
+      "v2_value": 0.6445221445221445,
+      "absolute_difference": 2.2144522144551537e-05,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence": "V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "gaussian_nb",
+      "class_id": 1,
+      "class_name": "1",
+      "metric": "f1",
+      "v1_value": 0.6663,
+      "v2_value": 0.6662650602409639,
+      "absolute_difference": 3.493975903612334e-05,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence": "V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "gaussian_nb",
+      "class_id": 2,
+      "class_name": "2",
+      "metric": "recall",
+      "v1_value": 0.1026,
+      "v2_value": 0.10262257696693272,
+      "absolute_difference": 2.2576966932724707e-05,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence": "V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "gaussian_nb",
+      "class_id": 2,
+      "class_name": "2",
+      "metric": "f1",
+      "v1_value": 0.132,
+      "v2_value": 0.13196480938416422,
+      "absolute_difference": 3.519061583578953e-05,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence": "V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "gaussian_nb",
+      "class_id": 3,
+      "class_name": "3",
+      "metric": "recall",
+      "v1_value": 0.6214,
+      "v2_value": 0.6214442013129103,
+      "absolute_difference": 4.420131291038576e-05,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence": "V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "gaussian_nb",
+      "class_id": 3,
+      "class_name": "3",
+      "metric": "f1",
+      "v1_value": 0.4993,
+      "v2_value": 0.49934065934065935,
+      "absolute_difference": 4.065934065933252e-05,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence": "V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "gaussian_nb",
+      "class_id": 4,
+      "class_name": "4",
+      "metric": "recall",
+      "v1_value": 0.4749,
+      "v2_value": 0.47489823609226595,
+      "absolute_difference": 1.763907734042558e-06,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence": "V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "gaussian_nb",
+      "class_id": 4,
+      "class_name": "4",
+      "metric": "f1",
+      "v1_value": 0.4016,
+      "v2_value": 0.40160642570281124,
+      "absolute_difference": 6.425702811230227e-06,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence": "V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "gaussian_nb",
+      "class_id": 5,
+      "class_name": "5",
+      "metric": "recall",
+      "v1_value": 0.0756,
+      "v2_value": 0.07555970149253731,
+      "absolute_difference": 4.0298507462691036e-05,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence": "V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "gaussian_nb",
+      "class_id": 5,
+      "class_name": "5",
+      "metric": "f1",
+      "v1_value": 0.1297,
+      "v2_value": 0.1297037630104083,
+      "absolute_difference": 3.763010408303069e-06,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence": "V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "gaussian_nb",
+      "class_id": 6,
+      "class_name": "6",
+      "metric": "recall",
+      "v1_value": 0.2155,
+      "v2_value": 0.2155425219941349,
+      "absolute_difference": 4.2521994134903096e-05,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence": "V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "gaussian_nb",
+      "class_id": 6,
+      "class_name": "6",
+      "metric": "f1",
+      "v1_value": 0.2398,
+      "v2_value": 0.2398042414355628,
+      "absolute_difference": 4.241435562796214e-06,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence": "V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "gaussian_nb",
+      "class_id": 7,
+      "class_name": "7",
+      "metric": "recall",
+      "v1_value": 0.6298,
+      "v2_value": 0.6297662976629766,
+      "absolute_difference": 3.370233702337799e-05,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence": "V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "gaussian_nb",
+      "class_id": 7,
+      "class_name": "7",
+      "metric": "f1",
+      "v1_value": 0.381,
+      "v2_value": 0.38095238095238093,
+      "absolute_difference": 4.7619047619074095e-05,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence": "V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "gaussian_nb",
+      "class_id": 8,
+      "class_name": "8",
+      "metric": "recall",
+      "v1_value": 0.1738,
+      "v2_value": 0.1737649063032368,
+      "absolute_difference": 3.50936967632165e-05,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence": "V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "gaussian_nb",
+      "class_id": 8,
+      "class_name": "8",
+      "metric": "f1",
+      "v1_value": 0.2399,
+      "v2_value": 0.23985890652557318,
+      "absolute_difference": 4.109347442682321e-05,
+      "status": "MATCHES PRINTED PRECISION",
+      "evidence": "V1 Naive_Bayes.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "mlp",
+      "class_id": 0,
+      "class_name": "Adipose",
+      "metric": "recall",
+      "v1_value": 0.9645,
+      "v2_value": 0.9576174112256587,
+      "absolute_difference": 0.006882588774341336,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 MLP.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "mlp",
+      "class_id": 0,
+      "class_name": "Adipose",
+      "metric": "f1",
+      "v1_value": 0.8259,
+      "v2_value": 0.8301886792452831,
+      "absolute_difference": 0.004288679245283089,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 MLP.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "mlp",
+      "class_id": 1,
+      "class_name": "Background",
+      "metric": "recall",
+      "v1_value": 0.6399,
+      "v2_value": 0.6386946386946387,
+      "absolute_difference": 0.0012053613053613077,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 MLP.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "mlp",
+      "class_id": 1,
+      "class_name": "Background",
+      "metric": "f1",
+      "v1_value": 0.6906,
+      "v2_value": 0.6807453416149069,
+      "absolute_difference": 0.00985465838509314,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 MLP.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "mlp",
+      "class_id": 2,
+      "class_name": "Debris",
+      "metric": "recall",
+      "v1_value": 0.138,
+      "v2_value": 0.13911060433295325,
+      "absolute_difference": 0.0011106043329532356,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 MLP.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "mlp",
+      "class_id": 2,
+      "class_name": "Debris",
+      "metric": "f1",
+      "v1_value": 0.2214,
+      "v2_value": 0.2057335581787521,
+      "absolute_difference": 0.015666441821247906,
+      "status": "NOTICE (>0.01)",
+      "evidence": "V1 MLP.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "mlp",
+      "class_id": 3,
+      "class_name": "Lymphocytes",
+      "metric": "recall",
+      "v1_value": 0.6685,
+      "v2_value": 0.6827133479212254,
+      "absolute_difference": 0.014213347921225417,
+      "status": "NOTICE (>0.01)",
+      "evidence": "V1 MLP.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "mlp",
+      "class_id": 3,
+      "class_name": "Lymphocytes",
+      "metric": "f1",
+      "v1_value": 0.5509,
+      "v2_value": 0.5531914893617021,
+      "absolute_difference": 0.0022914893617022036,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 MLP.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "mlp",
+      "class_id": 4,
+      "class_name": "Mucus",
+      "metric": "recall",
+      "v1_value": 0.5292,
+      "v2_value": 0.5305291723202171,
+      "absolute_difference": 0.0013291723202171202,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 MLP.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "mlp",
+      "class_id": 4,
+      "class_name": "Mucus",
+      "metric": "f1",
+      "v1_value": 0.5186,
+      "v2_value": 0.5326975476839237,
+      "absolute_difference": 0.014097547683923795,
+      "status": "NOTICE (>0.01)",
+      "evidence": "V1 MLP.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "mlp",
+      "class_id": 5,
+      "class_name": "Smooth muscle",
+      "metric": "recall",
+      "v1_value": 0.4422,
+      "v2_value": 0.4552238805970149,
+      "absolute_difference": 0.013023880597014925,
+      "status": "NOTICE (>0.01)",
+      "evidence": "V1 MLP.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "mlp",
+      "class_id": 5,
+      "class_name": "Smooth muscle",
+      "metric": "f1",
+      "v1_value": 0.4311,
+      "v2_value": 0.41673783091374894,
+      "absolute_difference": 0.014362169086251042,
+      "status": "NOTICE (>0.01)",
+      "evidence": "V1 MLP.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "mlp",
+      "class_id": 6,
+      "class_name": "Normal colon mucosa",
+      "metric": "recall",
+      "v1_value": 0.0821,
+      "v2_value": 0.03225806451612903,
+      "absolute_difference": 0.049841935483870975,
+      "status": "INVESTIGATE (>0.02)",
+      "evidence": "V1 MLP.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "mlp",
+      "class_id": 6,
+      "class_name": "Normal colon mucosa",
+      "metric": "f1",
+      "v1_value": 0.1322,
+      "v2_value": 0.057971014492753624,
+      "absolute_difference": 0.07422898550724638,
+      "status": "SIGNIFICANT RISK (>0.05)",
+      "evidence": "V1 MLP.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "mlp",
+      "class_id": 7,
+      "class_name": "Cancer-associated stroma",
+      "metric": "recall",
+      "v1_value": 0.1279,
+      "v2_value": 0.13407134071340712,
+      "absolute_difference": 0.0061713407134071085,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 MLP.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "mlp",
+      "class_id": 7,
+      "class_name": "Cancer-associated stroma",
+      "metric": "f1",
+      "v1_value": 0.1813,
+      "v2_value": 0.18091286307053941,
+      "absolute_difference": 0.0003871369294605742,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 MLP.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "mlp",
+      "class_id": 8,
+      "class_name": "Colorectal adenocarcinoma epithelium",
+      "metric": "recall",
+      "v1_value": 0.7019,
+      "v2_value": 0.6592844974446337,
+      "absolute_difference": 0.04261550255536628,
+      "status": "INVESTIGATE (>0.02)",
+      "evidence": "V1 MLP.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "mlp",
+      "class_id": 8,
+      "class_name": "Colorectal adenocarcinoma epithelium",
+      "metric": "f1",
+      "v1_value": 0.49,
+      "v2_value": 0.489873417721519,
+      "absolute_difference": 0.00012658227848100223,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 MLP.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "cnn",
+      "class_id": 0,
+      "class_name": "Adipose",
+      "metric": "recall",
+      "v1_value": 0.9759,
+      "v2_value": 0.9736540664375716,
+      "absolute_difference": 0.002245933562428415,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 CNN.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "cnn",
+      "class_id": 0,
+      "class_name": "Adipose",
+      "metric": "f1",
+      "v1_value": 0.9059,
+      "v2_value": 0.9032943676939427,
+      "absolute_difference": 0.0026056323060573705,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 CNN.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "cnn",
+      "class_id": 1,
+      "class_name": "Background",
+      "metric": "recall",
+      "v1_value": 0.9231,
+      "v2_value": 0.9300699300699301,
+      "absolute_difference": 0.006969930069930075,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 CNN.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "cnn",
+      "class_id": 1,
+      "class_name": "Background",
+      "metric": "f1",
+      "v1_value": 0.9468,
+      "v2_value": 0.9516994633273703,
+      "absolute_difference": 0.004899463327370346,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 CNN.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "cnn",
+      "class_id": 2,
+      "class_name": "Debris",
+      "metric": "recall",
+      "v1_value": 0.2645,
+      "v2_value": 0.39110604332953247,
+      "absolute_difference": 0.12660604332953246,
+      "status": "SIGNIFICANT RISK (>0.05)",
+      "evidence": "V1 CNN.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "cnn",
+      "class_id": 2,
+      "class_name": "Debris",
+      "metric": "f1",
+      "v1_value": 0.4024,
+      "v2_value": 0.5066469719350074,
+      "absolute_difference": 0.10424697193500743,
+      "status": "SIGNIFICANT RISK (>0.05)",
+      "evidence": "V1 CNN.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "cnn",
+      "class_id": 3,
+      "class_name": "Lymphocytes",
+      "metric": "recall",
+      "v1_value": 0.953,
+      "v2_value": 0.9529540481400438,
+      "absolute_difference": 4.5951859956150365e-05,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 CNN.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "cnn",
+      "class_id": 3,
+      "class_name": "Lymphocytes",
+      "metric": "f1",
+      "v1_value": 0.9217,
+      "v2_value": 0.9168421052631579,
+      "absolute_difference": 0.004857894736842061,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 CNN.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "cnn",
+      "class_id": 4,
+      "class_name": "Mucus",
+      "metric": "recall",
+      "v1_value": 0.6866,
+      "v2_value": 0.6879240162822252,
+      "absolute_difference": 0.0013240162822252266,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 CNN.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "cnn",
+      "class_id": 4,
+      "class_name": "Mucus",
+      "metric": "f1",
+      "v1_value": 0.6898,
+      "v2_value": 0.7051460361613352,
+      "absolute_difference": 0.01534603616133523,
+      "status": "NOTICE (>0.01)",
+      "evidence": "V1 CNN.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "cnn",
+      "class_id": 5,
+      "class_name": "Smooth muscle",
+      "metric": "recall",
+      "v1_value": 0.764,
+      "v2_value": 0.7220149253731343,
+      "absolute_difference": 0.04198507462686574,
+      "status": "INVESTIGATE (>0.02)",
+      "evidence": "V1 CNN.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "cnn",
+      "class_id": 5,
+      "class_name": "Smooth muscle",
+      "metric": "f1",
+      "v1_value": 0.7,
+      "v2_value": 0.7133640552995392,
+      "absolute_difference": 0.013364055299539213,
+      "status": "NOTICE (>0.01)",
+      "evidence": "V1 CNN.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "cnn",
+      "class_id": 6,
+      "class_name": "Normal colon mucosa",
+      "metric": "recall",
+      "v1_value": 0.4897,
+      "v2_value": 0.5146627565982405,
+      "absolute_difference": 0.024962756598240432,
+      "status": "INVESTIGATE (>0.02)",
+      "evidence": "V1 CNN.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "cnn",
+      "class_id": 6,
+      "class_name": "Normal colon mucosa",
+      "metric": "f1",
+      "v1_value": 0.5521,
+      "v2_value": 0.5549407114624506,
+      "absolute_difference": 0.0028407114624505736,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 CNN.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "cnn",
+      "class_id": 7,
+      "class_name": "Cancer-associated stroma",
+      "metric": "recall",
+      "v1_value": 0.433,
+      "v2_value": 0.5092250922509225,
+      "absolute_difference": 0.0762250922509225,
+      "status": "SIGNIFICANT RISK (>0.05)",
+      "evidence": "V1 CNN.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "cnn",
+      "class_id": 7,
+      "class_name": "Cancer-associated stroma",
+      "metric": "f1",
+      "v1_value": 0.4467,
+      "v2_value": 0.5054945054945055,
+      "absolute_difference": 0.05879450549450549,
+      "status": "SIGNIFICANT RISK (>0.05)",
+      "evidence": "V1 CNN.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "cnn",
+      "class_id": 8,
+      "class_name": "Colorectal adenocarcinoma epithelium",
+      "metric": "recall",
+      "v1_value": 0.856,
+      "v2_value": 0.8568994889267462,
+      "absolute_difference": 0.0008994889267461836,
+      "status": "SMALL DIFFERENCE",
+      "evidence": "V1 CNN.ipynb classification report; V2 verified_metrics.json"
+    },
+    {
+      "model": "cnn",
+      "class_id": 8,
+      "class_name": "Colorectal adenocarcinoma epithelium",
+      "metric": "f1",
+      "v1_value": 0.7153,
+      "v2_value": 0.7518684603886397,
+      "absolute_difference": 0.0365684603886397,
+      "status": "INVESTIGATE (>0.02)",
+      "evidence": "V1 CNN.ipynb classification report; V2 verified_metrics.json"
+    }
+  ]
+}

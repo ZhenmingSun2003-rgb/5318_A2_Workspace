@@ -1,0 +1,19 @@
+{
+  "network_mode": "none",
+  "memory_limit_bytes": 10737418240,
+  "nano_cpus": 4000000000,
+  "mounts": [
+    {
+      "Source": "C:\\Users\\Saberken\\Downloads\\5318_A2_Workspace",
+      "Destination": "/workspace/repo",
+      "Mode": "ro",
+      "RW": false
+    },
+    {
+      "Source": "C:\\Users\\Saberken\\Downloads\\5318_A2_Workspace\\reproduction_v2\\runs",
+      "Destination": "/workspace/repo/reproduction_v2/runs",
+      "Mode": "rw",
+      "RW": true
+    }
+  ]
+}

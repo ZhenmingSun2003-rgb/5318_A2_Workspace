@@ -1,0 +1,5 @@
+# Large per-run artifacts and caches remain local. Keep small summaries in reports/.
+runs/
+__pycache__/
+*.pyc
+!results/**/*.log

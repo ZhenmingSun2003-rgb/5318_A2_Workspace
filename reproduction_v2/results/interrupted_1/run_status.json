@@ -1,0 +1,15 @@
+{
+  "model": "mlp",
+  "started_at": "2026-10-27T16:36:17.704982+08:00",
+  "source_sha256": "5297efd9faca2593d87d6304a93de411914fdece974c1f8609d6cd271057027f",
+  "original_cells": 32,
+  "completed_original_code_cells": 5,
+  "audit_cell_executed": false,
+  "status": "FAIL",
+  "error": {
+    "type": "ContainerInterrupted",
+    "message": "Docker Desktop backend restarted during source Cell 18; docker compose exited 125 unexpected EOF. Root cause not proven."
+  },
+  "ended_at_host": "2026-10-27T16:38:20.6625529+08:00",
+  "cause_followup": "User later reported manually closing and reopening Docker Desktop during this run; interruption is excluded from model failure assessment."
+}

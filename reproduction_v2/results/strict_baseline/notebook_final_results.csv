@@ -1,0 +1,3 @@
+model,frozen_parameters,accuracy,macro_f1,balanced_accuracy,fit_seconds,prediction_seconds,train_samples,test_samples,seed
+Nearest centroid (RGB pixels),"{'metric': 'euclidean', 'shrink_threshold': None}",0.43025,0.41046943540717495,0.43251483438248034,0.09510057799997185,0.04658484500004079,32000,8000,5318
+Most frequent,"{'constant': None, 'random_state': None, 'strategy': 'most_frequent'}",0.14675,0.02843785577598527,0.1111111111111111,0.0011655540000106157,4.780199998322132e-05,32000,8000,5318

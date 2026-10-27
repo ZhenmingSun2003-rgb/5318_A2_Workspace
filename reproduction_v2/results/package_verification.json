@@ -1,0 +1,80 @@
+{
+  "dummy": {
+    "pass": true,
+    "calculated": {
+      "n_test": 8000,
+      "accuracy": 0.14675,
+      "macro_f1": 0.02843785577598527,
+      "balanced_accuracy": 0.1111111111111111
+    },
+    "recorded": {
+      "accuracy": 0.14675,
+      "macro_f1": 0.02843785577598527,
+      "balanced_accuracy": 0.1111111111111111
+    }
+  },
+  "nearest_centroid": {
+    "pass": true,
+    "calculated": {
+      "n_test": 8000,
+      "accuracy": 0.43025,
+      "macro_f1": 0.41046943540717495,
+      "balanced_accuracy": 0.43251483438248034
+    },
+    "recorded": {
+      "accuracy": 0.43025,
+      "macro_f1": 0.41046943540717495,
+      "balanced_accuracy": 0.43251483438248034
+    }
+  },
+  "gaussian_nb": {
+    "pass": true,
+    "calculated": {
+      "n_test": 8000,
+      "accuracy": 0.4155,
+      "macro_f1": 0.38574791151250903,
+      "balanced_accuracy": 0.43069610180489404
+    },
+    "recorded": {
+      "accuracy": 0.4155,
+      "macro_f1": 0.38574791151250903,
+      "balanced_accuracy": 0.43069610180489404
+    }
+  },
+  "mlp": {
+    "pass": true,
+    "calculated": {
+      "n_test": 8000,
+      "accuracy": 0.48925,
+      "macro_f1": 0.43867241580923655,
+      "balanced_accuracy": 0.4699447730850976
+    },
+    "recorded": {
+      "accuracy": 0.48925,
+      "macro_f1": 0.43867241580923655,
+      "balanced_accuracy": 0.4699447730850976
+    }
+  },
+  "cnn": {
+    "pass": true,
+    "calculated": {
+      "n_test": 8000,
+      "accuracy": 0.73925,
+      "macro_f1": 0.7232551863362164,
+      "balanced_accuracy": 0.7265011519342607
+    },
+    "recorded": {
+      "accuracy": 0.73925,
+      "macro_f1": 0.7232551863362164,
+      "balanced_accuracy": 0.7265011519342607
+    }
+  },
+  "mlp_final_only_same_predictions": {
+    "pass": true,
+    "sha256": "745dffc303a113b74b5f01e04a302965936b20f88d131619d67531a0f94149dd"
+  },
+  "cnn_final_only_same_predictions": {
+    "pass": true,
+    "sha256": "baa8aed260a4a00a4198049ac85e8218ef625f8fc695a87d8a953538d968b6ef"
+  }
+}

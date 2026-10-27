@@ -1,0 +1,2 @@
+model,best_hyperparameters,validation_macro_f1,validation_accuracy,test_accuracy,test_macro_f1,test_balanced_accuracy,fit_seconds,prediction_seconds,parameters,epochs,search_fit_samples,validation_samples,train_samples,test_samples,seed
+CNN,"{""base_filters"": 16, ""dropout_rate"": 0.3, ""learning_rate"": 0.001}",0.7386080336263325,0.75125,0.73925,0.7232551863362164,0.7265011519342607,58.342558733999795,0.5512085090001619,106089,11,25600,6400,32000,8000,5318

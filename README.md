@@ -129,3 +129,13 @@ streamlit run eda_lab/app.py
 **参考资料：** Canvas 任务说明及原始模板（见 `Canvas Sources/`）；MedMNIST 官方类别定义 https://github.com/MedMNIST/MedMNIST/blob/main/medmnist/info.py 。
 
 谢谢大家配合！我们把各自的 Notebook 做完整、把真实结果留下来，最后的整合和结果分析就会更顺畅。
+
+## V2 Docker Reproduction
+
+`reproduction_v2/` 保存只读原仓库挂载下的独立复现脚本、V1 快照和 V2 报告。实验基于 commit `0f2ffeaa118a82a39f4d2585ceca6e1d691e5036`；镜像使用 `python:3.11.11-slim-bookworm`（linux/amd64）、NumPy 1.26.4、scikit-learn 1.5.2、TensorFlow 2.17.1、Keras 3.6.0，CPU 运行。
+
+从仓库根目录执行 `docker compose -f reproduction_v2/compose.yaml build --pull`、`docker compose -f reproduction_v2/compose.yaml run --rm reproduce --audit` 和 `docker compose -f reproduction_v2/compose.yaml run --rm reproduce --all`。报告见 `reproduction_v2/reports/`，逐次执行日志与预测保存在 Git 忽略的 `reproduction_v2/runs/`。
+
+五个模型均完成严格执行及独立指标复核。Dummy、Nearest Centroid、Gaussian NB 与 V1 保存结果在显示精度内一致；MLP Test Macro-F1 为 0.438672（V1 0.449128，WARNING），CNN 为 0.723255（V1 0.697860，WARNING）。跨平台和依赖版本差异限制神经网络结果及耗时的直接等同性；训练轨迹、逐类差异与跳过搜索对照见 `reproduction_v2/reports/05_difference_analysis.md`，一次人工重启 Docker 的中断记录见 `reproduction_v2/reports/03_experiment_integrity_audit.md`。
+
+供小组审阅的实测产物已整理在 `reproduction_v2/results/`：`strict_*` 是完整搜索的执行副本、日志、预测与指标，`final_only_*` 是跳过搜索的对照，`interrupted_1` 保留人工重启造成的中断记录。`manifest.json` 记录逐文件 SHA-256，`package_verification.json` 证实上传的预测标签能够重算已报告的测试指标；大型模型权重和临时缓存不在上传包内。

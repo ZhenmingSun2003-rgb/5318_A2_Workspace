@@ -1,0 +1,114 @@
+[2026-10-27T08:35:52.275753+00:00] START baseline; source=/workspace/repo/baseline.ipynb; sha256=0fdbb9a33ac7e73a246b6f173e4c33873f812ab54646f42cac1f28f932242ea7; original_cells=33
+[2026-10-27T08:35:53.936480+00:00] BEGIN source_cell=4
+[2026-10-27T08:35:55.157512+00:00] END source_cell=4 seconds=1.220 outputs=1
+--- source cell 4 outputs ---
+Seed: 5318 | Python: 3.11.11 | NumPy: 1.26.4 | scikit-learn: 1.5.2
+Machine: Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.36
+Original Canvas data: /workspace/repo/Canvas Sources/Assignment2Data-1/Assignment2Data
+
+--- end cell 4 ---
+[2026-10-27T08:35:55.165900+00:00] BEGIN source_cell=6
+[2026-10-27T08:35:55.187357+00:00] END source_cell=6 seconds=0.021 outputs=1
+--- source cell 6 outputs ---
+Training: (32000, 28, 28, 3) uint8 | Test: (8000, 28, 28, 3) uint8
+Training labels: [0, 1, 2, 3, 4, 5, 6, 7, 8] | Test retained for final evaluation.
+Images are 28x28 RGB if shapes match the assignment description.
+
+--- end cell 6 ---
+[2026-10-27T08:35:55.195890+00:00] BEGIN source_cell=7
+[2026-10-27T08:35:55.251392+00:00] END source_cell=7 seconds=0.055 outputs=2
+--- source cell 7 outputs ---
+   class_id                            class_name  train_count  train_fraction
+0         0                               Adipose         3490          0.1091
+1         1                            Background         3431          0.1072
+2         2                                Debris         3505          0.1095
+3         3                           Lymphocytes         3656          0.1142
+4         4                                 Mucus         2950          0.0922
+5         5                         Smooth muscle         4290          0.1341
+6         6                   Normal colon mucosa         2728          0.0853
+7         7              Cancer-associated stroma         3253          0.1017
+8         8  Colorectal adenocarcinoma epithelium         4697          0.1468
+Majority-class training proportion: 0.1468
+
+--- end cell 7 ---
+[2026-10-27T08:35:55.259401+00:00] BEGIN source_cell=9
+[2026-10-27T08:35:56.032909+00:00] END source_cell=9 seconds=0.773 outputs=2
+--- source cell 9 outputs ---
+Train pixel range: [0.0000, 255.0000]; divisor: 255.0
+
+Development split: fit=25600, validation=6400, held-out test=8000
+Flattened features: 2352
+
+--- end cell 9 ---
+[2026-10-27T08:35:56.041370+00:00] BEGIN source_cell=10
+[2026-10-27T08:35:56.302884+00:00] END source_cell=10 seconds=0.261 outputs=0
+[2026-10-27T08:35:56.310760+00:00] BEGIN source_cell=16
+[2026-10-27T08:35:56.318890+00:00] END source_cell=16 seconds=0.008 outputs=1
+--- source cell 16 outputs ---
+Model-independent protocol: stratified validation from original training data, seed 5318 ; primary: macro-F1; secondary: accuracy and balanced accuracy.
+Train and prediction times use perf_counter; include fit/predict calls, exclude dataset loading and plotting.
+
+--- end cell 16 ---
+[2026-10-27T08:35:56.326779+00:00] BEGIN source_cell=22
+[2026-10-27T08:35:56.506776+00:00] END source_cell=22 seconds=0.180 outputs=2
+--- source cell 22 outputs ---
+                           model  accuracy  macro_f1  balanced_accuracy  \
+0  Nearest centroid (RGB pixels)    0.4222    0.4051             0.4237   
+1                  Most frequent    0.1467    0.0284             0.1111   
+
+   fit_seconds  prediction_seconds  
+0       0.0822              0.0755  
+1       0.0016              0.0001  
+No hyperparameters are optimised here; validation is descriptive only.
+Any future choice of assessed-model hyperparameters must use this validation split, not test-set performance.
+
+--- end cell 22 ---
+[2026-10-27T08:35:56.515166+00:00] BEGIN source_cell=23
+[2026-10-27T08:35:56.566667+00:00] END source_cell=23 seconds=0.051 outputs=0
+[2026-10-27T08:35:56.575337+00:00] BEGIN source_cell=29
+[2026-10-27T08:35:57.160271+00:00] END source_cell=29 seconds=0.585 outputs=2
+--- source cell 29 outputs ---
+                           model  \
+0  Nearest centroid (RGB pixels)   
+1                  Most frequent   
+
+                                   frozen_parameters  accuracy  macro_f1  \
+0  {'metric': 'euclidean', 'shrink_threshold': None}    0.4302    0.4105   
+1  {'constant': None, 'random_state': None, 'stra...    0.1468    0.0284   
+
+   balanced_accuracy  fit_seconds  prediction_seconds  train_samples  \
+0             0.4325       0.0951              0.0466          32000   
+1             0.1111       0.0012              0.0000          32000   
+
+   test_samples  seed  
+0          8000  5318  
+1          8000  5318  
+The reported test metrics are single-split reference measurements, not validation tuning scores.
+
+--- end cell 29 ---
+[2026-10-27T08:35:57.168075+00:00] BEGIN source_cell=30
+[2026-10-27T08:35:57.239057+00:00] END source_cell=30 seconds=0.071 outputs=1
+--- source cell 30 outputs ---
+                                      precision    recall  f1-score   support
+
+                             Adipose      0.668     0.960     0.788       873
+                          Background      0.456     0.670     0.543       858
+                              Debris      0.317     0.268     0.290       877
+                         Lymphocytes      0.770     0.435     0.556       914
+                               Mucus      0.300     0.577     0.394       737
+                       Smooth muscle      0.508     0.283     0.363      1072
+                 Normal colon mucosa      0.198     0.199     0.199       682
+            Cancer-associated stroma      0.250     0.154     0.190       813
+Colorectal adenocarcinoma epithelium      0.397     0.347     0.370      1174
+
+                            accuracy                          0.430      8000
+                           macro avg      0.429     0.433     0.410      8000
+                        weighted avg      0.441     0.430     0.415      8000
+
+Interpretation caution: neither temporal nor patient-level grouping is verifiable from the supplied arrays alone.
+Cross-machine elapsed times are not controlled hardware benchmarks.
+
+--- end cell 30 ---
+[2026-10-27T08:35:57.247946+00:00] BEGIN audit_export_cell=33
+[2026-10-27T08:35:57.271489+00:00] END audit_export_cell outputs=1
+[2026-10-27T08:35:57.861896+00:00] COMPLETE baseline: PASS; wall_seconds=5.521

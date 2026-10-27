@@ -1,0 +1,653 @@
+[2026-10-27T08:38:32.120039+00:00] START mlp; source=/workspace/repo/MLP.ipynb; sha256=5297efd9faca2593d87d6304a93de411914fdece974c1f8609d6cd271057027f; original_cells=32
+[2026-10-27T08:38:33.668551+00:00] BEGIN source_cell=4
+[2026-10-27T08:38:38.572121+00:00] END source_cell=4 seconds=4.903 outputs=2
+--- source cell 4 outputs ---
+2026-10-27 08:38:35.859735: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-10-27 08:38:35.956577: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-10-27 08:38:35.971240: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+
+{
+  "python": "3.11.11",
+  "numpy": "1.26.4",
+  "pandas": "2.2.3",
+  "scikit_learn": "1.5.2",
+  "tensorflow": "2.17.1",
+  "keras": "3.6.0",
+  "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+  "processor": "",
+  "logical_cpu_count": 16,
+  "seed": 5318,
+  "devices": [
+    "/physical_device:CPU:0"
+  ],
+  "intra_op_threads": 4,
+  "inter_op_threads": 2,
+  "deterministic_ops": true
+}
+
+--- end cell 4 ---
+[2026-10-27T08:38:38.580827+00:00] BEGIN source_cell=6
+[2026-10-27T08:38:39.324309+00:00] END source_cell=6 seconds=0.743 outputs=2
+--- source cell 6 outputs ---
+{
+  "fit_indices_sha256": "191d1629061294ebe7e01fe7a79ac57739fced43795161a0c6b821241311c571",
+  "validation_indices_sha256": "c07d9573b52ee95cb6bd73390fde64f9c2dccd1c2ab14c244a479b1aa0dd3718"
+}
+Train (25600, 28, 28, 3) Val (6400, 28, 28, 3) Test (8000, 28, 28, 3) Labels [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Training dtype: uint8 | pixel divisor: 255.0
+Flattened fit/validation shapes: (25600, 2352) (6400, 2352)
+
+   class_id                            class_name  original_train   fit  \
+0         0                               Adipose            3490  2792   
+1         1                            Background            3431  2745   
+2         2                                Debris            3505  2804   
+3         3                           Lymphocytes            3656  2925   
+4         4                                 Mucus            2950  2360   
+5         5                         Smooth muscle            4290  3432   
+6         6                   Normal colon mucosa            2728  2182   
+7         7              Cancer-associated stroma            3253  2602   
+8         8  Colorectal adenocarcinoma epithelium            4697  3758   
+
+   validation  
+0         698  
+1         686  
+2         701  
+3         731  
+4         590  
+5         858  
+6         546  
+7         651  
+8         939  
+--- end cell 6 ---
+[2026-10-27T08:38:39.332868+00:00] BEGIN source_cell=8
+[2026-10-27T08:38:40.363796+00:00] END source_cell=8 seconds=1.031 outputs=0
+[2026-10-27T08:38:40.371613+00:00] BEGIN source_cell=12
+[2026-10-27T08:38:40.619991+00:00] END source_cell=12 seconds=0.248 outputs=6
+--- source cell 12 outputs ---
+[1mModel: "pathmnist_mlp"[0m
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃[1m [0m[1mLayer (type)                   [0m[1m [0m┃[1m [0m[1mOutput Shape          [0m[1m [0m┃[1m [0m[1m      Param #[0m[1m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ dense ([38;5;33mDense[0m)                   │ ([38;5;45mNone[0m, [38;5;34m128[0m)            │       [38;5;34m301,184[0m │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dropout ([38;5;33mDropout[0m)               │ ([38;5;45mNone[0m, [38;5;34m128[0m)            │             [38;5;34m0[0m │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_1 ([38;5;33mDense[0m)                 │ ([38;5;45mNone[0m, [38;5;34m9[0m)              │         [38;5;34m1,161[0m │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+
+[1m Total params: [0m[38;5;34m302,345[0m (1.15 MB)
+
+[1m Trainable params: [0m[38;5;34m302,345[0m (1.15 MB)
+
+[1m Non-trainable params: [0m[38;5;34m0[0m (0.00 B)
+
+Macro-F1 streaming/reset and parameter-count checks passed.
+
+--- end cell 12 ---
+[2026-10-27T08:38:40.629216+00:00] BEGIN source_cell=13
+[2026-10-27T08:38:44.575710+00:00] END source_cell=13 seconds=3.946 outputs=6
+--- source cell 13 outputs ---
+Epoch 1/2
+
+200/200 - 2s - 11ms/step - accuracy: 0.2304 - loss: 2.0578 - macro_f1: 0.1711 - val_accuracy: 0.2748 - val_loss: 1.8658 - val_macro_f1: 0.1692
+
+Epoch 2/2
+
+200/200 - 1s - 4ms/step - accuracy: 0.3052 - loss: 1.8138 - macro_f1: 0.2677 - val_accuracy: 0.3381 - val_loss: 1.7605 - val_macro_f1: 0.2758
+
+   hidden_units  learning_rate  dropout_rate  batch_size  max_epochs  \
+0           128          0.001           0.0         128           2   
+
+   patience  validation_accuracy  validation_macro_f1  \
+0         3              0.33812              0.27585   
+
+   validation_balanced_accuracy  fit_seconds  validation_seconds  \
+0                       0.33327      2.89814             0.14104   
+
+   training_epoch_seconds  in_fit_validation_seconds  epochs_run  best_epoch  \
+0                 2.55962                    0.31098           2           2   
+
+   parameters  seed  fit_samples  validation_samples  
+0      302345  5318        25600                6400  
+4356
+--- end cell 13 ---
+[2026-10-27T08:38:44.585399+00:00] BEGIN source_cell=18
+[2026-10-27T08:40:16.182965+00:00] END source_cell=18 seconds=91.599 outputs=169
+--- source cell 18 outputs ---
+
+Trial 1/8: {'hidden_units': 128, 'learning_rate': 0.001, 'dropout_rate': 0.0}
+
+Epoch 1/12
+
+200/200 - 2s - 9ms/step - accuracy: 0.2304 - loss: 2.0578 - macro_f1: 0.1711 - val_accuracy: 0.2748 - val_loss: 1.8658 - val_macro_f1: 0.1692
+
+Epoch 2/12
+
+200/200 - 1s - 4ms/step - accuracy: 0.3052 - loss: 1.8138 - macro_f1: 0.2677 - val_accuracy: 0.3381 - val_loss: 1.7605 - val_macro_f1: 0.2758
+
+Epoch 3/12
+
+200/200 - 1s - 4ms/step - accuracy: 0.3646 - loss: 1.6983 - macro_f1: 0.3325 - val_accuracy: 0.3822 - val_loss: 1.6707 - val_macro_f1: 0.3238
+
+Epoch 4/12
+
+200/200 - 1s - 4ms/step - accuracy: 0.3927 - loss: 1.6238 - macro_f1: 0.3603 - val_accuracy: 0.4258 - val_loss: 1.6097 - val_macro_f1: 0.3826
+
+Epoch 5/12
+
+200/200 - 1s - 3ms/step - accuracy: 0.4094 - loss: 1.5843 - macro_f1: 0.3756 - val_accuracy: 0.4281 - val_loss: 1.5784 - val_macro_f1: 0.3845
+
+Epoch 6/12
+
+200/200 - 1s - 3ms/step - accuracy: 0.4192 - loss: 1.5568 - macro_f1: 0.3874 - val_accuracy: 0.4094 - val_loss: 1.5824 - val_macro_f1: 0.3523
+
+Epoch 7/12
+
+200/200 - 1s - 3ms/step - accuracy: 0.4389 - loss: 1.5261 - macro_f1: 0.4002 - val_accuracy: 0.4111 - val_loss: 1.5481 - val_macro_f1: 0.3469
+
+Epoch 8/12
+
+200/200 - 1s - 4ms/step - accuracy: 0.4423 - loss: 1.5077 - macro_f1: 0.3997 - val_accuracy: 0.4258 - val_loss: 1.5175 - val_macro_f1: 0.3557
+
+Restored validation Macro-F1: 0.38453
+
+Trial 2/8: {'hidden_units': 128, 'learning_rate': 0.001, 'dropout_rate': 0.3}
+
+Epoch 1/12
+
+200/200 - 2s - 10ms/step - accuracy: 0.1445 - loss: 2.2334 - macro_f1: 0.0479 - val_accuracy: 0.1467 - val_loss: 2.1892 - val_macro_f1: 0.0284
+
+Epoch 2/12
+
+200/200 - 1s - 4ms/step - accuracy: 0.1477 - loss: 2.1868 - macro_f1: 0.0303 - val_accuracy: 0.1486 - val_loss: 2.1849 - val_macro_f1: 0.0322
+
+Epoch 3/12
+
+200/200 - 1s - 5ms/step - accuracy: 0.1496 - loss: 2.1829 - macro_f1: 0.0340 - val_accuracy: 0.1495 - val_loss: 2.1820 - val_macro_f1: 0.0341
+
+Epoch 4/12
+
+200/200 - 1s - 5ms/step - accuracy: 0.1499 - loss: 2.1800 - macro_f1: 0.0347 - val_accuracy: 0.1494 - val_loss: 2.1807 - val_macro_f1: 0.0338
+
+Epoch 5/12
+
+200/200 - 1s - 4ms/step - accuracy: 0.1498 - loss: 2.1790 - macro_f1: 0.0344 - val_accuracy: 0.1495 - val_loss: 2.1793 - val_macro_f1: 0.0340
+
+Epoch 6/12
+
+200/200 - 1s - 5ms/step - accuracy: 0.1495 - loss: 2.1771 - macro_f1: 0.0349 - val_accuracy: 0.1489 - val_loss: 2.1818 - val_macro_f1: 0.0328
+
+Restored validation Macro-F1: 0.03407
+
+Trial 3/8: {'hidden_units': 128, 'learning_rate': 0.0003, 'dropout_rate': 0.0}
+
+Epoch 1/12
+
+200/200 - 2s - 9ms/step - accuracy: 0.2307 - loss: 2.0374 - macro_f1: 0.1711 - val_accuracy: 0.2559 - val_loss: 1.9188 - val_macro_f1: 0.1331
+
+Epoch 2/12
+
+200/200 - 1s - 3ms/step - accuracy: 0.2842 - loss: 1.8653 - macro_f1: 0.2448 - val_accuracy: 0.2403 - val_loss: 1.8432 - val_macro_f1: 0.1563
+
+Epoch 3/12
+
+200/200 - 1s - 3ms/step - accuracy: 0.3196 - loss: 1.7956 - macro_f1: 0.2879 - val_accuracy: 0.3503 - val_loss: 1.7940 - val_macro_f1: 0.2847
+
+Epoch 4/12
+
+200/200 - 1s - 4ms/step - accuracy: 0.3488 - loss: 1.7423 - macro_f1: 0.3237 - val_accuracy: 0.3527 - val_loss: 1.7267 - val_macro_f1: 0.2761
+
+Epoch 5/12
+
+200/200 - 1s - 4ms/step - accuracy: 0.3742 - loss: 1.6933 - macro_f1: 0.3519 - val_accuracy: 0.3564 - val_loss: 1.6875 - val_macro_f1: 0.2927
+
+Epoch 6/12
+
+200/200 - 1s - 4ms/step - accuracy: 0.3903 - loss: 1.6603 - macro_f1: 0.3689 - val_accuracy: 0.3566 - val_loss: 1.6761 - val_macro_f1: 0.2962
+
+Epoch 7/12
+
+200/200 - 1s - 4ms/step - accuracy: 0.3999 - loss: 1.6352 - macro_f1: 0.3745 - val_accuracy: 0.3789 - val_loss: 1.6350 - val_macro_f1: 0.3142
+
+Epoch 8/12
+
+200/200 - 1s - 4ms/step - accuracy: 0.4125 - loss: 1.6057 - macro_f1: 0.3840 - val_accuracy: 0.4206 - val_loss: 1.6019 - val_macro_f1: 0.3473
+
+Epoch 9/12
+
+200/200 - 1s - 3ms/step - accuracy: 0.4246 - loss: 1.5852 - macro_f1: 0.3992 - val_accuracy: 0.4445 - val_loss: 1.5752 - val_macro_f1: 0.4108
+
+Epoch 10/12
+
+200/200 - 1s - 3ms/step - accuracy: 0.4300 - loss: 1.5674 - macro_f1: 0.4015 - val_accuracy: 0.4239 - val_loss: 1.5710 - val_macro_f1: 0.3839
+
+Epoch 11/12
+
+200/200 - 1s - 4ms/step - accuracy: 0.4315 - loss: 1.5608 - macro_f1: 0.4016 - val_accuracy: 0.4328 - val_loss: 1.5926 - val_macro_f1: 0.3718
+
+Epoch 12/12
+
+200/200 - 1s - 3ms/step - accuracy: 0.4442 - loss: 1.5419 - macro_f1: 0.4114 - val_accuracy: 0.4439 - val_loss: 1.5481 - val_macro_f1: 0.3870
+
+Restored validation Macro-F1: 0.4108
+
+Trial 4/8: {'hidden_units': 128, 'learning_rate': 0.0003, 'dropout_rate': 0.3}
+
+Epoch 1/12
+
+200/200 - 2s - 9ms/step - accuracy: 0.2063 - loss: 2.1074 - macro_f1: 0.1378 - val_accuracy: 0.2641 - val_loss: 1.9900 - val_macro_f1: 0.1443
+
+Epoch 2/12
+
+200/200 - 1s - 4ms/step - accuracy: 0.2352 - loss: 1.9669 - macro_f1: 0.1540 - val_accuracy: 0.2436 - val_loss: 1.9023 - val_macro_f1: 0.1288
+
+Epoch 3/12
+
+200/200 - 1s - 4ms/step - accuracy: 0.2388 - loss: 1.9199 - macro_f1: 0.1721 - val_accuracy: 0.2759 - val_loss: 1.8573 - val_macro_f1: 0.1676
+
+Epoch 4/12
+
+200/200 - 1s - 4ms/step - accuracy: 0.2530 - loss: 1.8814 - macro_f1: 0.1972 - val_accuracy: 0.2609 - val_loss: 1.8305 - val_macro_f1: 0.1770
+
+Epoch 5/12
+
+200/200 - 1s - 4ms/step - accuracy: 0.2685 - loss: 1.8471 - macro_f1: 0.2233 - val_accuracy: 0.3045 - val_loss: 1.7970 - val_macro_f1: 0.2255
+
+Epoch 6/12
+
+200/200 - 1s - 4ms/step - accuracy: 0.2921 - loss: 1.8144 - macro_f1: 0.2476 - val_accuracy: 0.3602 - val_loss: 1.7661 - val_macro_f1: 0.2900
+
+Epoch 7/12
+
+200/200 - 1s - 4ms/step - accuracy: 0.3122 - loss: 1.7870 - macro_f1: 0.2689 - val_accuracy: 0.3459 - val_loss: 1.7262 - val_macro_f1: 0.2850
+
+Epoch 8/12
+
+200/200 - 1s - 4ms/step - accuracy: 0.3286 - loss: 1.7578 - macro_f1: 0.2812 - val_accuracy: 0.3847 - val_loss: 1.6906 - val_macro_f1: 0.3135
+
+Epoch 9/12
+
+200/200 - 1s - 4ms/step - accuracy: 0.3431 - loss: 1.7363 - macro_f1: 0.2938 - val_accuracy: 0.3659 - val_loss: 1.6687 - val_macro_f1: 0.3029
+
+Epoch 10/12
+
+200/200 - 1s - 4ms/step - accuracy: 0.3496 - loss: 1.7157 - macro_f1: 0.2957 - val_accuracy: 0.3914 - val_loss: 1.6485 - val_macro_f1: 0.3239
+
+Epoch 11/12
+
+200/200 - 1s - 3ms/step - accuracy: 0.3566 - loss: 1.7039 - macro_f1: 0.3014 - val_accuracy: 0.3988 - val_loss: 1.6340 - val_macro_f1: 0.3288
+
+Epoch 12/12
+
+200/200 - 1s - 4ms/step - accuracy: 0.3627 - loss: 1.6876 - macro_f1: 0.3061 - val_accuracy: 0.3956 - val_loss: 1.6283 - val_macro_f1: 0.3209
+
+Restored validation Macro-F1: 0.32882
+
+Trial 5/8: {'hidden_units': 256, 'learning_rate': 0.001, 'dropout_rate': 0.0}
+
+Epoch 1/12
+
+200/200 - 2s - 11ms/step - accuracy: 0.2345 - loss: 2.0544 - macro_f1: 0.2014 - val_accuracy: 0.2339 - val_loss: 1.8542 - val_macro_f1: 0.1148
+
+Epoch 2/12
+
+200/200 - 1s - 6ms/step - accuracy: 0.3002 - loss: 1.8225 - macro_f1: 0.2748 - val_accuracy: 0.2852 - val_loss: 1.7699 - val_macro_f1: 0.2290
+
+Epoch 3/12
+
+200/200 - 1s - 5ms/step - accuracy: 0.3554 - loss: 1.7198 - macro_f1: 0.3316 - val_accuracy: 0.3648 - val_loss: 1.6906 - val_macro_f1: 0.2941
+
+Epoch 4/12
+
+200/200 - 1s - 6ms/step - accuracy: 0.3890 - loss: 1.6475 - macro_f1: 0.3676 - val_accuracy: 0.3845 - val_loss: 1.6379 - val_macro_f1: 0.3077
+
+Epoch 5/12
+
+200/200 - 1s - 6ms/step - accuracy: 0.4105 - loss: 1.6016 - macro_f1: 0.3800 - val_accuracy: 0.3847 - val_loss: 1.6493 - val_macro_f1: 0.3259
+
+Epoch 6/12
+
+200/200 - 1s - 7ms/step - accuracy: 0.4141 - loss: 1.5817 - macro_f1: 0.3854 - val_accuracy: 0.4184 - val_loss: 1.5990 - val_macro_f1: 0.3860
+
+Epoch 7/12
+
+200/200 - 1s - 6ms/step - accuracy: 0.4284 - loss: 1.5481 - macro_f1: 0.3951 - val_accuracy: 0.4411 - val_loss: 1.5333 - val_macro_f1: 0.3876
+
+Epoch 8/12
+
+200/200 - 1s - 6ms/step - accuracy: 0.4435 - loss: 1.5230 - macro_f1: 0.4058 - val_accuracy: 0.4437 - val_loss: 1.5421 - val_macro_f1: 0.3610
+
+Epoch 9/12
+
+200/200 - 1s - 6ms/step - accuracy: 0.4446 - loss: 1.5096 - macro_f1: 0.4096 - val_accuracy: 0.4455 - val_loss: 1.5148 - val_macro_f1: 0.4289
+
+Epoch 10/12
+
+200/200 - 1s - 6ms/step - accuracy: 0.4540 - loss: 1.4825 - macro_f1: 0.4158 - val_accuracy: 0.4538 - val_loss: 1.4938 - val_macro_f1: 0.4103
+
+Epoch 11/12
+
+200/200 - 1s - 6ms/step - accuracy: 0.4632 - loss: 1.4694 - macro_f1: 0.4254 - val_accuracy: 0.4530 - val_loss: 1.4820 - val_macro_f1: 0.4029
+
+Epoch 12/12
+
+200/200 - 1s - 6ms/step - accuracy: 0.4643 - loss: 1.4581 - macro_f1: 0.4279 - val_accuracy: 0.4489 - val_loss: 1.4720 - val_macro_f1: 0.3732
+
+Restored validation Macro-F1: 0.42886
+
+Trial 6/8: {'hidden_units': 256, 'learning_rate': 0.001, 'dropout_rate': 0.3}
+
+Epoch 1/12
+
+200/200 - 3s - 13ms/step - accuracy: 0.2148 - loss: 2.1113 - macro_f1: 0.1419 - val_accuracy: 0.2506 - val_loss: 1.8879 - val_macro_f1: 0.1436
+
+Epoch 2/12
+
+200/200 - 1s - 6ms/step - accuracy: 0.2574 - loss: 1.8920 - macro_f1: 0.2006 - val_accuracy: 0.2884 - val_loss: 1.8217 - val_macro_f1: 0.2291
+
+Epoch 3/12
+
+200/200 - 1s - 6ms/step - accuracy: 0.2889 - loss: 1.8250 - macro_f1: 0.2412 - val_accuracy: 0.3581 - val_loss: 1.7278 - val_macro_f1: 0.3000
+
+Epoch 4/12
+
+200/200 - 1s - 6ms/step - accuracy: 0.3247 - loss: 1.7691 - macro_f1: 0.2711 - val_accuracy: 0.3797 - val_loss: 1.6738 - val_macro_f1: 0.3407
+
+Epoch 5/12
+
+200/200 - 1s - 5ms/step - accuracy: 0.3431 - loss: 1.7396 - macro_f1: 0.2929 - val_accuracy: 0.3417 - val_loss: 1.6632 - val_macro_f1: 0.2623
+
+Epoch 6/12
+
+200/200 - 1s - 6ms/step - accuracy: 0.3437 - loss: 1.7281 - macro_f1: 0.2892 - val_accuracy: 0.3767 - val_loss: 1.6837 - val_macro_f1: 0.2914
+
+Epoch 7/12
+
+200/200 - 1s - 6ms/step - accuracy: 0.3419 - loss: 1.7306 - macro_f1: 0.2786 - val_accuracy: 0.3816 - val_loss: 1.6536 - val_macro_f1: 0.3298
+
+Restored validation Macro-F1: 0.3407
+
+Trial 7/8: {'hidden_units': 256, 'learning_rate': 0.0003, 'dropout_rate': 0.0}
+
+Epoch 1/12
+
+200/200 - 2s - 10ms/step - accuracy: 0.2492 - loss: 1.9877 - macro_f1: 0.2067 - val_accuracy: 0.2692 - val_loss: 1.8591 - val_macro_f1: 0.1862
+
+Epoch 2/12
+
+200/200 - 1s - 5ms/step - accuracy: 0.2939 - loss: 1.8435 - macro_f1: 0.2679 - val_accuracy: 0.2698 - val_loss: 1.8176 - val_macro_f1: 0.1906
+
+Epoch 3/12
+
+200/200 - 1s - 5ms/step - accuracy: 0.3352 - loss: 1.7721 - macro_f1: 0.3087 - val_accuracy: 0.3642 - val_loss: 1.7546 - val_macro_f1: 0.2959
+
+Epoch 4/12
+
+200/200 - 1s - 5ms/step - accuracy: 0.3548 - loss: 1.7262 - macro_f1: 0.3369 - val_accuracy: 0.3683 - val_loss: 1.7419 - val_macro_f1: 0.2751
+
+Epoch 5/12
+
+200/200 - 1s - 5ms/step - accuracy: 0.3798 - loss: 1.6715 - macro_f1: 0.3604 - val_accuracy: 0.3714 - val_loss: 1.6765 - val_macro_f1: 0.3014
+
+Epoch 6/12
+
+200/200 - 1s - 5ms/step - accuracy: 0.3902 - loss: 1.6352 - macro_f1: 0.3695 - val_accuracy: 0.4062 - val_loss: 1.6595 - val_macro_f1: 0.3716
+
+Epoch 7/12
+
+200/200 - 1s - 5ms/step - accuracy: 0.4044 - loss: 1.6055 - macro_f1: 0.3819 - val_accuracy: 0.4339 - val_loss: 1.5877 - val_macro_f1: 0.3874
+
+Epoch 8/12
+
+200/200 - 1s - 5ms/step - accuracy: 0.4171 - loss: 1.5744 - macro_f1: 0.3884 - val_accuracy: 0.4280 - val_loss: 1.5879 - val_macro_f1: 0.3696
+
+Epoch 9/12
+
+200/200 - 1s - 5ms/step - accuracy: 0.4315 - loss: 1.5474 - macro_f1: 0.4067 - val_accuracy: 0.4367 - val_loss: 1.5585 - val_macro_f1: 0.3791
+
+Epoch 10/12
+
+200/200 - 1s - 5ms/step - accuracy: 0.4413 - loss: 1.5248 - macro_f1: 0.4075 - val_accuracy: 0.4316 - val_loss: 1.5338 - val_macro_f1: 0.4066
+
+Epoch 11/12
+
+200/200 - 1s - 5ms/step - accuracy: 0.4407 - loss: 1.5154 - macro_f1: 0.4100 - val_accuracy: 0.4441 - val_loss: 1.5484 - val_macro_f1: 0.3627
+
+Epoch 12/12
+
+200/200 - 1s - 5ms/step - accuracy: 0.4468 - loss: 1.5021 - macro_f1: 0.4155 - val_accuracy: 0.4295 - val_loss: 1.5063 - val_macro_f1: 0.3692
+
+Restored validation Macro-F1: 0.40658
+
+Trial 8/8: {'hidden_units': 256, 'learning_rate': 0.0003, 'dropout_rate': 0.3}
+
+Epoch 1/12
+
+200/200 - 2s - 11ms/step - accuracy: 0.2239 - loss: 2.0376 - macro_f1: 0.1689 - val_accuracy: 0.2692 - val_loss: 1.9115 - val_macro_f1: 0.1485
+
+Epoch 2/12
+
+200/200 - 1s - 6ms/step - accuracy: 0.2599 - loss: 1.8850 - macro_f1: 0.2064 - val_accuracy: 0.2516 - val_loss: 1.8217 - val_macro_f1: 0.1685
+
+Epoch 3/12
+
+200/200 - 1s - 6ms/step - accuracy: 0.2885 - loss: 1.8158 - macro_f1: 0.2529 - val_accuracy: 0.3564 - val_loss: 1.7605 - val_macro_f1: 0.2871
+
+Epoch 4/12
+
+200/200 - 1s - 6ms/step - accuracy: 0.3264 - loss: 1.7620 - macro_f1: 0.2982 - val_accuracy: 0.3769 - val_loss: 1.7034 - val_macro_f1: 0.3199
+
+Epoch 5/12
+
+200/200 - 1s - 5ms/step - accuracy: 0.3449 - loss: 1.7163 - macro_f1: 0.3174 - val_accuracy: 0.3836 - val_loss: 1.6696 - val_macro_f1: 0.3237
+
+Epoch 6/12
+
+200/200 - 1s - 5ms/step - accuracy: 0.3629 - loss: 1.6876 - macro_f1: 0.3326 - val_accuracy: 0.4142 - val_loss: 1.6398 - val_macro_f1: 0.3500
+
+Epoch 7/12
+
+200/200 - 1s - 5ms/step - accuracy: 0.3766 - loss: 1.6633 - macro_f1: 0.3406 - val_accuracy: 0.4169 - val_loss: 1.6079 - val_macro_f1: 0.3578
+
+Epoch 8/12
+
+200/200 - 1s - 5ms/step - accuracy: 0.3900 - loss: 1.6364 - macro_f1: 0.3522 - val_accuracy: 0.4116 - val_loss: 1.5960 - val_macro_f1: 0.3493
+
+Epoch 9/12
+
+200/200 - 1s - 5ms/step - accuracy: 0.3958 - loss: 1.6219 - macro_f1: 0.3536 - val_accuracy: 0.3917 - val_loss: 1.5904 - val_macro_f1: 0.3427
+
+Epoch 10/12
+
+200/200 - 1s - 5ms/step - accuracy: 0.4009 - loss: 1.6124 - macro_f1: 0.3549 - val_accuracy: 0.4184 - val_loss: 1.5901 - val_macro_f1: 0.3384
+
+Restored validation Macro-F1: 0.35783
+
+   hidden_units  learning_rate  dropout_rate  batch_size  max_epochs  \
+4           256         0.0010           0.0         128          12   
+2           128         0.0003           0.0         128          12   
+6           256         0.0003           0.0         128          12   
+0           128         0.0010           0.0         128          12   
+7           256         0.0003           0.3         128          12   
+5           256         0.0010           0.3         128          12   
+3           128         0.0003           0.3         128          12   
+1           128         0.0010           0.3         128          12   
+
+   patience  validation_accuracy  validation_macro_f1  \
+4         3              0.44547              0.42886   
+2         3              0.44453              0.41080   
+6         3              0.43156              0.40658   
+0         3              0.42812              0.38453   
+7         3              0.41688              0.35783   
+5         3              0.37969              0.34070   
+3         3              0.39875              0.32882   
+1         3              0.14953              0.03407   
+
+   validation_balanced_accuracy  fit_seconds  validation_seconds  \
+4                       0.44384     15.20241             0.17629   
+2                       0.43816      9.50219             0.12425   
+6                       0.44389     13.36310             0.15446   
+0                       0.41776      6.69586             0.16852   
+7                       0.39950     12.00263             0.13810   
+5                       0.36640      9.72490             0.14173   
+3                       0.37854      9.95270             0.12498   
+1                       0.11396      6.42892             0.13331   
+
+   training_epoch_seconds  in_fit_validation_seconds  epochs_run  best_epoch  \
+4                13.77575                    1.31399          12           9   
+2                 8.49150                    0.91057          12           9   
+6                12.18007                    1.08016          12          10   
+0                 5.96091                    0.65654           8           5   
+7                11.00639                    0.90801          10           7   
+5                 8.89076                    0.76578           7           4   
+3                 8.90174                    0.94930          12          11   
+1                 5.64638                    0.72086           6           3   
+
+   parameters  seed  fit_samples  validation_samples  trial_id  
+4      604681  5318        25600                6400         5  
+2      302345  5318        25600                6400         3  
+6      604681  5318        25600                6400         7  
+0      302345  5318        25600                6400         1  
+7      604681  5318        25600                6400         8  
+5      604681  5318        25600                6400         6  
+3      302345  5318        25600                6400         4  
+1      302345  5318        25600                6400         2  
+Validation-only selection (freeze before test evaluation):
+{
+  "best_params": {
+    "hidden_units": 256,
+    "learning_rate": 0.001,
+    "dropout_rate": 0.0
+  },
+  "best_epoch": 9,
+  "trial_id": 5,
+  "validation_macro_f1": 0.4288596287516593,
+  "validation_accuracy": 0.44546875,
+  "validation_balanced_accuracy": 0.4438372652524023,
+  "search_wall_seconds": 91.57717300999991
+}
+
+--- end cell 18 ---
+[2026-10-27T08:40:16.207747+00:00] BEGIN source_cell=19
+[2026-10-27T08:40:16.717289+00:00] END source_cell=19 seconds=0.509 outputs=6
+--- source cell 19 outputs ---
+
+Descriptive grid averages: hidden_units
+
+              validation_macro_f1  fit_seconds
+hidden_units                                  
+128                       0.28955      8.14492
+256                       0.38349     12.57326
+
+Descriptive grid averages: learning_rate
+
+               validation_macro_f1  fit_seconds
+learning_rate                                  
+0.0003                     0.37601     11.20515
+0.0010                     0.29704      9.51302
+
+Descriptive grid averages: dropout_rate
+
+              validation_macro_f1  fit_seconds
+dropout_rate                                  
+0.0                       0.40769     11.19089
+0.3                       0.26535      9.52729
+--- end cell 19 ---
+[2026-10-27T08:40:16.731563+00:00] BEGIN source_cell=25
+[2026-10-27T08:40:16.738105+00:00] END source_cell=25 seconds=0.006 outputs=1
+--- source cell 25 outputs ---
+Frozen MLP parameters: {'hidden_units': 256, 'learning_rate': 0.001, 'dropout_rate': 0.0}
+Fixed full-data epochs: 10
+Recorded validation selection: {'trial_id': 5, 'macro_f1': 0.4245453119342078, 'accuracy': 0.46828125, 'balanced_accuracy': 0.4624929838057703}
+
+--- end cell 25 ---
+[2026-10-27T08:40:16.754164+00:00] BEGIN source_cell=26
+[2026-10-27T08:40:30.823023+00:00] END source_cell=26 seconds=14.069 outputs=21
+--- source cell 26 outputs ---
+Epoch 1/10
+
+250/250 - 2s - 9ms/step - accuracy: 0.2429 - loss: 2.0129 - macro_f1: 0.2031
+
+Epoch 2/10
+
+250/250 - 1s - 5ms/step - accuracy: 0.3238 - loss: 1.7905 - macro_f1: 0.3009
+
+Epoch 3/10
+
+250/250 - 1s - 5ms/step - accuracy: 0.3884 - loss: 1.6772 - macro_f1: 0.3636
+
+Epoch 4/10
+
+250/250 - 1s - 5ms/step - accuracy: 0.4035 - loss: 1.6267 - macro_f1: 0.3766
+
+Epoch 5/10
+
+250/250 - 1s - 5ms/step - accuracy: 0.4235 - loss: 1.5773 - macro_f1: 0.3873
+
+Epoch 6/10
+
+250/250 - 1s - 5ms/step - accuracy: 0.4288 - loss: 1.5522 - macro_f1: 0.3931
+
+Epoch 7/10
+
+250/250 - 1s - 5ms/step - accuracy: 0.4421 - loss: 1.5206 - macro_f1: 0.4067
+
+Epoch 8/10
+
+250/250 - 1s - 5ms/step - accuracy: 0.4492 - loss: 1.4992 - macro_f1: 0.4079
+
+Epoch 9/10
+
+250/250 - 1s - 5ms/step - accuracy: 0.4537 - loss: 1.4807 - macro_f1: 0.4143
+
+Epoch 10/10
+
+250/250 - 1s - 5ms/step - accuracy: 0.4663 - loss: 1.4703 - macro_f1: 0.4285
+
+Final fit: 32000 images, 10 epochs, 13.189 s, 604,681 parameters
+
+--- end cell 26 ---
+[2026-10-27T08:40:30.839721+00:00] BEGIN source_cell=27
+[2026-10-27T08:40:31.432060+00:00] END source_cell=27 seconds=0.592 outputs=2
+--- source cell 27 outputs ---
+                                                                    value
+model                                                                 MLP
+best_hyperparameters    {"dropout_rate": 0.0, "hidden_units": 256, "le...
+validation_macro_f1                                              0.424545
+test_accuracy                                                     0.48925
+test_macro_f1                                                    0.438672
+test_balanced_accuracy                                           0.469945
+fit_seconds                                                     13.189112
+prediction_seconds                                               0.180592
+parameters                                                         604681
+epochs                                                                 10
+search_fit_samples                                                  25600
+validation_samples                                                   6400
+train_samples                                                       32000
+test_samples                                                         8000
+seed                                                                 5318
+                                      precision  recall  f1-score    support
+Adipose                                  0.7327  0.9576    0.8302   873.0000
+Background                               0.7287  0.6387    0.6807   858.0000
+Debris                                   0.3948  0.1391    0.2057   877.0000
+Lymphocytes                              0.4650  0.6827    0.5532   914.0000
+Mucus                                    0.5349  0.5305    0.5327   737.0000
+Smooth muscle                            0.3843  0.4552    0.4167  1072.0000
+Normal colon mucosa                      0.2857  0.0323    0.0580   682.0000
+Cancer-associated stroma                 0.2781  0.1341    0.1809   813.0000
+Colorectal adenocarcinoma epithelium     0.3897  0.6593    0.4899  1174.0000
+accuracy                                 0.4892  0.4892    0.4892     0.4892
+macro avg                                0.4660  0.4699    0.4387  8000.0000
+weighted avg                             0.4651  0.4892    0.4495  8000.0000
+--- end cell 27 ---
+[2026-10-27T08:40:31.447019+00:00] BEGIN source_cell=28
+[2026-10-27T08:40:31.805068+00:00] END source_cell=28 seconds=0.358 outputs=2
+--- source cell 28 outputs ---
+Largest directed confusions (count, true class, predicted class): [(321, 2, 5), (285, 6, 8), (250, 7, 8), (242, 2, 8), (240, 7, 5)]
+
+<IPython.core.display.Markdown object>
+--- end cell 28 ---
+[2026-10-27T08:40:31.820847+00:00] BEGIN audit_export_cell=32
+[2026-10-27T08:40:31.838794+00:00] END audit_export_cell outputs=1
+[2026-10-27T08:40:33.309282+00:00] COMPLETE mlp: PASS; wall_seconds=121.156
