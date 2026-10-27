@@ -2,8 +2,8 @@
 from pathlib import Path
 from streamlit.testing.v1 import AppTest
 
-ROOT = Path(__file__).resolve().parents[1]
-app = AppTest.from_file(str(ROOT / "eda_lab" / "app.py"), default_timeout=120)
+ROOT = Path(__file__).resolve().parents[3]
+app = AppTest.from_file(str(ROOT / "archive" / "v1" / "eda_lab" / "app.py"), default_timeout=120)
 app.run()
 errors = list(app.exception)
 if errors:

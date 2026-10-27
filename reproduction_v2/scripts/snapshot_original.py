@@ -92,23 +92,27 @@ def main() -> None:
         if "git_status_porcelain_before_v2" in manifest:
             manifest["git_status_porcelain_at_snapshot"] = manifest.pop("git_status_porcelain_before_v2")
         checksums = manifest["sha256"]
-        for name, expected in checksums.items():
-            if name == "README.md":
-                continue  # The only permitted tracked-file change is a small appended note.
-            if sha256(ROOT / name) != expected:
-                raise RuntimeError(f"Original tracked file changed since first snapshot: {name}")
-    else:
-        tracked = [x for x in git("ls-files", "-z").split("\0") if x]
-        checksums = {name: sha256(ROOT / name) for name in tracked}
-        manifest = {
-            "snapshot_at": datetime.now().astimezone().isoformat(),
-            "commit": git("rev-parse", "HEAD"),
-            "branch": git("branch", "--show-current"),
-            "remote": git("remote", "get-url", "origin"),
-            "git_status_porcelain_at_snapshot": git("status", "--porcelain"),
-            "sha256": checksums,
+        relocated = {
+            **{name: "archive/v1/notebooks/" + name for name in NAMES},
+            "notebooks_zh/baseline_中文版.ipynb": "archive/v1/notebooks_zh/baseline_中文版.ipynb",
+            "requirements.yaml": "archive/v1/requirements.yaml",
+            "README.md": "archive/v1/README_legacy.md",
         }
-        manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
+        changed_helpers = {
+            "eda_lab/app.py", "eda_lab/README.md",
+            "scripts/execute_baseline.py", "scripts/smoke_eda.py",
+            ".github/workflows/eda_smoke.yml", ".github/workflows/run_baseline.yml",
+        }
+        for name, expected in checksums.items():
+            if name in changed_helpers:
+                continue  # Intentionally adapted for archive relocation.
+            path = ROOT / relocated.get(name, name)
+            if not path.is_file() or sha256(path) != expected:
+                raise RuntimeError(f"Historical V1 source checksum mismatch: {name} => {path}")
+        print("Verified historical V1 source files after relocation; snapshot outputs left unchanged.")
+        return
+    else:
+        raise FileNotFoundError("Historical V1 reference manifest missing; refusing to fabricate a new V1 snapshot.")
     manifest["clone_reflog_event"] = git("reflog", "show", "--date=iso", "--format=%gd %gs", "-1")
     manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
     clone_time = manifest["snapshot_at"]

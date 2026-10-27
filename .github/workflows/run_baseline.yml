@@ -1,49 +1,31 @@
-name: Execute PathMNIST baseline
+name: Validate archived V1 PathMNIST baseline
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - 'baseline.ipynb'
-      - 'notebooks_zh/baseline_中文版.ipynb'
-      - 'scripts/execute_baseline.py'
-      - '.github/workflows/run_baseline.yml'
 
 permissions:
-  contents: write
-
-concurrency:
-  group: baseline-execution-main
-  cancel-in-progress: false
+  contents: read
 
 jobs:
   baseline:
-    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
-      - name: Checkout repository and provided Canvas arrays
+      - name: Checkout source
         uses: actions/checkout@v4
-        with:
-          persist-credentials: true
-      - name: Python 3.11
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install lightweight baseline dependencies
+      - name: Install baseline dependencies
         run: |
           python -m pip install --upgrade pip
           python -m pip install numpy==1.26.4 pandas==2.2.3 matplotlib==3.9.2 scikit-learn==1.5.2 nbclient==0.10.2 nbformat==5.10.4 ipykernel==6.29.5 ipython==8.30.0
-      - name: Execute from clean kernel and synchronise Chinese outputs
-        run: python scripts/execute_baseline.py
-      - name: Preserve real executed notebook outputs
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add baseline.ipynb notebooks_zh/baseline_中文版.ipynb
-          if ! git diff --cached --quiet; then
-            git commit -m "Save executed PathMNIST baseline outputs [skip ci]"
-            git fetch origin main
-            git rebase origin/main
-            git push origin HEAD:main
-          fi
+      - name: Execute to temporary artifacts; archived notebooks remain unchanged
+        env:
+          V1_BASELINE_OUTPUT_DIR: ${{ runner.temp }}/comp5318-v1-baseline
+        run: python archive/v1/scripts/execute_baseline.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v1-baseline-validated
+          path: ${{ runner.temp }}/comp5318-v1-baseline/
+          if-no-files-found: error

@@ -23,7 +23,7 @@ from sklearn.metrics import accuracy_score, balanced_accuracy_score, classificat
 ROOT = Path("/workspace/repo") if Path("/workspace/repo").is_dir() else Path(__file__).resolve().parents[2]
 V2 = ROOT / "reproduction_v2"
 RUNS = V2 / "runs"
-SOURCES = {"baseline": "baseline.ipynb", "naive_bayes": "Naive_Bayes.ipynb", "mlp": "MLP.ipynb", "cnn": "CNN.ipynb"}
+SOURCES = {"baseline": "archive/v1/notebooks/baseline.ipynb", "naive_bayes": "archive/v1/notebooks/Naive_Bayes.ipynb", "mlp": "archive/v1/notebooks/MLP.ipynb", "cnn": "archive/v1/notebooks/CNN.ipynb"}
 PACKAGES = ["numpy", "pandas", "scikit-learn", "scipy", "matplotlib", "tensorflow", "keras", "ipykernel", "nbclient", "nbformat", "ipython", "pillow"]
 
 
@@ -130,7 +130,7 @@ def run_one(model: str, final_only: bool = False) -> dict:
     source = ROOT / SOURCES[model]
     checks = json.loads((V2 / "reference" / "notebook_checksums.json").read_text(encoding="utf-8"))
     actual_hash = sha256(source)
-    if actual_hash != checks["sha256"][SOURCES[model]]:
+    if actual_hash != checks["sha256"][Path(SOURCES[model]).name]:  # immutable historical key
         raise RuntimeError(f"Source notebook checksum changed: {source}")
     mode = "final_only" if final_only else "strict"
     run_dir = RUNS / (datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ") + "_" + model + "_" + mode + "_" + uuid.uuid4().hex[:8])

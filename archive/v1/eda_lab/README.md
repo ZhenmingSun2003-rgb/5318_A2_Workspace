@@ -5,9 +5,9 @@
 从仓库根目录运行：
 
 ```bash
-conda env create -f requirements.yaml
+conda env create -f archive/v1/requirements.yaml
 conda activate comp5318-a2
-streamlit run eda_lab/app.py
+streamlit run archive/v1/eda_lab/app.py
 ```
 
 应用会自动查找 `Canvas Sources/Assignment2Data-1/Assignment2Data/` 四个 NPY 文件；不复制、不修改原始数据。

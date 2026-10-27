@@ -20,7 +20,7 @@ NAMES = {
     8: "结直肠腺癌上皮 (Tumour epithelium)",
 }
 CHANNELS = ("红 / R", "绿 / G", "蓝 / B")
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[3]
 DATA = ROOT / "Canvas Sources" / "Assignment2Data-1" / "Assignment2Data"
 
 st.set_page_config(

@@ -25,37 +25,49 @@ def git(*args: str) -> str:
 
 
 def main() -> int:
+    # Historical immutable sources are verified at relocated paths.
+    archived = {
+        **{name: "archive/v1/notebooks/" + name for name in
+           ("baseline.ipynb", "Naive_Bayes.ipynb", "MLP.ipynb", "CNN.ipynb")},
+        "notebooks_zh/baseline_中文版.ipynb": "archive/v1/notebooks_zh/baseline_中文版.ipynb",
+        "requirements.yaml": "archive/v1/requirements.yaml",
+        "README.md": "archive/v1/README_legacy.md",
+    }
+    adapted_helpers = {
+        "eda_lab/app.py", "eda_lab/README.md",
+        "scripts/execute_baseline.py", "scripts/smoke_eda.py",
+        ".github/workflows/eda_smoke.yml", ".github/workflows/run_baseline.yml",
+    }
     changed = []
-    for name, expected in MANIFEST["sha256"].items():
-        if name == "README.md":
+    for original, expected in MANIFEST["sha256"].items():
+        if original in adapted_helpers:
             continue
-        file = ROOT / name
-        actual = digest(file) if file.is_file() else None
+        path = ROOT / archived.get(original, original)
+        actual = digest(path) if path.is_file() else None
         if actual != expected:
-            changed.append({"path": name, "expected": expected, "actual": actual})
+            changed.append({"original": original, "current": str(path),
+                            "expected": expected, "actual": actual})
     status = git("status", "--short")
-    untracked = [name for name in git("ls-files", "--others", "--exclude-standard").splitlines() if name]
-    stat = git("diff", "--stat")
-    readme_diff = git("diff", "--", "README.md")
-    disallowed = []
-    for line in status.splitlines():
-        path = line[3:]
-        if path != "README.md" and path.rstrip("/") != "reproduction_v2" and not path.startswith("reproduction_v2/"):
-            disallowed.append(line)
     source_is_ancestor = subprocess.run(
         ["git", "merge-base", "--is-ancestor", MANIFEST["commit"], "HEAD"],
         cwd=ROOT, check=False,
     ).returncode == 0
-    result = {"at": datetime.now(timezone.utc).isoformat(), "source_commit": MANIFEST["commit"],
-              "head": git("rev-parse", "HEAD").strip(), "source_is_ancestor": source_is_ancestor,
-              "checked_original_files": len(MANIFEST["sha256"])-1,
-              "changed_original_files": changed, "disallowed_git_status": disallowed,
-              "git_status_short": status, "git_diff_stat": stat, "git_diff_readme": readme_diff,
-              "new_untracked_files": untracked,
-              "pass": not changed and not disallowed and all(name.startswith("reproduction_v2/") for name in untracked)
-                      and source_is_ancestor}
-    (V2 / "reports" / "integrity_verification.json").write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
-    print(json.dumps({k: result[k] for k in ("head", "checked_original_files", "changed_original_files", "disallowed_git_status", "pass")}, indent=2))
+    result = {
+        "at": datetime.now(timezone.utc).isoformat(),
+        "source_commit": MANIFEST["commit"],
+        "head": git("rev-parse", "HEAD").strip(),
+        "source_is_ancestor": source_is_ancestor,
+        "checked_immutable_original_files": len(MANIFEST["sha256"]) - len(adapted_helpers),
+        "changed_immutable_original_files": changed,
+        "intentionally_adapted_helpers": sorted(adapted_helpers),
+        "git_status_short": status,
+        "pass": not changed and source_is_ancestor and not status.strip(),
+    }
+    path = V2 / "runs" / "relocation_integrity_verification.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(json.dumps({k: result[k] for k in ("head", "checked_immutable_original_files",
+                                            "changed_immutable_original_files", "pass")}, indent=2))
     return 0 if result["pass"] else 1
 
 

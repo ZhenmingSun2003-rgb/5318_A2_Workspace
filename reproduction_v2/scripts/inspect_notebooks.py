@@ -7,7 +7,7 @@ root = Path(__file__).resolve().parents[2]
 for name in ("baseline.ipynb", "Naive_Bayes.ipynb", "MLP.ipynb", "CNN.ipynb"):
     if len(sys.argv) > 1 and name not in sys.argv[1:]:
         continue
-    notebook = json.loads((root / name).read_text(encoding="utf-8"))
+    notebook = json.loads((root / "archive" / "v1" / "notebooks" / name).read_text(encoding="utf-8"))
     print(f"\n## {name}: {len(notebook['cells'])} cells")
     for i, cell in enumerate(notebook["cells"]):
         source = "".join(cell.get("source", []))

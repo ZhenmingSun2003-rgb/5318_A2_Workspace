@@ -31,3 +31,16 @@ python reproduction_v2/scripts/analyze_differences.py
 
 The `final_only` runs are separately marked and excluded from the strict main
 comparison. See `reports/05_difference_analysis.md` for the controlled check.
+
+## V1 archive relocation for the V3 workspace
+
+Original source notebooks now live at `archive/v1/notebooks/` with unchanged
+contents and SHA-256 hashes. Original Canvas data remain at repository root.
+The V2 runner resolves archived source paths and checks their original bytes
+against legacy keys in `reference/notebook_checksums.json`.
+
+The **existing** V2 reference files, reports and result artifacts are
+historical evidence tied to source commit `0f2ffeaa`. Paths in those
+records denote their *historical* locations and have intentionally not
+been rewritten. Future reproductions execute the unchanged archived sources.
+`snapshot_original.py` verifies the preserved snapshot but will not overwrite it.

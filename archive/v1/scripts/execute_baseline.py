@@ -1,12 +1,15 @@
 """Execute the English reference baseline and synchronise output cells to Chinese."""
 import copy
+import os
+import tempfile
 from pathlib import Path
 import nbformat
 from nbclient import NotebookClient
 
-ROOT = Path(__file__).resolve().parents[1]
-ENGLISH = ROOT / "baseline.ipynb"
-CHINESE = ROOT / "notebooks_zh" / "baseline_中文版.ipynb"
+ROOT = Path(__file__).resolve().parents[3]
+V1 = ROOT / "archive" / "v1"
+ENGLISH = V1 / "notebooks" / "baseline.ipynb"
+CHINESE = V1 / "notebooks_zh" / "baseline_中文版.ipynb"
 
 def main():
     en = nbformat.read(ENGLISH, as_version=4)
@@ -34,9 +37,11 @@ def main():
 
     nbformat.validate(executed)
     nbformat.validate(zh)
-    nbformat.write(executed, ENGLISH)
-    nbformat.write(zh, CHINESE)
-    print("Executed Canvas-data baseline and saved genuine English + Chinese outputs.")
+    output = Path(os.environ.get("V1_BASELINE_OUTPUT_DIR") or tempfile.mkdtemp(prefix="comp5318-v1-baseline-"))
+    output.mkdir(parents=True, exist_ok=True)
+    nbformat.write(executed, output / ENGLISH.name)
+    nbformat.write(zh, output / CHINESE.name)
+    print(f"Executed V1 baseline to {output}; archived source notebooks were not modified.")
 
 if __name__ == "__main__":
     main()
