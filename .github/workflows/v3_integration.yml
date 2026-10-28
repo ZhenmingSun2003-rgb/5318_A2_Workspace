@@ -1,0 +1,36 @@
+name: V3 integration — Docker CPU validation
+on:
+  push:
+    paths:
+      - 'integration_v3/**'
+      - '.github/workflows/v3_integration.yml'
+  workflow_dispatch:
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout sources and original Canvas data
+        uses: actions/checkout@v4
+      - name: Build exact V2-resolved CPU dependencies
+        run: docker compose -f integration_v3/compose.yaml build
+      - name: Check template, model cells and Python compilation
+        run: docker compose -f integration_v3/compose.yaml run --rm integrate --validate
+      - name: Train all five frozen models and export actual test metrics
+        run: docker compose -f integration_v3/compose.yaml run --rm integrate --execute
+      - name: Preserve results (including failure diagnosis)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: comp5318-v3-integration-evidence
+          path: |
+            integration_v3/outputs/*.csv
+            integration_v3/outputs/*.json
+            integration_v3/outputs/*.png
+            integration_v3/outputs/*.ipynb
+            integration_v3/outputs/mlp/*.csv
+            integration_v3/outputs/cnn/*.csv
+          if-no-files-found: warn
