@@ -12,10 +12,11 @@ The repository's V1 original Notebook sources, V2 evidence and Canvas data were 
 ## Real Docker executions (success)
 - [CI 1: complete build and all models trained — 2026-10-28](https://github.com/ZhenmingSun2003-rgb/5318_A2_Workspace/actions/runs/40624341311) — PASS, evidence uploaded.
 - [CI 2: improved standalone fallback source — 2026-10-28](https://github.com/ZhenmingSun2003-rgb/5318_A2_Workspace/actions/runs/40624494612) — PASS, evidence uploaded.
-- CI 1/2 model predictions and scores were **identical**, showing stability within the CI environment. Runtime seconds differed, as expected.
+- CI 1/2 model predictions and scores were **identical**, but were not universally stable across **all** CI runs. Runtime seconds differed.
+- [CI 3: final embedded-figure Notebook on the same pinned container](https://github.com/ZhenmingSun2003-rgb/5318_A2_Workspace/actions/runs/40625793593) — **PASS**; preserved 7 newly generated PNG figures in the Notebook outputs and checked this in CI. All **five final metrics exactly matched V2** at available precision (CNN Macro-F1 0.723255; MLP 0.438672). The original V1/V2 model source and frozen parameters are unchanged.
 - CI runner platform in `summary.json`: `Linux-7.0.0-1017-azure-x86_64-with-glibc2.36` (GitHub Actions virtual CPU), which differs from the V2 machine.
 
-| Model | V2 strict Test Accuracy | V3 CI Test Accuracy | V2 strict Macro-F1 | V3 CI Macro-F1 | V3−V2 Macro-F1 |
+| Model | V2 strict Test Accuracy | V3 CI runs #1/#2 Accuracy | V2 strict Macro-F1 | V3 CI runs #1/#2 Macro-F1 | #1/#2 minus V2 |
 |---|---:|---:|---:|---:|---:|
 | Dummy | 0.146750 | 0.146750 | 0.028438 | 0.028438 | 0.000000 |
 | Nearest Centroid | 0.430250 | 0.430250 | 0.410469 | 0.410469 | 0.000000 |
@@ -23,7 +24,17 @@ The repository's V1 original Notebook sources, V2 evidence and Canvas data were 
 | MLP | 0.489250 | 0.484875 | 0.438672 | 0.443158 | +0.004485 |
 | CNN | 0.739250 | 0.708000 | 0.723255 | 0.683125 | −0.040131 |
 
-**Evidence interpretation:** the Docker image fixes packages and execution semantics but cannot guarantee bit-identical floating-point training across different CPU hardware/kernel implementations. The current CI was stable on consecutive runs; the material CNN deviation from V2 (−0.040131 Macro-F1) is a documented **cross-machine reproducibility limitation**, not evidence of a different dataset or changed CNN architecture. No isolated root cause has been established. Do not force the V3 metrics to match V2 by tuning on the test set.
+**Evidence interpretation:** runs #1/#2 were stable and consistently differed from V2 on neural-network results, while run #3 gave exactly V2 metrics. All three had the **same declared pinned library versions**, seed, split fingerprints and generic platform string, but significantly different CPU fitting times (CNN 15.6s / 22.7s / 71.3s respectively). No per-run microarchitecture/instruction-set manifest was captured, so the exact source of the observed differences is **not proven**. Hardware-specific CPU/oneDNN numerical paths are one plausible explanation. Do not claim identical metrics are guaranteed on other machines and do not force agreement by tuning on the held-out test set.
+
+**Most recent verified V3 run #3** (fresh fit and test prediction; *not* the V2 archival values substituted for current results):
+
+| Model | V3 CI #3 Accuracy | V3 CI #3 Macro-F1 | Difference to V2 Macro-F1 |
+|---|---:|---:|---:|
+| Dummy | 0.146750 | 0.028438 | 0.000000 |
+| Nearest Centroid | 0.430250 | 0.410469 | 0.000000 |
+| GaussianNB | 0.415500 | 0.385748 | 0.000000 |
+| MLP | 0.489250 | 0.438672 | 0.000000 |
+| CNN | 0.739250 | 0.723255 | 0.000000 |
 
 ## Canvas PDF checklist
 Reviewed `Canvas Sources/COMP5318-assignment2-Sem2-2026-2.pdf` (12 pages) and `COMP5318-assignment2-template-notebook-1.ipynb`.
@@ -39,7 +50,7 @@ Reviewed `Canvas Sources/COMP5318-assignment2-Sem2-2026-2.pdf` (12 pages) and `C
 - [x] GaussianNB / MLP / CNN final frozen fits and both fixed reference baselines
 - [x] V2 pinned complete dependency list and reproducible offline CPU build
 - [x] Five current-run test predictions and independent metrics validated
-- [x] No errors in executed Notebook; complete notebook outputs archived as CI artifacts
-- [x] Baseline and GaussianNB match V2, neural-network differences transparently disclosed
+- [x] No errors in executed Notebook; all 7 plot images embedded directly into the executed Notebook and uploaded with CI evidence
+- [x] Baseline and GaussianNB match V2 on all three runs; neural-network drift in runs #1/#2 and perfect V2 agreement in run #3 both transparently documented
 - [ ] Group final review of SID identities, original model interpretations, AI declaration and individual reflections
 - [ ] Formal report PDF finalisation and submission via Canvas
