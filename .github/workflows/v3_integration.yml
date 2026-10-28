@@ -33,4 +33,6 @@ jobs:
             integration_v3/outputs/*.ipynb
             integration_v3/outputs/mlp/*.csv
             integration_v3/outputs/cnn/*.csv
+            integration_v3/outputs/mlp/*.png
+            integration_v3/outputs/cnn/*.png
           if-no-files-found: warn

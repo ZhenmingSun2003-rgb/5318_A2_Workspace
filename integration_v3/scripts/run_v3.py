@@ -98,6 +98,10 @@ def main():
         )
         executed = client.execute()
         nbformat.write(executed, output / "executed.ipynb")
+        rich_figures = sum(1 for cell in executed.cells if cell.cell_type == "code"
+                           for entry in cell.outputs
+                           if "image/png" in entry.get("data", {}))
+        assert rich_figures >= 3, f"Only {rich_figures} figures embedded; expected current-run figures"
         summary = json.loads((output / "summary.json").read_text(encoding="utf-8"))
         models = {item["model"] for item in summary["scores"]}
         assert models == REQUIRED_MODELS, (models, REQUIRED_MODELS)
@@ -108,7 +112,7 @@ def main():
                 assert 0 <= row[metric] <= 1
         status["status"] = "PASS"
         status["metrics"] = {r["model"]: r["macro_f1"] for r in summary["scores"]}
-        print("PASS: five frozen final models executed and verified.", flush=True)
+        print(f"PASS: five frozen final models and {rich_figures} inline figures executed and verified.", flush=True)
     except Exception as exc:
         nbformat.write(notebook, output / "executed_partial.ipynb")
         status["status"] = "FAIL"
