@@ -1,0 +1,17 @@
+name: Review Canvas A2 specification text
+on:
+  push:
+    paths:
+      - '.github/workflows/v3_canvas_spec_review.yml'
+  workflow_dispatch:
+jobs:
+  read-pdf:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify template sections and extract original Canvas text
+        run: |
+          pdfinfo "Canvas Sources/COMP5318-assignment2-Sem2-2026-2.pdf" | head -20
+          pdftotext -layout "Canvas Sources/COMP5318-assignment2-Sem2-2026-2.pdf" - | sed -n '1,360p'
