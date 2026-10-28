@@ -1,0 +1,10 @@
+# Build context is the repository root; V3 Docker only installs archived pinned
+# dependencies and copies the small runner. Runtime binds the repository read-only.
+**
+!integration_v3/
+!integration_v3/scripts/
+!integration_v3/scripts/run_v3.py
+!integration_v3/Dockerfile
+!reproduction_v2/
+!reproduction_v2/reference/
+!reproduction_v2/reference/requirements-v2-resolved.txt

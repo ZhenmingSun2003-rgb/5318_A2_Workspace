@@ -1,0 +1,26 @@
+services:
+  integrate:
+    platform: linux/amd64
+    build:
+      context: ..
+      dockerfile: integration_v3/Dockerfile
+    image: comp5318-a2-v3:local
+    working_dir: /workspace/repo
+    network_mode: none
+    environment:
+      PYTHONHASHSEED: "5318"
+      TF_DETERMINISTIC_OPS: "1"
+      CUDA_VISIBLE_DEVICES: "-1"
+      OMP_NUM_THREADS: "4"
+      TF_NUM_INTRAOP_THREADS: "4"
+      TF_NUM_INTEROP_THREADS: "2"
+      KERAS_BACKEND: tensorflow
+      MPLBACKEND: Agg
+      A2_DATA_DIR: /workspace/repo/Canvas Sources/Assignment2Data-1/Assignment2Data
+      V3_OUTPUT_DIR: /workspace/results
+      V3_RUN_TUNING: "0"
+    volumes:
+      - ../:/workspace/repo:ro
+      - ./outputs:/workspace/results:rw
+    mem_limit: 10g
+    cpus: 4
