@@ -13,26 +13,41 @@ jobs:
     permissions:
       contents: read
     steps:
-      - name: Checkout sources and original Canvas data
+      - name: Checkout V3 package and source data
         uses: actions/checkout@v4
-      - name: Build exact V2-resolved CPU dependencies
-        run: docker compose -f integration_v3/compose.yaml build
-      - name: Check template, model cells and Python compilation
-        run: docker compose -f integration_v3/compose.yaml run --rm integrate --validate
-      - name: Train all five frozen models and export actual test metrics
-        run: docker compose -f integration_v3/compose.yaml run --rm integrate --execute
-      - name: Preserve results (including failure diagnosis)
+      - name: Build pinned CPU environment
+        run: docker compose -f integration_v3/environment/compose.yaml build
+      - name: Validate notebook template and Python syntax (without executing)
+        run: docker compose -f integration_v3/environment/compose.yaml run --rm a2 --validate
+      - name: Remove pre-existing run markers (avoid stale PASS)
+        run: |
+          rm -f integration_v3/results/run_status.json
+          rm -f integration_v3/results/a2-code-*_executed.ipynb
+          rm -f integration_v3/results/a2-code-*_executed_with_tuning.ipynb
+      - name: Execute integrated notebook in pinned CPU environment
+        run: docker compose -f integration_v3/environment/compose.yaml run --rm a2
+      - name: Require fresh execution evidence
+        if: success()
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("integration_v3/results/run_status.json")
+          assert p.is_file(), "No run_status.json produced by the container"
+          status = json.loads(p.read_text(encoding="utf-8"))
+          assert status.get("status") == "PASS", status
+          assert status.get("tuning") is False, status
+          executed = Path("integration_v3/results") / status["executed_notebook"]
+          assert executed.is_file(), f"Executed notebook missing: {executed}"
+          print(f"Fresh execution verified: {executed}")
+          PY
+      - name: Preserve execution evidence and failure diagnosis
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: comp5318-v3-integration-evidence
           path: |
-            integration_v3/outputs/*.csv
-            integration_v3/outputs/*.json
-            integration_v3/outputs/*.png
-            integration_v3/outputs/*.ipynb
-            integration_v3/outputs/mlp/*.csv
-            integration_v3/outputs/cnn/*.csv
-            integration_v3/outputs/mlp/*.png
-            integration_v3/outputs/cnn/*.png
+            integration_v3/results/run_status.json
+            integration_v3/results/a2-code-*_executed.ipynb
+            integration_v3/results/a2-code-*_executed_with_tuning.ipynb
           if-no-files-found: warn

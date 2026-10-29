@@ -1,2 +1,7 @@
-results/
-*.zip
+# The image installs pinned dependencies and copies only the execution wrapper.
+# The 100 MB dataset, submission artifacts, and results are bind-mounted at runtime.
+**
+!environment/
+!environment/Dockerfile
+!environment/requirements-lock.txt
+!environment/run_notebook.py
