@@ -41,6 +41,7 @@ def find_package_root() -> Path:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--tune", action="store_true", help="re-run all hyperparameter searches")
+    parser.add_argument("--validate", action="store_true", help="validate the notebook template and syntax without execution")
     parser.add_argument("--notebook", default=None, help="notebook to execute (default: the a2-code-*.ipynb)")
     parser.add_argument("--timeout", type=int, default=7200, help="per-cell timeout in seconds")
     args = parser.parse_args()
@@ -59,6 +60,9 @@ def main() -> int:
         if cell.cell_type == "code":
             compile(cell.source, f"{notebook_path.name}:cell{i}", "exec")
     print(f"Template structure and code syntax OK ({notebook_path.name}).", flush=True)
+    if args.validate:
+        print("Validation-only mode: notebook source was not executed or modified.", flush=True)
+        return 0
 
     os.environ["A2_RUN_TUNING"] = "1" if args.tune else "0"
     os.environ["A2_RESULTS_DIR"] = str(results)
