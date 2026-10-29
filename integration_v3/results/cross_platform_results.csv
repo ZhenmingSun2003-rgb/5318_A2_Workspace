@@ -1,0 +1,7 @@
+platform,cpu,software,MLP_accuracy,MLP_macro_f1,CNN_accuracy,CNN_macro_f1
+Windows 11 笔记本（开发阶段）,"Intel x86-64 (Family 6, Model 189)","Py 3.11.15, Keras 3.6.0",0.496375,0.449128,,
+macOS 笔记本（开发阶段）,Apple Silicon (arm64),"Py 3.12.14, Keras 3.5.0",,,0.720375,0.69786
+Docker（WSL2 主机）,AMD Ryzen 9 5900HS,固定版本镜像,0.48925,0.438672,0.73925,0.723255
+Docker（GitHub 托管执行器，三次中的两次）,Azure 虚拟机，未记录 CPU 型号,固定版本镜像,0.484875,0.443158,0.708,0.683125
+Docker（GitHub 托管执行器，三次中的一次）,Azure 虚拟机，未记录 CPU 型号,固定版本镜像,0.48925,0.438672,0.73925,0.723255
+本次运行：Windows-10-10.0.19045-SP0,"AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",固定版本软件栈,0.46775,0.417230737483054,0.729375,0.7102355556461626

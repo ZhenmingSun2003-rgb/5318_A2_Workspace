@@ -1,0 +1,33 @@
+# Run from the package root (the folder that contains the notebook):
+#   docker compose -f environment/compose.yaml build
+#   docker compose -f environment/compose.yaml run --rm a2            # final models only (fast)
+#   docker compose -f environment/compose.yaml run --rm a2 --tune     # + full hyperparameter searches
+#
+# The package is mounted read-only, so a run can never alter the data or the
+# submitted notebook; only ./results is writable.
+services:
+  a2:
+    platform: linux/amd64
+    build:
+      context: ..
+      dockerfile: environment/Dockerfile
+    image: comp5318-a2:pinned-cpu
+    working_dir: /workspace/a2
+    network_mode: none
+    environment:
+      PYTHONHASHSEED: "5318"
+      TF_DETERMINISTIC_OPS: "1"
+      CUDA_VISIBLE_DEVICES: "-1"
+      OMP_NUM_THREADS: "4"
+      TF_NUM_INTRAOP_THREADS: "4"
+      TF_NUM_INTEROP_THREADS: "2"
+      KERAS_BACKEND: tensorflow
+      MPLBACKEND: Agg
+      A2_RESULTS_DIR: /workspace/results
+    volumes:
+      - ../:/workspace/a2:ro
+      - ../results:/workspace/results:rw
+    # Resource limits used for the reference runs. Lower `cpus` if the host has
+    # fewer than 4 cores (thread counts above stay fixed, so numerics do not change).
+    cpus: 4
+    mem_limit: 10g

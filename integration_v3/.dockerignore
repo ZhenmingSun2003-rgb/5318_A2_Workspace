@@ -1,3 +1,2 @@
-outputs/
-.ipynb_checkpoints/
-__pycache__/
+results/
+*.zip
